@@ -1,0 +1,45 @@
+@import "../2_base/0_index.scss";
+
+
+.header-page{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+   
+    p{
+        line-height: 46px;
+        height: 26px;
+        color: $dark-blue;
+    }
+
+    }
+
+ 
+    .home-title_h3{
+        text-align: center;
+        color: $dark-grey;
+        font-size: map-get($font-sizes, 's' );
+        margin: 10px auto 20px auto;
+        }
+
+
+.sections-tags{
+   display: flex;
+   flex-flow: nowrap row;
+   justify-content: space-between;
+    margin: 40px auto 20px auto;
+}
+
+
+.text-buttons-group{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 10px auto 30px auto;
+
+    p{
+        line-height: 46px;
+        height: 26px;
+        color: $dark-blue;
+    }
+}

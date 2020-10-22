@@ -1,6 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
+
 import AuthContext from '../../context/auth/authContext';
 import AlertContext from '../../context/alert/alertContext';
+
+
+import Input from '../../components/uiElements/forms/Input';
+import Button from '../../components/uiElements/forms/Button';
 
 const Login = props => {
   const alertContext = useContext(AlertContext);
@@ -11,11 +16,12 @@ const Login = props => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      props.history.push('/');
+      // props.history.push('/');
+      props.backToMenu()
     }
 
     if (error === 'Invalid Credentials') {
-      setAlert(error, 'danger');
+      setAlert(error, 'error');
       clearErrors();
     }
     // eslint-disable-next-line
@@ -43,40 +49,40 @@ const Login = props => {
   };
 
   return (
-    <div className='form-container'>
-      <h1>
-        Account <span className='text-primary'>Login</span>
-      </h1>
+    < >
+      <div className="back-arrow" onClick={props.backToMenu}><i className="aicon-left-arrow"> </i> zurück zum Menü </div>
+      <h3>Account Login</h3>
       <form onSubmit={onSubmit}>
-        <div className='form-group'>
-          <label htmlFor='email'>Email Address</label>
-          <input
+        <div >
+          <Input
             id='email'
             type='email'
             name='email'
             value={email}
             onChange={onChange}
-            required
+            placeholder='Email'
+            required='required'
           />
         </div>
         <div className='form-group'>
-          <label htmlFor='password'>Password</label>
-          <input
+          <Input
             id='password'
             type='password'
             name='password'
             value={password}
             onChange={onChange}
-            required
+            placeholder='Password'
+            required='required'
           />
+
         </div>
-        <input
+        <Button
           type='submit'
           value='Login'
-          className='btn btn-primary btn-block'
+          className=''
         />
       </form>
-    </div>
+    </>
   );
 };
 

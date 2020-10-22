@@ -1,0 +1,23 @@
+.premium-button{
+    display: inline-block;
+    background-color: $blue;
+    color: $white;
+    font-size: map-get( $font-sizes, 's' );
+    padding: 9px 20px;
+    margin-right: 10px;
+    border-radius: $border-radius-lg;
+    @include add-shadow-blue();
+
+}
+
+.circle-premium-button{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: $brand-red;
+    color: $white;
+    text-align: center;
+    font-size: map-get( $font-sizes, 's' );
+    }

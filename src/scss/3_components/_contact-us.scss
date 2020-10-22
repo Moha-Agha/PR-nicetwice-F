@@ -1,0 +1,168 @@
+.contact-us{
+    position: relative;
+    
+    .contact-us_title{
+        margin: 120px auto 40px auto ;
+
+        .contact-us_subtitle{
+            color: $brand-black;
+            -webkit-text-stroke: 1px $white;
+        }
+    }
+
+    .contact-us_message{
+        line-height: 30px;
+        p{
+            font-size: map-get($font-sizes , 'm' );
+            margin:  5px auto 5px auto;
+
+            &:first-child{
+                margin:  10px auto 40px auto;
+            }
+        }
+
+        .message-item{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            margin-bottom: 10px;
+           
+            span{font-size: map-get($font-sizes , 'm' );}
+      .message-item_title_1 { flex: 1 1 ; padding-bottom: 8px;}
+      .message-item_input_1 { flex: 3 2 ; }
+      .message-item_title_2 { flex: 1 1 ; padding-bottom: 8px;}
+      .message-item_input_2 { flex: 3 2 ; }
+      .message-item_title_3 { flex: 2 1 ; padding-bottom: 8px;}
+      .message-item_input_3 { flex: 3 2 ; }
+      .message-item_title_4 { flex: 2 1 ; padding-bottom: 8px;}
+      .message-item_input_4 { flex: 3 2 ; }
+      .message-item_title_5 { flex: 3 1 ; padding-bottom: 8px;}
+      .message-item_input_5 { flex: 3 2 ; }
+        }
+
+   
+
+    }
+}
+
+
+.contact-us_success{
+    color: $brand-black;
+    -webkit-text-stroke: 1px $brand-red;
+    animation: glow 1s ease-in-out infinite alternate forwards;
+}
+
+@keyframes glow {
+    0% {text-shadow: 0 0 0px $brand-red;}
+    0% {text-shadow: 0 0 10px $brand-red;}
+    25% {text-shadow: 0 0 20px $brand-red;}
+    50% {text-shadow: 0 0 30px $brand-red;}
+    75% {text-shadow: 0 0 40px $brand-red;}
+    100% {text-shadow: 0 0 50px $brand-red;}
+}
+
+.city-name{
+    position: absolute;
+    right: -510px;
+    top: 420px;
+    font-size: 140px;
+    font-weight: bold;
+    color: $white;
+    opacity: 0.05;
+    transform: rotate(-90deg);
+    padding: 0;
+    margin: 0;
+}
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+ 
+    .contact-us_message{
+     
+        .message-item{
+            display: block !important;
+           
+       span{font-size: map-get($font-sizes , 'm' );}
+      .message-item_title_1 { display: block;}
+      .message-item_input_1 { display: block;}
+      .message-item_title_2 { display: block;}
+      .message-item_input_2 { display: block;}
+      .message-item_title_3 { display: block;}
+      .message-item_input_3 { display: block;}
+      .message-item_title_4 { display: block;}
+      .message-item_input_4 { display: block;}
+      .message-item_title_5 { display: block;}
+      .message-item_input_5 { display: block;}
+        }
+
+    }
+    .city-name{
+        display: none;
+    }
+        
+  }
+ 
+ // Tablet
+ @media (max-width: 1200px) and (min-width: 701px) {
+ 
+    .city-name{
+        display: none;
+    }
+  }
+ 
+ // Desktop and X Desktop
+ @media (min-width: 1201px) {
+ 
+    .contact-us{
+        max-width: 900px;
+
+        .contact-us_title{
+            margin: 150px auto 60px auto ;
+        }
+    
+        .contact-us_message{
+            margin:  100px auto 100px auto;
+    
+            .message-item{
+                display: block;
+
+                .message-item_title_1 { display: inline-block; margin-right: 10px;}
+                .message-item_input_1 { display: inline-block; max-width: 500px;  }
+                .message-item_title_2 { display: inline-block; margin-right: 10px; }
+                .message-item_input_2 { display: inline-block; max-width: 500px; }
+                .message-item_title_3 { display: inline-block; margin-right: 10px; }
+                .message-item_input_3 { display: inline-block; max-width: 500px; }
+                .message-item_title_4 { display: inline-block; margin-right: 10px; }
+                .message-item_input_4 { display: inline-block; max-width: 500px; }
+                .message-item_title_5 { display: inline-block; margin-right: 10px; }
+                .message-item_input_5 { display: inline-block; max-width: 500px; }
+            }
+    
+     .button{
+         margin-top: 30px;
+           max-width: 200px;
+       }
+    
+        }
+        .contact-us_success{
+            margin-bottom: 200px;
+        }
+    }
+
+  }
+ 
+ // X Desktop
+ @media (max-width: 1920px) and (min-width: 1367px) {
+    .contact-us_success{
+        margin-bottom: 200px;
+    }
+ 
+  }
+
+

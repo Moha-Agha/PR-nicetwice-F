@@ -1,0 +1,13 @@
+.footer-copyright{
+   text-align: center;
+
+   p{
+      font-size: map-get($font-sizes, 'xs' );
+      color: $brand-grey;
+      margin: 4px auto;
+      a{
+         color: $brand-grey; 
+      }
+   }
+  
+}

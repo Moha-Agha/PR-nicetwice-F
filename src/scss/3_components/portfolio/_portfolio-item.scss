@@ -1,0 +1,205 @@
+.portfolio-item{
+    position: relative;
+    margin: 20px auto auto auto;
+    padding-top: 35px;
+  
+
+   .portfolio-item_number{
+      position: absolute;
+      top: -10px;
+      right: -16px;
+      z-index: 1;
+      font-size: map-get($font-sizes, 'xxxl' );
+      font-weight: bold;
+      opacity: 0.3;
+   }
+
+   .portfolio-item_card{
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      min-height: 246px;
+      border-radius: $border-radius-xl;
+      background-color: $white;
+      overflow: hidden;
+
+      a{
+         display: block;
+         width: 100%;
+         height: 100%;
+         background-color: $brand-red;
+         img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+         }
+      }
+
+         .portfolio-asking{
+            .asking_first-layer{
+               position: absolute;
+               z-index: 3;
+               left: 10%;
+               bottom: 25%;
+
+               h2{
+                  font-size: map-get($font-sizes , 'xl' );
+                  color: $brand-red;
+                  margin-bottom: 15px;
+               }
+               div{
+                  color: $white; 
+                  background: $brand-black;
+                  padding: 15px;
+                  font-size: map-get($font-sizes , 'm' );
+                  border-radius: $border-radius-lg;
+               }
+            }
+            .asking_second-layer{
+               position: relative;
+               z-index: 2;
+               display: block; 
+               width: 100%;
+               height: 100%;
+               background: $brand-red;
+
+               img{
+                  object-fit: cover;
+                  width: 100%;
+                  height: 100%;
+               }
+            }
+            }
+ 
+   }
+}
+
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+ 
+   .portfolio-item{
+      .portfolio-item_card{
+         min-height: 229px;
+         }
+
+        .first-layer{
+           h3{ 
+              font-size: map-get($font-sizes , 'l' );
+              text-transform: uppercase !important;
+           }
+           h4{ 
+              font-size: map-get($font-sizes , 'm' );
+           }
+        }
+
+        .portfolio-asking{
+        .asking_first-layer{
+           display: flex;
+           flex-flow: column nowrap;
+           position: absolute;
+           left: 5%;
+           top: 25%;
+
+           h2{
+            display: block;
+              font-size: map-get($font-sizes , 'xl' );
+              color: $brand-red;
+              margin-bottom: 15px;
+           }
+           button{
+              display: block;
+              color: $white; 
+              background: $brand-black;
+              padding: 15px;
+              font-size: map-get($font-sizes , 'm' );
+              border-radius: $border-radius-lg;
+           }
+        }
+        .asking_second-layer{
+           display: block; 
+           width: 100%;
+           height: 100%;
+           background: $brand-red;
+  
+           img{
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+           }
+        }
+        }
+     }
+  }
+       
+ 
+
+// Tablet and Desktop and X Desktop
+@media all  and (min-width: 701px) {
+
+   .portfolio-item{
+       width: 98%;
+       margin-bottom: 20px;
+
+       .portfolio-item_card{
+         min-height: 236px;
+
+         } 
+
+         .first-layer{
+            h3{ 
+               font-size: map-get($font-sizes , 'l' );
+               text-transform: uppercase !important;
+            }
+            h4{ 
+               font-size: map-get($font-sizes , 'm' );
+            }
+         }
+
+         .portfolio-asking{
+         .asking_first-layer{ 
+            left: 8%;
+            h2{
+               font-size: map-get($font-sizes , 'xxl' );
+            }
+         }
+         }
+      }
+   }
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+   .portfolio-item{
+      .portfolio-item_card{
+        .portfolio-asking{
+        .asking_first-layer{
+           left: 8%;
+           top: 50%;
+        }
+        }
+     }
+  }
+
+ }
+
+// X Desktop
+@media all and (max-width: 1920px) and (min-width: 1367px) {
+
+   .portfolio-item{
+      .portfolio-item_card{
+        .portfolio-asking{
+        .asking_first-layer{
+           left: 8%;
+           top: 50%;
+        }
+        }
+     }
+  }
+
+ }
+
+
+
