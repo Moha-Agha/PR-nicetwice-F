@@ -4,8 +4,8 @@
   status = 200
 
 [[redirects]]
-  from = "/api"
-  to = "https://nicetwicede.herokuapp.com/"
+  from = "/api/*"
+  to = "https://nicetwicede.herokuapp.com"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
