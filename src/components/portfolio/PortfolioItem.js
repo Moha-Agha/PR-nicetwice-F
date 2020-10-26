@@ -15,14 +15,13 @@ const PortfolioItem = ({ number = '', image = '', type = '.jpg', content = true 
   }
 
   if (content == true) {
-    cardContent = < a href='#' >
+    cardContent = < div className="portfolio-item-img" >
       {img}
-    </a >
+    </div >
   } else {
     cardContent = <span className='portfolio-asking'>
       <div className='asking_first-layer'>
-        <h2>ist hier <br /> dein business ?</h2>
-        <div>Ja, hier ist meins!</div>
+        <h2>Ein freier Platz für<br /> dein business!</h2>
       </div>
       <span className='asking_second-layer'>
         {img}

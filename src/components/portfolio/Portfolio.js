@@ -1,18 +1,18 @@
 import React, { useState, useEffect, Fragment } from "react";
-import axios from 'axios';
 
-import Preloader from "../uiElements/Preloader"
+import Preloader from "../layout/Preloader"
 import PortfolioItem from "./PortfolioItem"
 
 const Portfolio = () => {
 
   const [portfolioItems, setPortfolioItems] = useState([]);
+  const [loading, setLoading] = useState(true);
 
 
   useEffect(() => {
-    window.addEventListener('load', resizeScreen)
     window.addEventListener('resize', resizeScreen)
-  });
+    resizeScreen()
+  }, []);
 
   function resizeScreen() {
     let Items
@@ -22,32 +22,36 @@ const Portfolio = () => {
         < PortfolioItem number={1} image={'portfolio-1'} type='.png' />
         < PortfolioItem number={2} image={'portfolio-2'} type='.png' />
         < PortfolioItem number={3} image={'portfolio-3'} type='.png' />
-        < PortfolioItem image={'portfolio-4'} type='.jpg' content='false' />
+        < PortfolioItem number={4} image={'portfolio-4'} type='.jpg' content='false' />
       </Fragment>
     } else {
       Items = <Fragment>
         < PortfolioItem number={2} image={'portfolio-2'} type='.png' />
-        < PortfolioItem image={'portfolio-4'} type='.jpg' content='false' />
+        < PortfolioItem number={4} image={'portfolio-4'} type='.jpg' content='false' />
         < PortfolioItem number={1} image={'portfolio-1'} type='.png' />
         < PortfolioItem number={3} image={'portfolio-3'} type='.png' />
       </Fragment>
     }
 
     setPortfolioItems(Items)
+    setLoading(false)
   }
 
 
-  return (
-    <div className='portfolio'>
+  if (loading) {
+    return <Preloader />
+  } else {
+    return (
+      <div id="portfolio" className='portfolio'>
 
-      <h1 className="portfolio_title"> Portfolio </h1>
-      <p className="portfolio_subtitle">UI-UX design website and App programming</p>
+        <h1 className="portfolio_title"> Portfolio </h1>
+        <p className="portfolio_subtitle">UI-UX design website and App programming</p>
 
-      {portfolioItems}
+        {portfolioItems}
 
-    </div>
-  );
-
+      </div>
+    )
+  }
 
 };
 

@@ -24,6 +24,9 @@
 .aicon-at:before {
   content: '\F01D'
 }
+.aicon-behance-logo:before {
+  content: '\F021'
+}
 .aicon-clock:before {
   content: '\F00D'
 }

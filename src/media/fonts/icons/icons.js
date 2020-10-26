@@ -1,5 +1,6 @@
 export default {
     "at": "aicon-at",
+    "behanceLogo": "aicon-behance-logo",
     "clock": "aicon-clock",
     "downArrow": "aicon-down-arrow",
     "eye": "aicon-eye",

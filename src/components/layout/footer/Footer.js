@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import FooterReduction from "./FooterReduction"
 import FooterCopyright from "./FooterCopyright"
 

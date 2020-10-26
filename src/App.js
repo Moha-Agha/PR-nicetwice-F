@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import "./scss/App.scss";
 
 import Navbar from './components/layout/navbar/Navbar';
 import Home from './components/pages/Home';
-import About from './components/pages/About';
+import Blog from './components/blog/Blog';
 import Messages from './components/messages/Messages';
 
 import Alerts from './components/layout/Alerts';
@@ -15,6 +15,8 @@ import ContactState from './context/contact/ContactState';
 import MessagetState from './context/message/MessagetState';
 import AuthState from './context/auth/AuthState';
 import AlertState from './context/alert/AlertState';
+import NavState from './context/nav/NavState';
+import Footer from './components/layout/footer/Footer';
 
 
 const App = () => {
@@ -23,20 +25,23 @@ const App = () => {
       <ContactState>
         <MessagetState>
           <AlertState>
-            <Router>
-              <div className="container">
-                <Navbar />
+            <NavState>
+              <Router>
+                <div className="container">
+                  <Navbar />
 
-                <Alerts />
-                <Switch>
-                  <Route exact path='/' component={Home} />
-                  <Route exact path='/about' component={About} />
-                  <PrivateRoute exact path='/messages' component={Messages} />
-                  <Route path='*' component={About} />
-                </Switch>
+                  <Alerts />
+                  <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route exact path='/blog' component={Blog} />
+                    <PrivateRoute exact path='/messages' component={Messages} />
+                    <Route path='*' component={Home} />
+                  </Switch>
 
-              </div>
-            </Router>
+                  <Footer />
+                </div>
+              </Router>
+            </NavState>
           </AlertState>
         </MessagetState>
       </ContactState>

@@ -2,22 +2,26 @@ import React, { useState, useContext, useEffect } from 'react';
 
 import AuthContext from '../../context/auth/authContext';
 import AlertContext from '../../context/alert/alertContext';
+import NavContext from '../../context/nav/navContext';
 
 
 import Input from '../../components/uiElements/forms/Input';
 import Button from '../../components/uiElements/forms/Button';
 
 const Login = props => {
-  const alertContext = useContext(AlertContext);
   const authContext = useContext(AuthContext);
-
-  const { setAlert } = alertContext;
   const { login, error, clearErrors, isAuthenticated } = authContext;
+
+  const alertContext = useContext(AlertContext);
+  const { setAlert } = alertContext;
+
+  const navContext = useContext(NavContext)
+  const { setSidebarItem } = navContext;
 
   useEffect(() => {
     if (isAuthenticated) {
       // props.history.push('/');
-      props.backToMenu()
+      setSidebarItem('menu')
     }
 
     if (error === 'Invalid Credentials') {
@@ -25,7 +29,7 @@ const Login = props => {
       clearErrors();
     }
     // eslint-disable-next-line
-  }, [error, isAuthenticated, props.history]);
+  }, [error, isAuthenticated]);
 
   const [user, setUser] = useState({
     email: '',
@@ -50,7 +54,7 @@ const Login = props => {
 
   return (
     < >
-      <div className="back-arrow" onClick={props.backToMenu}><i className="aicon-left-arrow"> </i> zurück zum Menü </div>
+      <div className="back-arrow" onClick={() => { setSidebarItem('menu') }}><i className="aicon-left-arrow"> </i> zurück zum Menü </div>
       <h3>Account Login</h3>
       <form onSubmit={onSubmit}>
         <div >

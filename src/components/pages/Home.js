@@ -6,7 +6,6 @@ import SocialMedia from '../uiElements/SocialMedia';
 import MessengerIcon from '../uiElements/MessengerIcon';
 import Portfolio from '../portfolio/Portfolio';
 import ContactUs from '../contactUs/ContactUs';
-import Footer from '../uiElements/footer/Footer';
 
 const Home = () => {
   return (
@@ -31,7 +30,6 @@ const Home = () => {
 
       <Portfolio />
       <ContactUs />
-      <Footer />
 
     </Fragment>
   );

@@ -60,7 +60,7 @@
 
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: $brand-red;
 }
 
 .sidenav .closebtn {
@@ -71,6 +71,10 @@
   margin-left: 50px;
 }
 
+.disable-link{
+  color: $darker-grey !important;
+  cursor: default;
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}

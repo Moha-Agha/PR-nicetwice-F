@@ -56,7 +56,7 @@ const ContactUs = () => {
           <>
             <div className='contact-us_message'>
 
-              <p>Hallo Nice,</p>
+              {/*  <p>Hallo Nice,</p>
               <div className="message-item">
                 <span className=' message-item_title_1 '>mein Name ist {name}</span>
               </div>
@@ -83,8 +83,8 @@ const ContactUs = () => {
               <p>Dankeschön.</p>
 
               <br />
-              <br />
-              <h2 className="contact-us_success">Danke dir, Wir werden uns bald bei dir melden.</h2>
+              <br /> */}
+              <span className="contact-us_success">Danke dir, Wir werden uns bald bei dir melden.</span>
 
             </div>
           </>
@@ -185,7 +185,7 @@ const ContactUs = () => {
 
 
   return (
-    <div className="contact-us">
+    <div id="contact" className="contact-us">
       <h1 className="contact-us_title"> sag mir, was du brauchst.<br /><span className="contact-us_subtitle"> was du wirklich brauchst.</span></h1>
       {switchStep()}
       <p className="city-name">HAMBURG</p>
