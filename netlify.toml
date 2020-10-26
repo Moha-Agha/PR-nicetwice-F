@@ -7,5 +7,3 @@
   from = "/api/*"
   to = "https://nicetwicede.herokuapp.com"
   status = 200
-  force = true
-  headers = {X-From = "Netlify"}
