@@ -1,5 +1,5 @@
 [build]
-    command = "sed -i \"s@https://nicetwicede.herokuapp.com@g\" netlify.toml && yarn build"
+    command = "sed -i \"s@https://nicetwicede.herokuapp.com@g\" netlify.toml && CI= npm run build"
 
 # API proxying
 [[redirects]]
