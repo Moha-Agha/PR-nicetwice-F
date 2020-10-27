@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import messagesContext from '../../context/message/messageContext'
 
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Spinner from '../layout/Spinner';
 
 import MessageItem from './MessageItem'
@@ -21,7 +20,7 @@ const Messages = () => {
     return (
       <div className="messages">
         {messages.map(message => (<MessageItem key={message._id} message={message} />))}
-        {(messages.length == 0) ? <h3>No message</h3> : null}
+        {(messages.length === 0) ? <h3>No message</h3> : null}
       </div>
     )
   } else {

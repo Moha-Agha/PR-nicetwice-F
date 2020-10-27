@@ -10,7 +10,7 @@ const FooterReduction = () => {
   return (
     <div className="reduction-footer">
 
-      {currentNav == 'blog' ?
+      {currentNav === 'blog' ?
         <>
           <h1>
             zurück zur Homepage

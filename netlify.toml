@@ -5,7 +5,8 @@
     to = "https://nicetwicede.herokuapp.com/:splat"
     status = 200
     force = true
-
+    headers = {Content-Type = "application/json"}
+    
 # React Router support
 [[redirects]]
     from = "/*"

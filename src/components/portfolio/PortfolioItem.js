@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 const PortfolioItem = ({ number = '', image = '', type = '.jpg', content = true }) => {
 
@@ -6,7 +6,7 @@ const PortfolioItem = ({ number = '', image = '', type = '.jpg', content = true 
   let img
   let path
 
-  if (image != '') {
+  if (image !== '') {
     path = require('../../media/image/' + image + type)
 
     img = <img src={path} alt="niceTwice.de portfolio" />
@@ -14,7 +14,7 @@ const PortfolioItem = ({ number = '', image = '', type = '.jpg', content = true 
     img = <h1 className='text-center pt-5'>no image</h1>
   }
 
-  if (content == true) {
+  if (content === true) {
     cardContent = < div className="portfolio-item-img" >
       {img}
     </div >

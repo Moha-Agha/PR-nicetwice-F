@@ -6,7 +6,7 @@ import AuthContext from '../../../../context/auth/authContext';
 function SidenavHead() {
 
     const navContext = useContext(NavContext)
-    const { showSidebar, setSidebarItem } = navContext;
+    const { showSidebar, setSidebarItem, setCurrentNav } = navContext;
 
     const authContext = useContext(AuthContext);
     const { isAuthenticated, logout, user, loadUser } = authContext;
@@ -18,11 +18,12 @@ function SidenavHead() {
 
     const onLogout = () => {
         logout();
+        setCurrentNav('home')
     };
 
     const authLinks = (
         <>
-            <a>Hello {user && user.name}</a> /
+            <span>Hello {user && user.name}</span> /
             <a onClick={onLogout} href='#!'>
                 <i className='fas fa-sign-out-alt' />{' '}
                 <span className='hide-sm'>Logout</span>
@@ -31,7 +32,7 @@ function SidenavHead() {
     );
     const guestLinks = (
         <>
-            <a onClick={() => { setSidebarItem('login') }}>Einloggen</a> / <a onClick={() => { }} className="disable-link">Registrieren</a>
+            <a href='#!' onClick={() => { setSidebarItem('login') }}>Einloggen</a> / <a href='#!' onClick={() => { }} className="disable-link">Registrieren</a>
         </>
     );
     return (

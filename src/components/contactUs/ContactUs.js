@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
 import AlertContext from '../../context/alert/alertContext';
 import MessageContext from '../../context/message/messageContext';
@@ -89,7 +89,7 @@ const ContactUs = () => {
             </div>
           </>
         )
-        break;
+
       default:
         return (
           <>
@@ -179,7 +179,7 @@ const ContactUs = () => {
 
           </>
         )
-        break;
+
     }
   };
 

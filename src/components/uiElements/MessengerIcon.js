@@ -7,7 +7,7 @@ const MessengerIcon = ({ mobile = 'show' }) => {
 
   return (
     <div className={"messenger-icon " + mobile}>
-      <a href={whatsapp} target="_blank"><i className="aicon-whatsapp"></i></a>
+      <a href={whatsapp} target="_blank" rel="noopener noreferrer"><i className="aicon-whatsapp"></i></a>
       {/* <!-- Your Chat Plugin code --> 
       <div class="fb-customerchat"
         attribution='setup_tool'

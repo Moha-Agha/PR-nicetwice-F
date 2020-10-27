@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import NavContext from '../../../../context/nav/navContext';
+import AuthContext from '../../../../context/auth/authContext';
+
 import { SidebarDataHome, SidebarDataBlog } from '../sidenav/SidebarData'
 import Login from '../../../auth/Login'
 
@@ -10,9 +12,12 @@ function SideBody() {
     const navContext = useContext(NavContext)
     const { showSidebar, sidebarItem, setCurrentNav, currentNav } = navContext;
 
-    let location = useLocation().pathname == '/'
+    const authContext = useContext(AuthContext);
+    const { isAuthenticated } = authContext;
 
-    let SidebarData = currentNav == 'home' || location ? SidebarDataHome : SidebarDataBlog;
+    let location = useLocation().pathname === '/'
+
+    let SidebarData = currentNav === 'home' || location ? SidebarDataHome : SidebarDataBlog;
     let navContent
 
     switch (sidebarItem) {
@@ -23,9 +28,9 @@ function SideBody() {
             navContent = (
                 SidebarData.map((nav) => {
                     if (nav.path.includes('#')) {
-                        return <AnchorLink href={nav.path} onClick={showSidebar}>{nav.title}</AnchorLink>
+                        return <AnchorLink href={nav.path} key={nav.path} onClick={showSidebar}>{nav.title}</AnchorLink>
                     } else {
-                        return <Link to={nav.path} onClick={(nav.path == '/blog' ? () => { showSidebar(); setCurrentNav('blog') } : () => { showSidebar(); setCurrentNav('home') })}>{nav.title}</Link>
+                        return <Link to={nav.path} key={nav.path} onClick={(nav.path === '/blog' ? () => { showSidebar(); setCurrentNav('blog') } : () => { showSidebar(); setCurrentNav('home') })}>{nav.title}</Link>
                     }
                 })
             )
@@ -35,6 +40,7 @@ function SideBody() {
     return (
         <nav >
             {navContent}
+            {isAuthenticated ? <Link to='/Messages'>Message</Link> : null}
         </nav>
     )
 }
