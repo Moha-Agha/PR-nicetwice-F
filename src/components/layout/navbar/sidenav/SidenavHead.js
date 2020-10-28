@@ -32,7 +32,7 @@ function SidenavHead() {
     );
     const guestLinks = (
         <>
-            <a href='#!' onClick={() => { setSidebarItem('login') }}>Einloggen</a> / <a href='#!' onClick={() => { }} className="disable-link">Registrieren</a>
+            <span onClick={() => { setSidebarItem('login'); }}>Einloggen</span> / <span onClick={() => { }} className="disable-link">Registrieren</span>
         </>
     );
     return (
