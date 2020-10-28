@@ -56,35 +56,8 @@ const ContactUs = () => {
           <>
             <div className='contact-us_message'>
 
-              {/*  <p>Hallo Nice,</p>
-              <div className="message-item">
-                <span className=' message-item_title_1 '>mein Name ist {name}</span>
-              </div>
-              <div className="message-item">
-                {companyName && <span className=' message-item_title_2 '>Ich arbeite bei {companyName}</span>}
-              </div>
-              <div className="message-item">
-                <span className=' message-item_title_3 '> {companyName && <>und</>} ich brauche deine Hilfe für {service}.</span>
-              </div>
-              <div className="message-item">
-                {phone && <span className=' message-item_title_4 '>Du kannst mich unter dieser Telefonnummer: {phone}</span>}
-              </div>
-              <div className="message-item">
-                {
-                  phone ?
-                    <span className=' message-item_title_5 '>erreichen oder einfach per E-Mail: {email}</span>
-                    : <span className=' message-item_title_5 '>Du kannst mich per E-Mail: {email} erreichen</span>
-                }
-              </div>
-              <div className="message-item">
-                {information && <span> Weitere Informationen : {information} </span>}
-              </div>
-              <br />
-              <p>Dankeschön.</p>
-
-              <br />
-              <br /> */}
-              <span className="contact-us_success">Danke dir, Wir werden uns bald bei dir melden.</span>
+              <span className='contact-us_icon-success'><i className='aicon-direct'></i></span>
+              <h1 className="contact-us_success">Danke dir<br /> Wir werden uns bald<br /> bei dir melden.</h1>
 
             </div>
           </>

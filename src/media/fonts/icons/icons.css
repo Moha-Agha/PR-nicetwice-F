@@ -30,6 +30,9 @@
 .aicon-clock:before {
   content: '\F00D'
 }
+.aicon-direct:before {
+  content: '\F022'
+}
 .aicon-down-arrow:before {
   content: '\F017'
 }

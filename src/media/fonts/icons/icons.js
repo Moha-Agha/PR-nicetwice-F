@@ -2,6 +2,7 @@ export default {
     "at": "aicon-at",
     "behanceLogo": "aicon-behance-logo",
     "clock": "aicon-clock",
+    "direct": "aicon-direct",
     "downArrow": "aicon-down-arrow",
     "eye": "aicon-eye",
     "facebook": "aicon-facebook",
