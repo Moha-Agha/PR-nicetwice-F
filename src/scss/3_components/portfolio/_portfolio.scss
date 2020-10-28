@@ -41,17 +41,20 @@
 // Desktop
 @media all and (max-width: 1366px) and (min-width: 1201px) {
 
-   .portfolio{
-      margin: 50px auto auto auto;  
-      columns: 2 ;
-      column-gap: 40px;
-      -moz-columns: 2 ;
-      -webkit-columns: 2 ;
+   .portfolio_title{
+      margin:70px auto auto auto;
+      font-size: 54px;
+   }
+   .portfolio_subtitle{
+      margin-bottom: 0px;
+   }
 
-      .portfolio_title{
-         margin:20px auto 10px auto;
-         font-size: 54px;
-      }
+   .portfolio{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+      column-gap: 40px;
+      justify-content: center;
+      margin: auto;   
       
 }
 
