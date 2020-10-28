@@ -11,7 +11,7 @@ const Navbar = () => {
 
 
   return (
-    < div className="navbar" >
+    < div id='nav' className="navbar" >
       <Sidenav />
       <Logo logo='nicetwice_logo' type='.png' />
       <div className="navbar_items">

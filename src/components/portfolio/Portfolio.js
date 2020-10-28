@@ -19,17 +19,17 @@ const Portfolio = () => {
 
     if (window.innerWidth <= 750) {
       Items = <Fragment>
-        < PortfolioItem number={1} image={'portfolio-1'} type='.png' />
-        < PortfolioItem number={2} image={'portfolio-2'} type='.png' />
-        < PortfolioItem number={3} image={'portfolio-3'} type='.png' />
+        < PortfolioItem number={1} image={'portfolio-1'} type='.png' href='#' />
+        < PortfolioItem number={2} image={'portfolio-2'} type='.png' href='https://that.im/' />
+        < PortfolioItem number={3} image={'portfolio-3'} type='.png' href='https://inislam.net/' />
         < PortfolioItem number={4} image={'portfolio-4'} type='.jpg' content='false' />
       </Fragment>
     } else {
       Items = <Fragment>
-        < PortfolioItem number={2} image={'portfolio-2'} type='.png' />
+        < PortfolioItem number={2} image={'portfolio-2'} type='.png' href='https://that.im/' />
         < PortfolioItem number={4} image={'portfolio-4'} type='.jpg' content='false' />
-        < PortfolioItem number={1} image={'portfolio-1'} type='.png' />
-        < PortfolioItem number={3} image={'portfolio-3'} type='.png' />
+        < PortfolioItem number={1} image={'portfolio-1'} type='.png' href='#' />
+        < PortfolioItem number={3} image={'portfolio-3'} type='.png' href='https://inislam.net/' />
       </Fragment>
     }
 

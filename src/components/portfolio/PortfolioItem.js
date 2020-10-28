@@ -1,6 +1,6 @@
 import React from "react";
 
-const PortfolioItem = ({ number = '', image = '', type = '.jpg', content = true }) => {
+const PortfolioItem = ({ number = '', image = '', type = '.jpg', href = '', content = true }) => {
 
   let cardContent
   let img
@@ -15,9 +15,9 @@ const PortfolioItem = ({ number = '', image = '', type = '.jpg', content = true 
   }
 
   if (content === true) {
-    cardContent = < div className="portfolio-item-img" >
+    cardContent = < a href={href} target="_blank" rel="noopener noreferrer" className="portfolio-item-img" >
       {img}
-    </div >
+    </a >
   } else {
     cardContent = <span className='portfolio-asking'>
       <div className='asking_first-layer'>
