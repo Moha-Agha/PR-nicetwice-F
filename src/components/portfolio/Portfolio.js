@@ -51,7 +51,7 @@ const Portfolio = () => {
           < PortfolioItem number={1} image={'portfolio-1'} type='.jpg' href='https://that.im/' />
           < PortfolioItem number={2} image={'portfolio-2'} type='.jpg' href='https://inislam.net/' />
           < PortfolioItem number={3} image={'portfolio-3'} type='.jpg' href='#' />
-          < PortfolioItem number={4} image={'portfolio-4'} type='.jpg' content='false' />
+          < PortfolioItem number={4} image={'portfolio-4'} type='.jpg' href='#' />
         </div>
       </div>
     )
