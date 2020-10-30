@@ -14,6 +14,13 @@
          font-size:140px;
       }
    }
+   .service-item-title{
+      font-size: map-get($font-sizes , 'xl' );
+      font-weight: bold;
+      text-align: center;
+      margin-top: 0px;
+      opacity: 0.7;
+   }
    .service-item-price{
       font-size: map-get($font-sizes , 'l' );
       color: $brand-red;
@@ -28,13 +35,7 @@
    .service-item-notic{
       font-size: map-get($font-sizes , 's' );
       color: $darker-grey;
-   }
-   .service-item-title{
-      font-size: map-get($font-sizes , 'xxl' );
-      font-weight: bold;
-      text-align: center;
-      margin-top: 20px;
-      opacity: 0.7;
+      margin-bottom: 20px;
    }
 }
 

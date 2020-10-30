@@ -21,7 +21,7 @@ export const ServiceData = [
     time: '2 Wochen'
   },
   {
-    title: 'Restaurant website',
+    title: 'Restaurant-website',
     icon: 'aicon-order-food',
     price: '5600',
     notic: 'zzgl. monatlicher Kosten',
