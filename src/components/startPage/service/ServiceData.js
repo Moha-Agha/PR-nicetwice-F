@@ -38,7 +38,7 @@ export const ServiceData = [
     title: 'Wünsche realisieren',
     icon: 'aicon-lamp',
     price: '0000',
-    notic: 'Es kommt darauf an',
+    notic: 'abhängig von Arbeitsaufwand',
     time: 'Unbegrenzt'
   }
 ];

@@ -16,7 +16,7 @@ const Service = () => {
     <div id="service" >
       <div className="container">
         <h1 className="service_title"> Service </h1>
-        <p className="service_subtitle">Modernste Technologie und Startups freundliche Atmosphäre</p>
+        <p className="service_subtitle">Modernste Technologie und Startup freundliche Atmosphäre</p>
       </div>
 
       <div className={width > 700 ? 'service container' : 'service'}>
