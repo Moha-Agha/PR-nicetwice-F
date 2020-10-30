@@ -51,6 +51,12 @@
 .aicon-info:before {
   content: '\F00E'
 }
+.aicon-lamp:before {
+  content: '\F023'
+}
+.aicon-laptop:before {
+  content: '\F024'
+}
 .aicon-left-arrow:before {
   content: '\F01C'
 }
@@ -65,6 +71,12 @@
 }
 .aicon-messenger:before {
   content: '\F020'
+}
+.aicon-online-shop:before {
+  content: '\F025'
+}
+.aicon-order-food:before {
+  content: '\F026'
 }
 .aicon-phone-call:before {
   content: '\F01E'
@@ -90,6 +102,9 @@
 .aicon-spotifyLogo:before {
   content: '\F007'
 }
+.aicon-star:before {
+  content: '\F027'
+}
 .aicon-trash:before {
   content: '\F01F'
 }
@@ -101,6 +116,9 @@
 }
 .aicon-user:before {
   content: '\F009'
+}
+.aicon-website:before {
+  content: '\F028'
 }
 .aicon-whatsapp:before {
   content: '\F013'

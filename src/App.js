@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./scss/App.scss";
 
 import Navbar from './components/layout/navbar/Navbar';
-import Home from './components/pages/Home';
+import Home from './components/startPage/Home';
 import Blog from './components/blog/Blog';
 import Messages from './components/messages/Messages';
 import Footer from './components/layout/footer/Footer';
@@ -33,15 +33,15 @@ const App = () => {
                 <ScrollToTopButton />
                 <div className="container">
                   <Navbar />
-
-                  <Alerts />
-                  <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route exact path='/blog' component={Blog} />
-                    <PrivateRoute exact path='/messages' component={Messages} />
-                    <Route path='*' component={Home} />
-                  </Switch>
-
+                </div>
+                <Alerts />
+                <Switch>
+                  <Route exact path='/' component={Home} />
+                  <Route exact path='/blog' component={Blog} />
+                  <PrivateRoute exact path='/messages' component={Messages} />
+                  <Route path='*' component={Home} />
+                </Switch>
+                <div className="container">
                   <Footer />
                 </div>
               </Router>

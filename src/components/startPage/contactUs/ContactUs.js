@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 
-import AlertContext from '../../context/alert/alertContext';
-import MessageContext from '../../context/message/messageContext';
+import AlertContext from '../../../context/alert/alertContext';
+import MessageContext from '../../../context/message/messageContext';
 
-import Input from "../uiElements/forms/Input";
-import Select from "../uiElements/forms/Select";
-import Textarea from "../uiElements/forms/Textarea";
-import Button from "../uiElements/forms/Button";
+import Input from "../../uiElements/forms/Input";
+import Select from "../../uiElements/forms/Select";
+import Textarea from "../../uiElements/forms/Textarea";
+import Button from "../../uiElements/forms/Button";
 
 const ContactUs = () => {
   const messageContext = useContext(MessageContext);
@@ -158,10 +158,13 @@ const ContactUs = () => {
 
 
   return (
-    <div id="contact" className="contact-us">
-      <h1 className="contact-us_title"> sag mir, was du brauchst.<br /><span className="contact-us_subtitle"> was du wirklich brauchst.</span></h1>
-      {switchStep()}
-      <p className="city-name">HAMBURG</p>
+    <div className="container">
+      <div id="contact" className="contact-us">
+        <h1 className="contact-us_title"> sag mir, was du brauchst.<br /><span className="contact-us_subtitle"> was du wirklich brauchst.</span></h1>
+
+        {switchStep()}
+        <p className="city-name">HAMBURG</p>
+      </div>
     </div>
   );
 }

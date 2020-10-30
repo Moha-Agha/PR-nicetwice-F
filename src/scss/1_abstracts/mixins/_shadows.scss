@@ -21,3 +21,7 @@
 @mixin add-shadow-seidnav() {
   box-shadow: -10px 3px 26px 0 rgba(0, 0, 0, 0.56);
 }
+
+@mixin add-shadow-service() {
+  box-shadow: 0 4px 33px 0 #00000082;
+}

@@ -8,6 +8,10 @@ export const SidebarDataHome = [
     path: '#portfolio'
   },
   {
+    title: 'Service',
+    path: '#service'
+  },
+  {
     title: 'Kontakt',
     path: '#contact'
   },

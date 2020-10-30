@@ -60,7 +60,7 @@
     font-size: 121px;
     font-weight: bold;
     color: $white;
-    opacity: 0.05;
+    opacity: 0.02;
     transform: rotate(-90deg);
     padding: 0;
     margin: 0;
@@ -88,6 +88,14 @@
 // Mobile
 @media all and (max-width: 700px) and (min-width: 340px) {
  
+
+    .contact-us{
+        margin-top: -35px;
+    }
+    .contact-us_title{
+        margin: 40px auto 40px auto ;
+    }
+
     .contact-us_message{
      
         .message-item{

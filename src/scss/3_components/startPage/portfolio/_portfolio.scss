@@ -1,7 +1,9 @@
-
+#portfolio{
+   padding-top: 70px;
+}
 
 .portfolio_title{
-   margin:20px auto 10px auto;
+   margin:0 auto 10px auto;
    font-size: 54px;
 }
 .portfolio_subtitle{
@@ -28,10 +30,6 @@
 // Desktop
 @media all and (max-width: 1366px) and (min-width: 1201px) {
 
-   .portfolio_title{
-      margin:70px auto auto auto;
-      font-size: 54px;
-   }
    .portfolio_subtitle{
       margin-bottom: 0px;
    }
@@ -50,18 +48,10 @@
 // X Desktop
 @media all  and (min-width: 1367px) {
 
-   .portfolio{
-      margin: 50px auto auto auto;  
-      columns: 2 ;
-      column-gap: 65px;
-      -moz-columns: 2 ;
-      -webkit-columns: 2 ;
-
       .portfolio_title{
          margin:20px auto 10px auto;
          font-size: 54px;
       }
       
-}
 
 }
