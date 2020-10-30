@@ -9,7 +9,7 @@ const Service = () => {
 
   useEffect(() => {
     setWidth(window.innerWidth);
-  });
+  }, []);
 
 
   return (

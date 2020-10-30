@@ -8,7 +8,7 @@ const ServiceItem = ({ icon = '', title = '', price = '', notic = '', time = '' 
         <i className={icon}></i>
         <div className='service-item-price'>ab {price} €</div>
 
-        <div className='service-item-time'>{time === 'Unbegrenzt' ? '' : 'in ca.'} {time}</div>
+        <div className='service-item-time'>{time === ' ' ? 'Zeit und Kosten sind' : 'in ca.'} {time}</div>
         <div className='service-item-notic'>{notic}</div>
       </div>
       <p className='service-item-title'>{title}</p>
