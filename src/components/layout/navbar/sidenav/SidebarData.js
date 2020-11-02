@@ -1,4 +1,4 @@
-export const SidebarDataHome = [
+export const SidebarData = [
   {
     title: 'Home',
     path: '/'
@@ -18,11 +18,5 @@ export const SidebarDataHome = [
   {
     title: 'Blog',
     path: '/blog'
-  }
-];
-export const SidebarDataBlog = [
-  {
-    title: 'Home',
-    path: '/'
   }
 ];

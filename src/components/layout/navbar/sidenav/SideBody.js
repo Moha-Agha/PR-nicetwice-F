@@ -5,7 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import NavContext from '../../../../context/nav/navContext';
 import AuthContext from '../../../../context/auth/authContext';
 
-import { SidebarDataHome, SidebarDataBlog } from '../sidenav/SidebarData'
+import { SidebarData } from '../sidenav/SidebarData'
 import Login from '../../../auth/Login'
 
 function SideBody() {
@@ -17,7 +17,8 @@ function SideBody() {
 
     let location = useLocation().pathname === '/'
 
-    let SidebarData = currentNav === 'home' || location ? SidebarDataHome : SidebarDataBlog;
+    const SidebarDataHome = currentNav === 'home' || location ? true : false
+
     let navContent
 
     switch (sidebarItem) {
@@ -28,9 +29,9 @@ function SideBody() {
             navContent = (
                 SidebarData.map((nav) => {
                     if (nav.path.includes('#')) {
-                        return <AnchorLink href={nav.path} key={nav.path} onClick={showSidebar}>{nav.title}</AnchorLink>
+                        return SidebarDataHome ? <AnchorLink href={nav.path} key={nav.path} onClick={showSidebar}>{nav.title}</AnchorLink> : null
                     } else {
-                        return <Link to={nav.path} key={nav.path} onClick={(nav.path === '/blog' ? () => { showSidebar(); setCurrentNav('blog') } : () => { showSidebar(); setCurrentNav('home') })}>{nav.title}</Link>
+                        return <Link to={nav.path} key={nav.path} onClick={(nav.path !== '/' ? () => { showSidebar(); setCurrentNav('other') } : () => { showSidebar(); setCurrentNav('home') })}>{nav.title}</Link>
                     }
                 })
             )
