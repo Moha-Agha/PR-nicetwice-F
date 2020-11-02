@@ -1,12 +1,12 @@
 import React from "react";
-import FooterReduction from "./FooterReduction"
+import FooterRedirection from "./FooterRedirection"
 import FooterCopyright from "./FooterCopyright"
 
 
 const Footer = () => {
   return (
     <footer>
-      <FooterReduction />
+      <FooterRedirection />
       <FooterCopyright />
     </footer>
   );

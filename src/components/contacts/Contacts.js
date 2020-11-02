@@ -1,51 +1,174 @@
-import React, { Fragment, useContext, useEffect } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import ContactItem from './ContactItem';
-import Spinner from '../layout/Spinner';
-import ContactContext from '../../context/contact/contactContext';
+import React, { useState, useContext, useEffect } from "react";
+
+import AlertContext from '../../context/alert/alertContext';
+import MessageContext from '../../context/message/messageContext';
+
+import Input from "../uiElements/forms/Input";
+import Select from "../uiElements/forms/Select";
+import Textarea from "../uiElements/forms/Textarea";
+import Button from "../uiElements/forms/Button";
 
 const Contacts = () => {
-  const contactContext = useContext(ContactContext);
+  const messageContext = useContext(MessageContext);
+  const alertContext = useContext(AlertContext);
 
-  const { contacts, filtered, getContacts, loading } = contactContext;
+  const { setAlert } = alertContext;
+  const { addMessage, error } = messageContext;
 
   useEffect(() => {
-    getContacts();
-    // eslint-disable-next-line
-  }, []);
+    window.scrollTo(0, 0);
+  })
 
-  if (contacts !== null && contacts.length === 0 && !loading) {
-    return <h4>Please add a contact</h4>;
-  }
+  const [step, setStep] = useState(0);
+
+  const [messageItems, setMessageItems] = useState({
+    name: '',
+    companyName: '',
+    service: '',
+    phone: '',
+    email: '',
+    information: ''
+  });
+
+  const { name, companyName, service, phone, email, information } = messageItems;
+
+  const onChange = e => setMessageItems({ ...messageItems, [e.target.name]: e.target.value });
+
+  const onSubmit = e => {
+    e.preventDefault();
+
+    if (name === '' || service === '' || email === '') {
+      setAlert('Please fill in all fields', 'error');
+    } else if (email === '') {
+      setAlert('Please fill in all fields', 'error');
+    }
+    else {
+      addMessage(messageItems)
+      if (error == null) {
+        setStep(1)
+      }
+    }
+  };
+
+
+
+  const switchStep = () => {
+    switch (step) {
+      case 1:
+        return (
+          <>
+            <div className='contact-us_message'>
+
+              <span className='contact-us_icon-success'><i className='aicon-direct'></i></span>
+              <h1 className="contact-us_success">Danke dir<br /> Wir werden uns bald<br /> bei dir melden.</h1>
+
+            </div>
+          </>
+        )
+
+      default:
+        return (
+          <>
+            <form onSubmit={onSubmit} className='contact-us_message' >
+
+              <p>Hallo Nice,</p>
+              <div className="message-item">
+                <span className=' message-item_title_1 '>mein Name ist</span>
+                <Input
+                  id='name'
+                  type='text'
+                  name='name'
+                  value={name}
+                  onChange={onChange}
+                  placeholder='Vor- und Nachname*'
+                  required='required'
+                  classs=' message-item_input_1 '
+                />
+              </div>
+              <div className="message-item">
+                <span className=' message-item_title_2 '>Ich arbeite bei </span>
+                <Input
+                  id='companyName'
+                  type='text'
+                  name='companyName'
+                  value={companyName}
+                  onChange={onChange}
+                  placeholder='Unternehmensname'
+                  classs=' message-item_input_2 '
+                />
+              </div>
+              <div className="message-item">
+                <span className=' message-item_title_3 '>und ich brauche deine Hilfe für</span>
+                <Select
+                  id='service'
+                  name='service'
+                  value={service}
+                  onChange={onChange}
+                  placeholder='Art des Projekts*'
+                  required='required'
+                  classs='  message-item_input_3 '
+                />
+              </div>
+              <div className="message-item">
+                <span className=' message-item_title_4 '>Du kannst mich unter dieser</span>
+                <Input
+                  id='phone'
+                  type='text'
+                  name='phone'
+                  value={phone}
+                  onChange={onChange}
+                  placeholder='Telefonnummer'
+                  classs='  message-item_input_4 '
+                />
+              </div>
+              <div className="message-item">
+                <span className=' message-item_title_5 '>erreichen oder einfach per E-Mail</span>
+                <Input
+                  id='email'
+                  type='email'
+                  name='email'
+                  value={email}
+                  onChange={onChange}
+                  placeholder='E-Mail adresse*'
+                  required='required'
+                  classs='  message-item_input_5 '
+                />
+              </div>
+              <div className="message-item">
+                <Textarea
+                  id='information'
+                  name='information'
+                  value={information}
+                  onChange={onChange}
+                  placeholder='Weitere Informationen'
+                  classs='  message-item_input_5 '
+                />
+              </div>
+
+              <p>Dankeschön.</p>
+
+              <Button
+                type='submit'
+                value='SENDEN'
+              />
+            </form >
+
+          </>
+        )
+
+    }
+  };
+
 
   return (
-    <Fragment>
-      {contacts !== null && !loading ? (
-        <TransitionGroup>
-          {filtered !== null
-            ? filtered.map(contact => (
-                <CSSTransition
-                  key={contact._id}
-                  timeout={500}
-                  classNames='item'
-                >
-                  <ContactItem contact={contact} />
-                </CSSTransition>
-              ))
-            : contacts.map(contact => (
-                <CSSTransition
-                  key={contact._id}
-                  timeout={500}
-                  classNames='item'
-                >
-                  <ContactItem contact={contact} />
-                </CSSTransition>
-              ))}
-        </TransitionGroup>
-      ) : (
-        <Spinner />
-      )}
-    </Fragment>
+    <div className="container">
+      <div id="contact" className="contact-us">
+        <h1 className="contact-us_title"> sag mir, was du brauchst.<br /><span className="contact-us_subtitle"> was du wirklich brauchst.</span></h1>
+
+        {switchStep()}
+        <p className="city-name">HAMBURG</p>
+      </div>
+    </div>
   );
 };
 

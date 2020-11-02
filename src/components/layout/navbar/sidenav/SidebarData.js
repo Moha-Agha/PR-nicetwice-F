@@ -13,7 +13,7 @@ export const SidebarDataHome = [
   },
   {
     title: 'Kontakt',
-    path: '#contact'
+    path: '/contact'
   },
   {
     title: 'Blog',

@@ -7,7 +7,7 @@ const Logo = ({ logo = 'logo_nav', type = '.png' }) => {
   const [path, setPath] = useState('');
 
   useEffect(() => {
-    window.addEventListener('load', resizeScreen)
+    resizeScreen();
     window.addEventListener('resize', resizeScreen)
   });
 
@@ -26,7 +26,7 @@ const Logo = ({ logo = 'logo_nav', type = '.png' }) => {
 
   return (
     <a href='/' className='logo'>
-      <img src={path} alt="niceTwice logo" />
+      {path ? <img src={path} alt="niceTwice logo" /> : <h2 className='logo-title'>niceTwice</h2>}
     </a >
   );
 };

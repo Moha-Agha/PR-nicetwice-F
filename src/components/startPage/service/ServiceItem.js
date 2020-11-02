@@ -2,6 +2,7 @@ import React from "react";
 
 const ServiceItem = ({ icon = '', title = '', price = '', notic = '', time = '' }) => {
 
+
   return (
     <div className='service-item'>
       <div className='service-item-card'>

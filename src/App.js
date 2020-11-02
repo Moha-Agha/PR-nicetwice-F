@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import "./scss/App.scss";
 
+
+import Preloader from './components/layout/Preloader';
+
 import Navbar from './components/layout/navbar/Navbar';
 import Home from './components/startPage/Home';
 import Blog from './components/blog/Blog';
+import ContactUs from './components/contacts/Contacts';
 import Messages from './components/messages/Messages';
 import Footer from './components/layout/footer/Footer';
 
@@ -23,33 +27,52 @@ import NavState from './context/nav/NavState';
 
 
 const App = () => {
+
+  const [loading, setLoading] = useState(false)
+
+
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      setLoading(true);
+    });
+  })
+
   return (
-    <AuthState>
-      <ContactState>
-        <MessagetState>
-          <AlertState>
-            <NavState>
-              <Router>
-                <ScrollToTopButton />
-                <div className="container">
-                  <Navbar />
-                </div>
-                <Alerts />
-                <Switch>
-                  <Route exact path='/' component={Home} />
-                  <Route exact path='/blog' component={Blog} />
-                  <PrivateRoute exact path='/messages' component={Messages} />
-                  <Route path='*' component={Home} />
-                </Switch>
-                <div className="container">
-                  <Footer />
-                </div>
-              </Router>
-            </NavState>
-          </AlertState>
-        </MessagetState>
-      </ContactState>
-    </AuthState>
+
+    <> { loading ?
+      (<>
+        <AuthState>
+          <ContactState>
+            <MessagetState>
+              <AlertState>
+                <NavState>
+                  <Router>
+                    <ScrollToTopButton />
+                    <div className="container">
+                      <Navbar />
+                    </div>
+                    <Alerts />
+                    <Switch>
+                      <Route exact path='/' component={Home} />
+                      <Route exact path='/blog' component={Blog} />
+                      <Route exact path='/contact' component={ContactUs} />
+                      <PrivateRoute exact path='/messages' component={Messages} />
+                      <Route path='*' component={Home} />
+                    </Switch>
+                    <div className="container">
+                      <Footer />
+                    </div>
+                  </Router>
+                </NavState>
+              </AlertState>
+            </MessagetState>
+          </ContactState>
+        </AuthState>
+      </>)
+      : <Preloader />}
+    </>
+
+
   );
 };
 

@@ -7,23 +7,26 @@ const FooterReduction = () => {
   const navContext = useContext(NavContext)
   const { currentNav, setCurrentNav } = navContext;
 
+
+  const redirectionTitle = 'Na, möchtest du uns kontaktieren?';
+  const redirectionTitleHome = 'Na, zurück zur Homepage?';
+
   return (
     <div className="reduction-footer">
 
-      {currentNav === 'blog' ?
+      {currentNav === 'home' ?
         <>
           <h1>
-            zurück zur Homepage
-    </h1>
-          <Link className='reduction-footer_arrow' to='/' onClick={() => { setCurrentNav('home') }} ><i className='aicon-right-arrow'></i></Link>
+            {redirectionTitleHome}
+          </h1>
+          <Link className='reduction-footer_arrow' to='/' onClick={() => { setCurrentNav('contact') }} ><i className='aicon-right-arrow'></i></Link>
         </>
         :
         <>
           <h1>
-            Na, möchtest
-            du unseren Blog besuchen?
-   </h1>
-          <Link className='reduction-footer_arrow' to='/blog' onClick={() => { setCurrentNav('blog') }}><i className='aicon-right-arrow'></i></Link>
+            {redirectionTitle}
+          </h1>
+          <Link className='reduction-footer_arrow' to='/contact' onClick={() => { setCurrentNav('home') }}><i className='aicon-right-arrow'></i></Link>
         </>
       }
 
