@@ -17,14 +17,14 @@ const FooterRedirection = () => {
           <h1>
             Na, zurück zur
           </h1>
-          <Link className='reduction-footer_arrow' to='/' onClick={() => { setCurrentNav('contact') }} ><h1>Homepage?</h1></Link>
+          <Link to='/' onClick={() => { setCurrentNav('contact') }} ><h1>Homepage?</h1></Link>
         </>
         :
         <>
           <h1>
             Na, möchtest du uns
           </h1>
-          <Link className='reduction-footer_arrow' to='/contact' onClick={() => { setCurrentNav('home') }}><h1>kontaktieren?</h1></Link>
+          <Link to='/contact' onClick={() => { setCurrentNav('home') }}><h1>kontaktieren?</h1></Link>
         </>
       }
 
