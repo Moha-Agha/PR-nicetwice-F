@@ -1,12 +1,10 @@
 import React from "react";
 
-import i18next from 'i18next';
-import { useTranslation } from 'react-i18next';
-import '../../i18n';
+
 
 const ArticleMotivator = ({ image, tags, title, share, likes, views, youtube, spotify }) => {
 
-  const { t } = useTranslation();
+
 
   return (
     <div className="article-motivator">
@@ -26,7 +24,7 @@ const ArticleMotivator = ({ image, tags, title, share, likes, views, youtube, sp
         <a href="artical" className="title">كيف تحقق المكاسب السياسية العدالة التي تصنع هي التي تكرس بالدين؟</a>
 
         <div className="article-footer">
-          <a href="shaer" className="article-footer_item"><i className="aicon-share"></i> {t('ArticleMotivator.share')} </a>
+          <a href="shaer" className="article-footer_item"><i className="aicon-share"></i> </a>
           <div className="article-footer_item">200K <i className="aicon-heart"></i></div>
           <div className="article-footer_item">200K <i className="aicon-eye"></i> </div>
         </div>

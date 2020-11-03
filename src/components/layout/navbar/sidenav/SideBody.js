@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
@@ -15,11 +15,15 @@ function SideBody() {
     const authContext = useContext(AuthContext);
     const { isAuthenticated } = authContext;
 
-    let location = useLocation().pathname === '/'
-
-    const SidebarDataHome = currentNav === 'home' || location ? true : false
-
+    const [sidebarDataHome, setSidebarDataHome] = useState()
+    const location = useLocation().pathname === '/'
     let navContent
+
+    useEffect(() => {
+        currentNav === 'other' || location ? setSidebarDataHome(true) : setSidebarDataHome(false)
+    })
+
+
 
     switch (sidebarItem) {
         case 'login':
@@ -29,7 +33,7 @@ function SideBody() {
             navContent = (
                 SidebarData.map((nav) => {
                     if (nav.path.includes('#')) {
-                        return SidebarDataHome ? <AnchorLink href={nav.path} key={nav.path} onClick={showSidebar}>{nav.title}</AnchorLink> : null
+                        return sidebarDataHome ? <AnchorLink href={nav.path} key={nav.path} onClick={showSidebar}>{nav.title}</AnchorLink> : null
                     } else {
                         return <Link to={nav.path} key={nav.path} onClick={(nav.path !== '/' ? () => { showSidebar(); setCurrentNav('home') } : () => { showSidebar(); setCurrentNav('other') })}>{nav.title}</Link>
                     }
