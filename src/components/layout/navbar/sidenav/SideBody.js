@@ -31,7 +31,7 @@ function SideBody() {
                     if (nav.path.includes('#')) {
                         return SidebarDataHome ? <AnchorLink href={nav.path} key={nav.path} onClick={showSidebar}>{nav.title}</AnchorLink> : null
                     } else {
-                        return <Link to={nav.path} key={nav.path} onClick={(nav.path !== '/' ? () => { showSidebar(); setCurrentNav('other') } : () => { showSidebar(); setCurrentNav('home') })}>{nav.title}</Link>
+                        return <Link to={nav.path} key={nav.path} onClick={(nav.path !== '/' ? () => { showSidebar(); setCurrentNav('home') } : () => { showSidebar(); setCurrentNav('other') })}>{nav.title}</Link>
                     }
                 })
             )
