@@ -15,7 +15,7 @@ const FooterRedirection = () => {
       {currentNav === 'home' ?
         <>
           <h1>
-            Na, zurück zur
+            Zurück zur
           </h1>
           <Link to='/' onClick={() => { setCurrentNav('contact') }} ><h1>Homepage?</h1></Link>
         </>

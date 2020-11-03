@@ -1,13 +1,12 @@
 .sections-tag{
-    display: inline-flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    background-color: $light-blue;
-    color: $blue;
+    display: inline-block;
+    background-color: $brand-dark-grey;
+    color: $white;
     font-size: map-get( $font-sizes, 's' );
     border-radius: $border-radius-xl;
-    height: 40px;
+    padding: 8px 5px;
     margin: auto 0px auto 20px;
+    @include add-shadow-xl();
     
 
     &:first-child{
@@ -21,12 +20,13 @@
 
      .sections-tag_number{
             display: inline-block;
-            width: 25px;
-            height: 25px;
-            background: $lighter-blue;
+            min-width: 25px ;
+            min-height: 25px ;
+            background: $brand-black;
             border-radius: $border-radius-circal; 
             text-align: center;
             margin-left: 10px;
+            padding: 3px 6px;
         }
     
 }

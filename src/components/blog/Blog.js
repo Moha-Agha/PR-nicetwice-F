@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 
-import BlogData from './BlogData'
+import { cardsData, sectionsData } from './BlogData'
 
 import BlogOffline from './BlogOffline'
 import ArticleMotivator from "./ArticleMotivator"
@@ -14,13 +14,15 @@ const Blog = () => {
 
   const [online, setOnline] = useState(false);
 
+  const [sectionsTag, setSectionsTag] = useState([]);
   const [mostViewedArticles, setMostViewedArticles] = useState([]);
   const [newArticles, setNewArticle] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setMostViewedArticles({ BlogData });
-    setNewArticle({ BlogData });
+    setSectionsTag({ sectionsData });
+    setMostViewedArticles({ cardsData });
+    setNewArticle({ cardsData });
     setLoading(false)
   }, [])
 
@@ -28,39 +30,44 @@ const Blog = () => {
     <>{!online ? <BlogOffline /> :
       loading ? <Preloader /> :
         <div className="container">
-          <div className="header-page">
-            <div>
-
-            </div>
-            <p></p>
+          <div className="blog-header-page">
+            {sectionsTag.sectionsData.map(({ title, articleNumber }) => {
+              return <SectionsTag key={title} title={title} articleNumber={articleNumber} />
+            })}
           </div>
 
 
           <div className="article-motivators">
             {
-              mostViewedArticles.BlogData.slice(0, 3).map((mostViewedArticle) => {
+              mostViewedArticles.cardsData.slice(0, 3).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
                 return (
-                  <ArticleMotivator key={mostViewedArticle.id} image={'https://source.unsplash.com/collection/' + mostViewedArticle.id} tags={mostViewedArticle.id}
-                    title={mostViewedArticle.id} share={mostViewedArticle.id}
-                    likes={mostViewedArticle.id} views={mostViewedArticle.id}
-                    youtube={mostViewedArticle.id} spotify={mostViewedArticle.id} />
+                  <ArticleMotivator key={id}
+                    image={image + id}
+                    tags={tags}
+                    title={title}
+                    share={share}
+                    likes={likes}
+                    views={views}
+                    youtube={id} spotify={id} />
                 )
               })
             }
           </div>
 
-          <h3 className="home-title_h3">
-            المقالات المضافة حديثاً في المدونة
-       </h3>
+          <h3 className="blog-home-title_h3">Neue Artikel</h3>
 
           <div className="article-motivators">
             {
-              newArticles.BlogData.slice(0, 6).map((mostViewedArticle) => {
+              newArticles.cardsData.slice(0, 6).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
                 return (
-                  <ArticleMotivator key={mostViewedArticle.id} image={'https://source.unsplash.com/collection/' + mostViewedArticle.id} tags={mostViewedArticle.id}
-                    title={mostViewedArticle.id} share={mostViewedArticle.id}
-                    likes={mostViewedArticle.id} views={mostViewedArticle.id}
-                    youtube={mostViewedArticle.id} spotify={mostViewedArticle.id} />
+                  <ArticleMotivator key={id}
+                    image={image + id}
+                    tags={tags}
+                    title={title}
+                    share={share}
+                    likes={likes}
+                    views={views}
+                    youtube={id} spotify={id} />
                 )
               })
             }
