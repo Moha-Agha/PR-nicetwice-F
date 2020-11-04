@@ -72,16 +72,16 @@ export const sectionsData = [
     articleNumber: '03'
   },
   {
+    title: 'Front-end development',
+    articleNumber: '12'
+  },
+  {
     title: 'UX Design',
     articleNumber: '05'
   },
   {
     title: 'Branding',
     articleNumber: '02'
-  },
-  {
-    title: 'Front-end development',
-    articleNumber: '12'
   },
   {
     title: 'Back-end development',

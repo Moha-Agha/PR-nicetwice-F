@@ -5,8 +5,6 @@ import { cardsData, sectionsData } from './BlogData'
 
 import BlogOffline from './BlogOffline'
 import ArticleMotivator from "./ArticleMotivator"
-import PremiumButton from "../uiElements/button/PremiumButton"
-import SecondaryButton from "../uiElements/button/SecondaryButton"
 import SectionsTag from "./SectionsTag"
 import Preloader from "../layout/Preloader"
 
@@ -18,22 +16,30 @@ const Blog = () => {
   const [mostViewedArticles, setMostViewedArticles] = useState([]);
   const [newArticles, setNewArticle] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [width, setWidth] = useState()
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
 
   useEffect(() => {
     setSectionsTag({ sectionsData });
     setMostViewedArticles({ cardsData });
     setNewArticle({ cardsData });
+    setOnline(false)
     setLoading(false)
   }, [])
 
   return (
     <>{!online ? <BlogOffline /> :
       loading ? <Preloader /> :
-        <div className="container">
-          <div className="blog-header-page">
-            {sectionsTag.sectionsData.map(({ title, articleNumber }) => {
-              return <SectionsTag key={title} title={title} articleNumber={articleNumber} />
-            })}
+        <div className={width > 700 ? 'container' : null}>
+          <div className="blog_sections-tag">
+            <div className="blog_sections-tag-contener">
+              {sectionsTag.sectionsData.map(({ title, articleNumber }) => {
+                return <SectionsTag key={title} title={title} articleNumber={articleNumber} />
+              })}
+            </div>
           </div>
 
 
@@ -73,15 +79,6 @@ const Blog = () => {
             }
           </div>
 
-
-          <div className="text-buttons-group">
-            <div>
-              <SecondaryButton />
-              <SecondaryButton />
-              <SecondaryButton />
-            </div>
-            <p></p>
-          </div>
         </div>
     }
     </>
