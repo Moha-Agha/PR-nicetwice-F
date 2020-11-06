@@ -12,17 +12,17 @@
             display: inline-block;
             margin: auto 15px auto 15px;
         }
-
-     .sections-tag_number{
-            display: inline-block;
-            min-width: 25px ;
-            min-height: 25px ;
-            background: $brand-black;
-            border-radius: $border-radius-circal; 
-            text-align: center;
-            margin-left: 10px;
-            padding: 3px 6px;
-        }
+    
+         .sections-tag_number{
+                display: inline-block;
+                max-width: 30px ;
+                max-height: 35px ;
+                background: $brand-black;
+                border-radius: $border-radius-circal; 
+                text-align: center;
+                margin-left: 10px;
+                padding: 3px 6px;
+            }
     
 }
 
@@ -51,7 +51,7 @@
 
 // Desktop
 @media all and (max-width: 1366px) and (min-width: 1201px) {
- 
+
   }
 
 // X Desktop

@@ -1,0 +1,46 @@
+.article_body{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; 
+    margin-bottom: 20px;
+    direction: ltr;
+
+    .article_body_contener{
+       max-width: 560px;
+  
+            text-align: justify;
+            line-height: 32px;
+            color: $white;
+            font-size: map-get($font-sizes, 'm' );
+        
+      
+       .article_intro_text{
+          margin-bottom: 40px;
+       }   
+       .article_body_text{
+        margin-bottom: 20px;
+       }   
+       .article_conclusion_text{
+        margin-top: 40px;
+        margin-bottom: 20px;
+       }   
+
+  
+    .article_body_image{
+        max-width: 560px;
+        margin-bottom: 10px;
+         img{
+            background: $grey;
+            border-radius: $border-radius-xl;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+         }
+        .article_body_imageimage-info{
+            color: $darker-grey;
+            font-size: map-get($font-sizes, 'xs' );
+        }
+    }
+    }
+   
+}

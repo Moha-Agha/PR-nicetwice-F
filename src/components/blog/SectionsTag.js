@@ -1,8 +1,8 @@
 import React from "react";
 
-const SectionsTag = ({ title = '', articleNumber = '' }) => {
+const SectionsTag = ({ name = '', title = '', articleNumber = '' }) => {
   return (
-    <a href="section" className="sections-tag">
+    <a href={`/blog/section/${name}`} className="sections-tag">
       <span className="sections-tag_number">{articleNumber}</span>
       <span className="sections-tag_title">{title}</span>
     </a>
@@ -10,3 +10,5 @@ const SectionsTag = ({ title = '', articleNumber = '' }) => {
 };
 
 export default SectionsTag;
+
+

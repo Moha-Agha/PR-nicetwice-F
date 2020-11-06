@@ -1,0 +1,24 @@
+
+.article_more{
+    max-width: 560px;
+    
+    h2{
+        color: $dark-grey;
+        font-size: map-get($font-sizes, 's' );
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .article_more_blogs{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        .article-motivator{
+            margin:0 0 0 10px;
+        &:first-child{
+            margin:0 10px 0 0;
+        }
+      }
+    }
+}

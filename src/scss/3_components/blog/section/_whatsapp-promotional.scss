@@ -1,0 +1,43 @@
+.whatsapp-promotional{
+
+  min-width: 360px;
+  background-color: $brand-dark-grey;
+  padding: 35px 20px 20px 20px;
+  border-radius: $border-radius-xl;
+  text-align: center;
+
+  h2{
+    font-size: map-get($font-sizes , 'xl' );
+    text-transform: none;
+    color: $white;
+    margin:  20px auto 10px auto;
+  }
+  p{
+    font-size: map-get($font-sizes , 's' );
+    color: $grey;
+    opacity: 0.8;
+    line-height: 25px;
+    margin-bottom: 25px;
+  }
+
+  .secondary-button{
+    padding: 15px 70px;
+  }
+
+  .sub-link{
+    display: block;
+    margin: 10px auto 20px auto ;
+    font-size: map-get($font-sizes , 'xs' );
+    color: $brand-grey;
+  }
+
+} 
+
+ 
+  
+  
+  
+ 
+  
+ 
+          

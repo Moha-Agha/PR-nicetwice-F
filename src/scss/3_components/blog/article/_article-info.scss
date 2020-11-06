@@ -1,0 +1,100 @@
+.article_info{
+    direction: ltr;
+    display: flex;
+    flex-flow:  nowrap row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+ .article_author{
+    display: flex;
+    flex-flow: row nowrap;
+   
+    img{
+        width: 57px;
+        height: 57px;
+        border-radius: $rounded-pill;
+        object-fit: cover;
+    }
+    
+       div{
+        margin: auto 10px;
+        .article_author_name{
+            color: $white;
+            font-size: map-get($font-sizes, 'xs' );
+            font-weight: bold;
+            display: flex;
+            flex-flow: column nowrap;
+    
+            &::before{
+                content: "";
+                width: 30px;
+                height: 5px;
+                display: block;
+                background-color: $brand-red;
+                margin: 8px 0 5px auto ;
+                border-radius: $rounded-pill;
+                direction: rtl;
+            }
+        }
+        .article_author_publish-date{
+            color: $dark-grey;
+            font-size: map-get($font-sizes, 'xs' );
+        }
+       }
+    
+}
+
+.article_reading-duration {
+    background: $brand-dark-grey;
+    border-radius: $rounded-pill;
+    padding: 8px 15px;
+    color: $white;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-align: center;
+    opacity: 0.8;
+
+    .aicon-clock{
+        display: inline-block;
+        color: $white;
+        font-size: map-get($font-sizes, 's' );
+    }
+    span{
+        font-size: map-get($font-sizes, 'xs' );
+        margin-left: 6px;  
+    }
+}
+
+.article_send-me-to{
+    background: $brand-red;
+    border-radius: $rounded-pill;
+    padding: 8px 15px;
+    margin-left: 10px;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-align: center;
+    font-size: map-get($font-sizes, 'xs' );
+
+    a{       
+        display: inline-flex;
+        flex-flow: row nowrap;
+        align-items: center;
+      i{
+        display: inline-block;
+        color: $white;
+        font-size: map-get($font-sizes, 'm' );
+      }
+      span{   
+        color: $white;
+        margin-left: 6px;  
+         } 
+         .aicon-spotify{
+            color: $white;  
+         } 
+    }  
+}   
+
+}

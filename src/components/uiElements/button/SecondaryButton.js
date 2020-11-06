@@ -1,8 +1,8 @@
 import React from "react";
 
-const SecondaryButton = ({ title = "الانضمام لمجموعة الوتساب" }) => {
+const SecondaryButton = ({ title = "", className }) => {
   return (
-    <a href="#" className="secondary-button">
+    <a href="#" className={`secondary-button ${className}`}>
       {title}
     </a>
   );

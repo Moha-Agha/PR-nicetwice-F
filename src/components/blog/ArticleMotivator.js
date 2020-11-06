@@ -2,17 +2,17 @@ import React from "react";
 
 
 
-const ArticleMotivator = ({ image, tags = ['nicetwice', 'logo'], title, share, likes = '200K', views = '200K', youtube, spotify }) => {
+const ArticleMotivator = ({ id, image = 'https://source.unsplash.com/collection/12', tags = ['nicetwice', 'logo'], title, share, likes = '200K', views = '200K', youtube, spotify }) => {
 
 
 
   return (
-    <a href='artical' className="article-motivator" >
+    <a href={`/blog/article/${id}`} className="article-motivator" >
 
       <div className="article_motivator-content">
         <div className="article_social-media">
-          <a href="1" className="a-youtube"><i className="aicon-youtube"></i></a>
-          <a href="1-2" className="a-spotify"><i className="aicon-spotify"></i></a>
+          <a href={`/blog/article/${id}`} className="a-youtube"><i className="aicon-youtube"></i></a>
+          <a href={`/blog/article/${id}`} className="a-spotify"><i className="aicon-spotify"></i></a>
         </div>
 
         <div className="article_footer">
@@ -20,7 +20,7 @@ const ArticleMotivator = ({ image, tags = ['nicetwice', 'logo'], title, share, l
             {tags.map((tag) => { return <span key={tag} className="tag">{tag}</span> })}
           </div>
 
-          <a href="artical" className="article_title hover-1">
+          <a href={`/blog/article/${id}`} className="article_title hover-1">
             {title}
           </a>
 

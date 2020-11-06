@@ -1,0 +1,26 @@
+
+    .article_body_ad{
+        width: 300px;
+        height: 630px;
+        text-align: center;
+       
+        .article_body_ad_info{
+            display: inline-flex;
+            flex-flow: nowrap nowrap;
+            align-items: center;
+            color: $darker-grey;
+            font-size: map-get($font-sizes, 'xxs' );
+            margin: auto auto 10px auto;
+        .aicon-info{
+            margin-right: 5px;
+            font-size: map-get($font-sizes, 's' ); 
+                }
+        }
+        .article_body_ad_ad{
+            background: $grey;
+            border-radius: $border-radius-lg;
+            width: 300;
+            height: 600px;
+        }
+    }
+   

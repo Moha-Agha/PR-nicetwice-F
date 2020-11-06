@@ -1,4 +1,8 @@
 .article-motivators{
+
+} 
+
+.article-motivators-contener{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   column-gap: 40px;
@@ -6,13 +10,48 @@
   justify-content: center;
   margin: auto; 
   padding: 0;  
-} 
+}
+ 
+ // Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+  .article-motivators{
+    overflow: hidden;
+  } 
 
- 
-  
-  
-  
- 
-  
- 
-          
+  .article-motivators-contener{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 10px 0 10px 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    }
+
+    .article-motivators-contener::-webkit-scrollbar {
+        width: 10px;
+        height: 2px;
+      }
+      .article-motivators-contener::-webkit-scrollbar-thumb {
+        background: $black;
+        border-radius: 10px;
+      }
+      .article-motivators-contener::-webkit-scrollbar-track {
+        background: transparent;
+      }
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+}
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
+}

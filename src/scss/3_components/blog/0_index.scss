@@ -1,8 +1,10 @@
 @import "./article-motivator";
-@import "./article";
 @import "./articles-motivator";
 
 @import "./blog";
 
-@import "./section";
+@import "./section/0_index.scss";
 @import "./sections-tag";
+
+
+@import "./article/0_index.scss";

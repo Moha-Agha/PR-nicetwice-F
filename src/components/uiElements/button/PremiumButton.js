@@ -1,9 +1,9 @@
 import React from "react";
 
-const PremiumButton = () => {
+const PremiumButton = ({ title }) => {
   return (
     <a href="" className="premium-button" >
-      هل انت مسلم جديد؟
+      {title}
     </a>
   );
 };
