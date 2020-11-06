@@ -9,8 +9,6 @@ import ArticleTitle from "./ArticleTitle"
 import ArticleInfo from "./ArticleInfo"
 import ArticleImage from "./ArticleImage"
 import ArticleBody from "./ArticleBody"
-import ArticleOther from "./ArticleOther"
-import EditSuggestion from "./EditSuggestion"
 import ArticleMore from "./ArticleMore"
 
 import Sharing from "./Sharing"

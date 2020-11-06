@@ -37,9 +37,10 @@ const App = () => {
 
 
   useEffect(() => {
-    window.addEventListener('load', () => {
-      setLoading(true);
-    });
+    // window.addEventListener('load', () => {
+    //   setLoading(true);
+    // });
+    setLoading(true);
   })
 
   return (

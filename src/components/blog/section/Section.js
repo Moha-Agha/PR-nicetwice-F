@@ -32,23 +32,25 @@ const Section = () => {
         <HeaderOfSection />
 
         <div className="article-motivators">
-          {
-            sectionArticles.cardsData.slice(0, 6).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
-              return (
-                <ArticleMotivator
-                  key={id}
-                  id={id}
-                  image={image + id}
-                  tags={tags}
-                  title={title}
-                  share={share}
-                  likes={likes}
-                  views={views}
-                  youtube={id}
-                  spotify={id} />
-              )
-            })
-          }
+          <div className="article-motivators-contener">
+            {
+              sectionArticles.cardsData.slice(0, 6).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
+                return (
+                  <ArticleMotivator
+                    key={id}
+                    id={id}
+                    image={image + id}
+                    tags={tags}
+                    title={title}
+                    share={share}
+                    likes={likes}
+                    views={views}
+                    youtube={id}
+                    spotify={id} />
+                )
+              })
+            }
+          </div>
         </div>
 
         {/* <Pagination /> */}
