@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import { cardsData, sectionsData } from './BlogData'
 
-import BlogOffline from '../layout/errorPages/BlogOffline'
-import FooterRedirection from "../layout/footer/FooterRedirection"
+import FooterRedirection from "../0_1_layout/footer/FooterRedirection"
 
+import About from "../about/About"
 import ArticleMotivator from "./ArticleMotivator"
 import SectionsTag from "./SectionsTag"
-import Preloader from "../layout/Preloader"
+import Preloader from "../0_1_layout/Preloader"
 
 
 const Blog = () => {
@@ -33,10 +33,8 @@ const Blog = () => {
     <>
       {loading ? <Preloader /> :
         <>
-          <div className='container' >
-            {/* <BackTo to='/' title='Zurück zur Homepage' /> */}
 
-          </div>
+          <About />
 
           <div className={width > 700 ? 'container' : null}>
 

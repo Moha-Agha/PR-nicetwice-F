@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import messagesContext from '../../context/message/messageContext'
 
-import Spinner from '../layout/Spinner';
+import Spinner from '../0_1_layout/Spinner';
 
 import MessageItem from './MessageItem'
 

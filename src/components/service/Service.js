@@ -5,7 +5,7 @@ import { ServiceData } from "./ServiceData"
 import ServiceItem from "./ServiceItem"
 
 
-import NavContext from '../../../context/nav/navContext';
+import NavContext from '../../context/nav/navContext';
 
 const Service = () => {
 

@@ -3,10 +3,10 @@ import React, { useState, useContext, useEffect } from "react";
 import AlertContext from '../../context/alert/alertContext';
 import MessageContext from '../../context/message/messageContext';
 
-import Input from "../uiElements/forms/Input";
-import Select from "../uiElements/forms/Select";
-import Textarea from "../uiElements/forms/Textarea";
-import Button from "../uiElements/forms/Button";
+import Input from "../0_0_uiElements/forms/Input";
+import Select from "../0_0_uiElements/forms/Select";
+import Textarea from "../0_0_uiElements/forms/Textarea";
+import Button from "../0_0_uiElements/forms/Button";
 
 const Contacts = () => {
   const messageContext = useContext(MessageContext);

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import NavContext from '../../../context/nav/navContext'
 
-import Logo from '../../uiElements/Logo'
+import Logo from '../../0_0_uiElements/Logo'
 import Sidenav from './sidenav/Sidenav'
 
 const Navbar = () => {

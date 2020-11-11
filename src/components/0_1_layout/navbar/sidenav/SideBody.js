@@ -6,7 +6,7 @@ import NavContext from '../../../../context/nav/navContext';
 import AuthContext from '../../../../context/auth/authContext';
 
 import { SidebarData } from '../sidenav/SidebarData'
-import Login from '../../../auth/Login'
+import Login from '../../../2_auth/Login'
 
 function SideBody() {
     const navContext = useContext(NavContext)

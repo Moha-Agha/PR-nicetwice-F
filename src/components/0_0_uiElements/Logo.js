@@ -18,11 +18,9 @@ const Logo = ({ logo = 'logo_nav', type = '.png' }) => {
 
     if (window.innerWidth <= 750) {
       fullPath = require('../../media/image/' + logo + '_mobile' + type);
-      text = '';
 
     } else {
       fullPath = require('../../media/image/' + logo + type);
-      text = 'Mohamed Mahmoud Agha\'s blog';
     }
 
     setSlogan(text)

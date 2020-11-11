@@ -4,25 +4,27 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./scss/App.scss";
 
 
-import Preloader from './components/layout/Preloader';
+import Preloader from './components/0_1_layout/Preloader';
 
-import Navbar from './components/layout/navbar/Navbar';
-import Footer from './components/layout/footer/Footer';
+import Navbar from './components/0_1_layout/navbar/Navbar';
+import Footer from './components/0_1_layout/footer/Footer';
 
-import PageNotFound from './components/layout/errorPages/PageNotFound';
-import BlogOffline from './components/layout/errorPages/BlogOffline';
+import PageNotFound from './components/0_1_layout/errorPages/PageNotFound';
+import BlogOffline from './components/0_1_layout/errorPages/BlogOffline';
 
+import Portfolio from './components/portfolio/Portfolio';
+import Service from './components/service/Service';
 import ContactUs from './components/contacts/Contacts';
 import Messages from './components/messages/Messages';
 
 import Blog from './components/blog/Blog';
-import Section from './components/blog/section/Section';
-import Article from './components/blog/article/Article';
+// import Section from './components/blog/section/Section';
+// import Article from './components/blog/article/Article';
 
-import Alerts from './components/layout/Alerts';
-import ScrollToTopButton from './components/uiElements/button/ScrollToTopButton';
+import Alerts from './components/0_1_layout/Alerts';
+import ScrollToTopButton from './components/0_0_uiElements/button/ScrollToTopButton';
 
-import PrivateRoute from './components/routing/PrivateRoute';
+import PrivateRoute from './components/1_routing/PrivateRoute';
 
 import ContactState from './context/contact/ContactState';
 import MessagetState from './context/message/MessagetState';
@@ -64,6 +66,8 @@ const App = () => {
                       <Route exact path='/' component={Blog} />
                       <Route exact path='/section/:name' component={BlogOffline} />
                       <Route exact path='/article/:id' component={BlogOffline} />
+                      <Route exact path='/portfolio' component={Portfolio} />
+                      <Route exact path='/service' component={Service} />
                       <Route exact path='/contact' component={ContactUs} />
                       <PrivateRoute exact path='/messages' component={Messages} />
                       <Route path='*' component={PageNotFound} />

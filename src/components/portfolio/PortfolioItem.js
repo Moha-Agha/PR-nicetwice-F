@@ -6,7 +6,7 @@ const PortfolioItem = ({ number = '', image = '', type = '.jpg', href = '#' }) =
   let path
 
   if (image !== '') {
-    path = require('../../../media/image/' + image + type)
+    path = require('../../media/image/' + image + type)
     img = (
       <div className='portfolio-item_card'>
         < a href={href} target="_blank" rel="noopener noreferrer" className="portfolio-item-img" >
