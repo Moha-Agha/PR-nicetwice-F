@@ -12,7 +12,7 @@ const ArticleInfo = ({ ReadingTime, youtube, spotify, author, authorImage, date 
         </div>
       </div>
 
-      <div >
+      <div className="article_reading-send-container">
         <div className="article_reading-duration">
           <i className="aicon-clock"></i>
           <span>{ReadingTime}</span>

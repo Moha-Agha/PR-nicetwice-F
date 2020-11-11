@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 const Logo = ({ logo = 'logo_nav', type = '.png' }) => {
 
   const [path, setPath] = useState('');
+  const [slogan, setSlogan] = useState('');
 
   useEffect(() => {
     resizeScreen();
@@ -13,13 +14,18 @@ const Logo = ({ logo = 'logo_nav', type = '.png' }) => {
 
   function resizeScreen() {
     let fullPath
+    let text
 
     if (window.innerWidth <= 750) {
-      fullPath = require('../../media/image/' + logo + '_mobile' + type)
+      fullPath = require('../../media/image/' + logo + '_mobile' + type);
+      text = '';
+
     } else {
       fullPath = require('../../media/image/' + logo + type);
+      text = 'Mohamed Mahmoud Agha\'s blog';
     }
 
+    setSlogan(text)
     setPath(fullPath)
   }
 
@@ -27,6 +33,7 @@ const Logo = ({ logo = 'logo_nav', type = '.png' }) => {
   return (
     <a href='/' className='logo'>
       {path ? <img src={path} alt="niceTwice logo" /> : <h2 className='logo-title'>niceTwice</h2>}
+      <h5>{slogan}</h5>
     </a >
   );
 };

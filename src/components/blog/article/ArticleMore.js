@@ -7,32 +7,34 @@ import ArticleMotivator from '../ArticleMotivator';
 
 const ArticleMore = () => {
 
-
-  console.log(cardsData);
   return (
     <div className="article_more">
       <h2>Ähnliche Artikel</h2>
+
+
       <div className="article_more_blogs">
-
-        {
-          cardsData.slice(0, 2).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
-            return (
-              <ArticleMotivator
-                key={id}
-                id={id}
-                image={image + id}
-                tags={tags}
-                title={title}
-                share={share}
-                likes={likes}
-                views={views}
-                youtube={id}
-                spotify={id} />
-            )
-          })
-        }
-
+        <div className="article-motivators-contener">
+          {
+            cardsData.slice(0, 2).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
+              return (
+                <ArticleMotivator
+                  key={id}
+                  id={id}
+                  image={image + id}
+                  tags={tags}
+                  title={title}
+                  share={share}
+                  likes={likes}
+                  views={views}
+                  youtube={id}
+                  spotify={id} />
+              )
+            })
+          }
+        </div>
       </div>
+
+
     </div>
   );
 };

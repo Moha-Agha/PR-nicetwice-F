@@ -4,19 +4,7 @@ export const SidebarData = [
     path: '/'
   },
   {
-    title: 'Portfolio',
-    path: '#portfolio'
-  },
-  {
-    title: 'Service',
-    path: '#service'
-  },
-  {
     title: 'Kontakt',
     path: '/contact'
-  },
-  {
-    title: 'Blog',
-    path: '/blog'
   }
 ];

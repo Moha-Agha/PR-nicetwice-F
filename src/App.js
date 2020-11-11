@@ -9,7 +9,8 @@ import Preloader from './components/layout/Preloader';
 import Navbar from './components/layout/navbar/Navbar';
 import Footer from './components/layout/footer/Footer';
 
-import Home from './components/startPage/Home';
+import PageNotFound from './components/layout/errorPages/PageNotFound';
+import BlogOffline from './components/layout/errorPages/BlogOffline';
 
 import ContactUs from './components/contacts/Contacts';
 import Messages from './components/messages/Messages';
@@ -59,13 +60,13 @@ const App = () => {
                     </div>
                     <Alerts />
                     <Switch>
-                      <Route exact path='/' component={Home} />
-                      <Route exact path='/blog' component={Blog} />
-                      <Route exact path='/blog/section/:name' component={Section} />
-                      <Route exact path='/blog/article/:id' component={Article} />
+                      {/* <Route exact path='/' component={Home} /> */}
+                      <Route exact path='/' component={Blog} />
+                      <Route exact path='/section/:name' component={BlogOffline} />
+                      <Route exact path='/article/:id' component={BlogOffline} />
                       <Route exact path='/contact' component={ContactUs} />
                       <PrivateRoute exact path='/messages' component={Messages} />
-                      <Route path='*' component={Home} />
+                      <Route path='*' component={PageNotFound} />
                     </Switch>
                     <div className="container">
                       <Footer />

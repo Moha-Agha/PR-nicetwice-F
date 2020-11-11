@@ -98,3 +98,64 @@
 }   
 
 }
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+
+    .article_info{
+        display: block;
+        margin-bottom: 30px;
+    
+     .article_author{
+           div{
+            .article_author_name{
+               max-width: 200px;
+               white-space: nowrap;
+               overflow: hidden;
+               text-overflow: ellipsis;
+            }
+           }
+        
+    }
+
+    .article_reading-send-container{
+       display: flex;
+       flex-flow: row nowrap;
+       justify-content: space-between;
+       align-items: baseline;
+    }
+    
+    .article_reading-duration {
+     margin-top: 20px;
+    }
+    
+    .article_send-me-to{
+        padding: 8px 20px;
+        margin: 0;
+    
+        a{       
+          span{   
+            display: none; 
+             } 
+        }  
+    }   
+    
+    }
+    
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+}
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
+}

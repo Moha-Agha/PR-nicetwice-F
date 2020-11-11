@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 
 import { cardsData, sectionsData } from './BlogData'
 
-import BlogOffline from './BlogOffline'
-import BackTo from "../uiElements/button/BackTo"
+import BlogOffline from '../layout/errorPages/BlogOffline'
+import FooterRedirection from "../layout/footer/FooterRedirection"
 
 import ArticleMotivator from "./ArticleMotivator"
 import SectionsTag from "./SectionsTag"
 import Preloader from "../layout/Preloader"
+
 
 const Blog = () => {
 
@@ -24,16 +25,17 @@ const Blog = () => {
     setSectionsTag({ sectionsData });
     setMostViewedArticles({ cardsData });
     setNewArticle({ cardsData });
-    // setOnline(true)
+    setOnline(true)
     setLoading(false)
   }, [])
 
   return (
-    <>{!online ? <BlogOffline /> :
-      loading ? <Preloader /> :
+    <>
+      {loading ? <Preloader /> :
         <>
           <div className='container' >
-            <BackTo to='/' title='Zurück zur Homepage' />
+            {/* <BackTo to='/' title='Zurück zur Homepage' /> */}
+
           </div>
 
           <div className={width > 700 ? 'container' : null}>
@@ -93,9 +95,11 @@ const Blog = () => {
             </div>
 
           </div>
+
+          <FooterRedirection />
         </>
 
-    }
+      }
     </>
   );
 

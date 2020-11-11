@@ -1,4 +1,4 @@
-.article_image{
+.article_hero-image{
     margin-bottom: 20px;
     direction: ltr;
     img{
@@ -12,4 +12,28 @@
         color: $darker-grey;
         font-size: map-get($font-sizes, 'xs' );
     }
+}
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+    .article_hero-image{
+        img{
+            height: 430px;
+        }
+    }
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+}
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
 }

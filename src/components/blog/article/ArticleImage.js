@@ -2,7 +2,7 @@ import React from "react";
 
 const ArticleImage = ({ HeroImage, imageSource }) => {
   return (
-    <div className="article_image">
+    <div className="article_hero-image">
       <img src={HeroImage} />
       <span className="article_image_image-info">{imageSource}</span>
     </div>

@@ -14,8 +14,10 @@ const Section = () => {
 
   const [sectionArticles, setsectionArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [width, setWidth] = useState()
 
   useEffect(() => {
+    setWidth(window.innerWidth);
     setsectionArticles({ cardsData });
     setLoading(false)
   }, [])
@@ -25,36 +27,40 @@ const Section = () => {
     return <Preloader />;
   } else {
     return (
-      <div className='container'>
+      <>
+        <div className='container'>
 
-        <BackTo to='/blog' title='Zurück zum Blog' />
-
-        <HeaderOfSection />
-
-        <div className="article-motivators">
-          <div className="article-motivators-contener">
-            {
-              sectionArticles.cardsData.slice(0, 6).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
-                return (
-                  <ArticleMotivator
-                    key={id}
-                    id={id}
-                    image={image + id}
-                    tags={tags}
-                    title={title}
-                    share={share}
-                    likes={likes}
-                    views={views}
-                    youtube={id}
-                    spotify={id} />
-                )
-              })
-            }
-          </div>
+          <BackTo to='/blog' title='Zurück zum Blog' />
+          <HeaderOfSection />
         </div>
 
-        {/* <Pagination /> */}
-      </div>
+        <div className={width > 700 ? 'container' : null}>
+
+          <div className="article-motivators-without-slider">
+            <div className="article-motivators-contener-without-slider">
+              {
+                sectionArticles.cardsData.slice(0, 6).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
+                  return (
+                    <ArticleMotivator
+                      key={id}
+                      id={id}
+                      image={image + id}
+                      tags={tags}
+                      title={title}
+                      share={share}
+                      likes={likes}
+                      views={views}
+                      youtube={id}
+                      spotify={id} />
+                  )
+                })
+              }
+            </div>
+          </div>
+
+          {/* <Pagination /> */}
+        </div>
+      </>
     )
   }
 };

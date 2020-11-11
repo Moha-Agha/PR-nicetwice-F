@@ -1,5 +1,5 @@
 
-    .article_body_ad{
+    .article_body_ad-desktop{
         width: 300px;
         height: 630px;
         text-align: center;
@@ -24,3 +24,24 @@
         }
     }
    
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+    .article_body_ad-desktop{display: none;}
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+}
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
+}

@@ -21,7 +21,7 @@
   }
 
   .secondary-button{
-    padding: 15px 70px;
+    padding: 15px 20px;
   }
 
   .sub-link{
@@ -32,6 +32,52 @@
   }
 
 } 
+
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+  .whatsapp-promotional{
+
+    min-width: 300px;
+    background-color: $brand-black;
+    padding: 0;
+    margin: 20px 0 0 -5px;
+  
+    h2{
+     display: none;
+    }
+    p{
+      display: none;
+    }
+  
+    .secondary-button{
+      width: 100%;
+      margin: 0;
+    }
+  
+    .sub-link{
+      display: block;
+      margin: 10px auto 0 auto ;
+    }
+  
+  } 
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+}
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
+}
 
  
   

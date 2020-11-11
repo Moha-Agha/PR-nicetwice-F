@@ -50,38 +50,41 @@ const Article = () => {
     return <Preloader />;
   } else {
     return (
-      <div className="container">
-        <div className="article">
+      <>
+        <div className="container">
+          <div className="article">
 
-          <Sharing />
+            <Sharing />
 
-          <Breadcrumb
-            section={section} />
+            <Breadcrumb
+              section={section} />
 
-          <ArticleTitle
-            title={title}
-            subtitle={subtitle} />
+            <ArticleTitle
+              title={title}
+              subtitle={subtitle} />
 
-          <ArticleInfo
-            ReadingTime={ReadingTime}
-            youtube={youtube}
-            spotify={spotify}
-            author={author}
-            authorImage={authorImage}
-            date={date} />
+            <ArticleInfo
+              ReadingTime={ReadingTime}
+              youtube={youtube}
+              spotify={spotify}
+              author={author}
+              authorImage={authorImage}
+              date={date} />
 
-          <ArticleImage
-            HeroImage={HeroImage}
-            imageSource={imageSource} />
+            <ArticleImage
+              HeroImage={HeroImage}
+              imageSource={imageSource} />
 
-          <ArticleBody
-            articleBody={articleBody} likes={likes} />
+            <ArticleBody
+              articleBody={articleBody}
+              likes={likes} />
 
-
-          <ArticleMore />
-
+          </div>
         </div>
-      </div>
+        <div className={width > 700 ? 'container' : null}>
+          <ArticleMore />
+        </div>
+      </>
     )
   }
 };

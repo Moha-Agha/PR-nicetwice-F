@@ -7,7 +7,7 @@ const ArticleMotivator = ({ id, image = 'https://source.unsplash.com/collection/
 
 
   return (
-    <a href={`/blog/article/${id}`} className="article-motivator" >
+    <a href={`/article/${id}`} className="article-motivator" >
 
       <div className="article_motivator-content">
         <div className="article_social-media">

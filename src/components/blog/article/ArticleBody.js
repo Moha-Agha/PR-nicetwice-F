@@ -1,7 +1,7 @@
 import React from "react";
 
 import ArticleOther from './ArticleOther'
-import ArticleAD from './ArticleAD'
+import ArticleADDesktop from './ArticleADDesktop'
 
 const ArticleBody = ({ articleBody }) => {
 
@@ -30,13 +30,8 @@ const ArticleBody = ({ articleBody }) => {
 
       </div>
 
-      <div className="article_body_ad">
-        <div className="article_body_ad_info">
-          <i className="aicon-info"></i>
-          Wir sind nicht verantwortlich für den Inhalt dieser Anzeige.
-      </div>
-
-        <ArticleAD />
+      <div className="article_body_ad-desktop">
+        <ArticleADDesktop />
       </div>
     </div>
   );

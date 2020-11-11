@@ -1,5 +1,5 @@
 import React from "react";
-import SecondaryButton from "../../uiElements/button/SecondaryButton"
+import PremiumButton from "../../uiElements/button/PremiumButton"
 
 const WhatsappPromotional = () => {
   return (
@@ -10,7 +10,7 @@ const WhatsappPromotional = () => {
       <p>
         Registriere dich jetzt und bleib immer auf dem Laufenden.
       </p>
-      <SecondaryButton title='Join us' />
+      <PremiumButton title='Join WhatsApp-Newsletter' />
       <a href="" className="sub-link">
         Newsletter abmelden
       </a>
