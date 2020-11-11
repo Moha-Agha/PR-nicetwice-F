@@ -8,6 +8,8 @@ import Select from "../0_0_uiElements/forms/Select";
 import Textarea from "../0_0_uiElements/forms/Textarea";
 import Button from "../0_0_uiElements/forms/Button";
 
+import FooterRedirection from "../0_1_layout/footer/FooterRedirection"
+
 const Contacts = () => {
   const messageContext = useContext(MessageContext);
   const alertContext = useContext(AlertContext);
@@ -49,8 +51,6 @@ const Contacts = () => {
       }
     }
   };
-
-
 
   const switchStep = () => {
     switch (step) {
@@ -161,14 +161,17 @@ const Contacts = () => {
 
 
   return (
-    <div className="container">
-      <div id="contact" className="contact-us">
-        <h1 className="contact-us_title"> sag mir, was du brauchst.<br /><span className="contact-us_subtitle"> was du wirklich brauchst.</span></h1>
+    <>
+      <div className="container">
+        <div id="contact" className="contact-us">
+          <h1 className="contact-us_title"> sag mir, was du brauchst.<br /><span className="contact-us_subtitle"> was du wirklich brauchst.</span></h1>
 
-        {switchStep()}
-        <p className="city-name">HAMBURG</p>
+          {switchStep()}
+          <p className="city-name">HAMBURG</p>
+        </div>
       </div>
-    </div>
+      <FooterRedirection to='home' />
+    </>
   );
 };
 

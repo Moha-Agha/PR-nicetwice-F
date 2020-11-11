@@ -21,6 +21,7 @@ const Blog = () => {
   const [width, setWidth] = useState()
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setWidth(window.innerWidth);
     setSectionsTag({ sectionsData });
     setMostViewedArticles({ cardsData });
@@ -71,9 +72,9 @@ const Blog = () => {
             <h3 className="blog-home-title_h3">Neue Artikel</h3>
 
             <div className="article-motivators">
-              <div className="article-motivators-contener">
+              <div className="article-motivators-contener8">
                 {
-                  newArticles.cardsData.slice(0, 6).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
+                  newArticles.cardsData.slice(0, 8).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
                     return (
                       <ArticleMotivator
                         key={id}

@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 import { ServiceData } from "./ServiceData"
 import ServiceItem from "./ServiceItem"
 
-
 import NavContext from '../../context/nav/navContext';
+
+import FooterRedirection from "../0_1_layout/footer/FooterRedirection"
 
 const Service = () => {
 
@@ -39,6 +40,7 @@ const Service = () => {
 
       </div>
 
+      <FooterRedirection />
     </div >
   )
 

@@ -1,30 +1,24 @@
 import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
 
-import NavContext from '../../../context/nav/navContext';
-
-const FooterRedirection = () => {
-  const navContext = useContext(NavContext)
-  const { currentNav, setCurrentNav } = navContext;
-
-
+const FooterRedirection = ({ to }) => {
 
   return (
     <div className="redirection-footer">
 
-      {currentNav === 'home' ?
+      {to === 'home' ?
         <>
           <h1>
             Zurück zur
           </h1>
-          <Link to='/' onClick={() => { setCurrentNav('contact') }} ><h1>Homepage?</h1></Link>
+          <Link to='/'  ><h1>Homepage?</h1></Link>
         </>
         :
         <>
           <h1>
-            Na, möchtest du uns
+            Na, möchtest du mir
           </h1>
-          <Link to='/contact' onClick={() => { setCurrentNav('home') }}><h1>kontaktieren?</h1></Link>
+          <Link to='/contact' ><h1>kontaktieren?</h1></Link>
         </>
       }
 

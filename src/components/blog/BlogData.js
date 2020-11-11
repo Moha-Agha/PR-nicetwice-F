@@ -47,7 +47,7 @@ export const cardsData = [
   {
     id: 5,
     image: 'https://source.unsplash.com/collection/',
-    tags: ['Branding', 'Logo'],
+    tags: ['Branding', 'Front-end'],
     title: 'Picking Colors for Your Data Visualizations',
     share: '',
     likes: '25K',
@@ -58,8 +58,30 @@ export const cardsData = [
   {
     id: 6,
     image: 'https://source.unsplash.com/collection/',
-    tags: ['Front-end', 'UI'],
+    tags: ['UX', 'UI'],
     title: 'UI vs. UX: A Concise Explanation',
+    share: '',
+    likes: '25K',
+    views: '50K',
+    youtube: '',
+    spotify: ''
+  },
+  {
+    id: 7,
+    image: 'https://source.unsplash.com/collection/',
+    tags: ['UI', 'UX'],
+    title: 'What is User Flow?',
+    share: '',
+    likes: '25K',
+    views: '108K',
+    youtube: '',
+    spotify: ''
+  },
+  {
+    id: 8,
+    image: 'https://source.unsplash.com/collection/',
+    tags: ['UX', 'UI'],
+    title: 'What is User Journey?',
     share: '',
     likes: '25K',
     views: '50K',
