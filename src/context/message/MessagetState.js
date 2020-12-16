@@ -12,6 +12,7 @@ import {
 const MessageState = props => {
   const initialState = {
     messages: null,
+    loading: true,
     error: null
   };
 
@@ -20,7 +21,7 @@ const MessageState = props => {
   // Get Messages
   const getMessages = async () => {
     try {
-      const res = await axios.get('/api/messages');
+      const res = await axios.get('/messages');
 
       dispatch({
         type: GET_MESSAGES,
@@ -42,7 +43,7 @@ const MessageState = props => {
       }
     };
     try {
-      const res = await axios.post('/api/messages', message, config);
+      const res = await axios.post('/messages', message, config);
 
       dispatch({
         type: ADD_MESSAGE,
@@ -61,7 +62,7 @@ const MessageState = props => {
   // Delete Message
   const deleteMessage = async id => {
     try {
-      await axios.delete(`/api/messages/${id}`);
+      await axios.delete(`/messages/${id}`);
 
       dispatch({
         type: DELETE_MESSAGE,
@@ -79,6 +80,7 @@ const MessageState = props => {
     <MessageContext.Provider
       value={{
         messages: state.messages,
+        loading: state.loading,
         error: state.error,
         getMessages,
         addMessage,

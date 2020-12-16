@@ -1,17 +1,12 @@
-import React, { useEffect, useState, useContext } from "react";
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
 
 import { ServiceData } from "./ServiceData"
 import ServiceItem from "./ServiceItem"
 
-import NavContext from '../../context/nav/navContext';
-
+import BackTo from "../0_0_uiElements/button/BackTo"
 import FooterRedirection from "../0_1_layout/footer/FooterRedirection"
 
 const Service = () => {
-
-  const navContext = useContext(NavContext)
-  const { setCurrentNav } = navContext;
 
   const [width, setWidth] = useState()
 
@@ -23,6 +18,7 @@ const Service = () => {
   return (
     <div id="service" >
       <div className="container">
+        <BackTo to='/' title='Zurück zum Home' />
         <h1 className="service_title"> Service </h1>
         <p className="service_subtitle">Modernste Technologie und Startup freundliche Atmosphäre</p>
       </div>
@@ -34,9 +30,9 @@ const Service = () => {
           })}
         </div>
 
-        <div className='service-notic'>
+        {/* <div className='service-notic'>
           Bist du Startup-Unternehmer/in und die Kosten sind für dich zu hoch? <Link to="/contact" onClick={() => { setCurrentNav('home') }}>Schreib uns eine Nachricht!</Link>
-        </div>
+        </div> */}
 
       </div>
 

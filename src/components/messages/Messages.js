@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import messagesContext from '../../context/message/messageContext'
 
-import Spinner from '../0_1_layout/Spinner';
+import Preloader from '../0_1_layout/Preloader';
 
 import MessageItem from './MessageItem'
 
@@ -16,15 +16,16 @@ const Messages = () => {
     // eslint-disable-next-line 
   }, []);
 
-  if (messages !== null && !loading) {
+  if (!loading) {
     return (
-      <div className="messages">
-        {messages.map(message => (<MessageItem key={message._id} message={message} />))}
-        {(messages.length === 0) ? <h3>No message</h3> : null}
+      <div className="container">
+        <div className="messages">
+          {messages.length !== 0 ? messages.map(message => (<MessageItem key={message._id} message={message} />)) : <h3>No message</h3>}
+        </div>
       </div>
     )
   } else {
-    return (<Spinner />)
+    return (<Preloader />)
   }
 
 };

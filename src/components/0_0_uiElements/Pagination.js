@@ -1,7 +1,7 @@
 import React from "react";
 
-import PremiumButton from '../uiElements/button/PremiumButton';
-import SecondaryButton from '../uiElements/button/SecondaryButton';
+import PremiumButton from '../0_0_uiElements/button/PremiumButton';
+import SecondaryButton from '../0_0_uiElements/button/SecondaryButton';
 
 const Pagination = () => {
   return (

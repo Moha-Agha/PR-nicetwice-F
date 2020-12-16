@@ -1,11 +1,19 @@
-import React from "react";
-
-import { cardsData } from "../BlogData";
+import React, { useEffect, useContext } from "react";
+import SectionContext from '../../../context/section/sectionContext';
 
 import ArticleMotivator from '../ArticleMotivator';
+import Preloader from "../../0_1_layout/Preloader"
+
+const ArticleMore = ({ sectionSlug, articleSlug }) => {
+
+  const sectionContext = useContext(SectionContext);
+  const { getSection, section } = sectionContext;
 
 
-const ArticleMore = () => {
+  useEffect(() => {
+    getSection(sectionSlug)
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <div className="article_more">
@@ -14,22 +22,35 @@ const ArticleMore = () => {
 
       <div className="article_more_blogs">
         <div className="article-motivators-contener">
-          {
-            cardsData.slice(0, 2).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
-              return (
-                <ArticleMotivator
-                  key={id}
-                  id={id}
-                  image={image + id}
-                  tags={tags}
-                  title={title}
-                  share={share}
-                  likes={likes}
-                  views={views}
-                  youtube={id}
-                  spotify={id} />
-              )
-            })
+          {section != null ? section[1].filter(sectionSlugs => sectionSlugs.slug !== articleSlug).slice(0, 2).map(({
+            _id,
+            slug,
+            title,
+            subtitle,
+            heroImage,
+            socialMedia,
+            articleBody,
+            likes,
+            views,
+            tags,
+            images }) => {
+            return (
+              <ArticleMotivator
+                key={_id}
+                id={_id}
+                slug={slug}
+                title={title}
+                subtitle={subtitle}
+                heroImage={heroImage}
+                socialMedia={socialMedia}
+                articleBody={articleBody}
+                likes={likes}
+                views={views}
+                tags={tags}
+                images={images}
+              />
+            )
+          }) : <Preloader />
           }
         </div>
       </div>

@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
-import { cardsData, sectionsData } from './BlogData'
+import SectionContext from '../../context/section/sectionContext';
+import ArticleContext from '../../context/article/articleContext';
 
 import FooterRedirection from "../0_1_layout/footer/FooterRedirection"
 
@@ -12,81 +13,82 @@ import Preloader from "../0_1_layout/Preloader"
 
 const Blog = () => {
 
-  const [online, setOnline] = useState(false);
+  const sectionContext = useContext(SectionContext);
+  const { getSections, sections, loadingSection } = sectionContext;
 
-  const [sectionsTag, setSectionsTag] = useState([]);
-  const [mostViewedArticles, setMostViewedArticles] = useState([]);
-  const [newArticles, setNewArticle] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [width, setWidth] = useState()
+  const articleContext = useContext(ArticleContext);
+  const { getMostVisitedArticles, getLatestArticles, mostVisitedArticles, latestArticles, loadingArticle } = articleContext;
+
+
+  const [width, setWidth] = useState(1024)
 
   useEffect(() => {
+    getSections();
+    //most visited atricles
+    getMostVisitedArticles(3);
+    //Latest articles articles
+    getLatestArticles(8);
+
     window.scrollTo(0, 0);
     setWidth(window.innerWidth);
-    setSectionsTag({ sectionsData });
-    setMostViewedArticles({ cardsData });
-    setNewArticle({ cardsData });
-    setOnline(true)
-    setLoading(false)
+
+    // eslint-disable-next-line
   }, [])
 
   return (
     <>
-      {loading ? <Preloader /> :
+      {loadingSection && loadingArticle ? <Preloader /> :
         <>
-
           <About />
 
           <div className={width > 700 ? 'container' : null}>
 
             <div className="blog_sections-tag">
               <div className="blog_sections-tag-contener">
-                {sectionsTag.sectionsData.map(({ name, title, articleNumber }) => {
-                  return <SectionsTag key={name} name={name} title={title} articleNumber={articleNumber} />
-                })}
+                {sections ? sections.map((section) => {
+                  return <SectionsTag key={section._id} id={section._id} title={section.title} slug={section.slug} />
+                }) : <Preloader />}
               </div>
             </div>
 
             <div className="article-motivators">
               <div className="article-motivators-contener">
-                {
-                  mostViewedArticles.cardsData.slice(0, 3).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
-                    return (
-                      <ArticleMotivator
-                        key={id}
-                        id={id}
-                        image={image + id}
-                        tags={tags}
-                        title={title}
-                        share={share}
-                        likes={likes}
-                        views={views}
-                        youtube={id}
-                        spotify={id} />
-                    )
-                  })
+                {mostVisitedArticles !== null && mostVisitedArticles.map(({ _id, slug, heroImage, tags, title, share, likes, views, socialMedia }) => {
+                  return (
+                    <ArticleMotivator
+                      key={_id}
+                      id={_id}
+                      slug={slug}
+                      heroImage={heroImage}
+                      tags={tags}
+                      title={title}
+                      share={share}
+                      likes={likes}
+                      views={views}
+                      socialMedia={socialMedia} />
+                  )
+                })
                 }
               </div>
             </div>
 
-            <h3 className="blog-home-title_h3">Neue Artikel</h3>
-
+            {latestArticles !== null && (latestArticles.length !== 0 && <h3 className="blog-home-title_h3">Neue Artikel</h3>)}
             <div className="article-motivators">
               <div className="article-motivators-contener8">
                 {
-                  newArticles.cardsData.slice(0, 8).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
+                  latestArticles !== null && latestArticles.map(({ _id, slug, heroImage, tags, title, share, likes, views, socialMedia }) => {
                     return (
                       <ArticleMotivator
-                        key={id}
-                        id={id}
-                        image={image + id}
+                        key={_id}
+                        id={_id}
+                        slug={slug}
+                        heroImage={heroImage}
                         tags={tags}
                         title={title}
                         share={share}
                         likes={likes}
                         views={views}
-                        youtube={id}
-                        spotify={id} />
+                        socialMedia={socialMedia} />
                     )
                   })
                 }

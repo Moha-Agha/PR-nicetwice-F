@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-const PremiumButton = ({ title }) => {
+const PremiumButton = ({ title, goTo = '/' }) => {
   return (
-    <a href="" className="premium-button" >
+    <Link to={goTo} type="button" className="premium-button" >
       {title}
-    </a>
+    </Link>
   );
 };
 

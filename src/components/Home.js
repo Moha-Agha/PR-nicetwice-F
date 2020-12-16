@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 
 import Alerts from '../layout/Alerts';
 
-import SocialMedia from '../uiElements/SocialMedia';
-import MessengerIcon from '../uiElements/MessengerIcon';
+import SocialMedia from '../components/0_0_uiElements/SocialMedia';
+import MessengerIcon from '../components/0_0_uiElements/MessengerIcon';
 import Portfolio from './portfolio/Portfolio';
 import Service from './service/Service';
 

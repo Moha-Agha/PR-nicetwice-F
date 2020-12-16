@@ -1,33 +1,22 @@
-import React, { useEffect, useState } from "react";
-
-import { sectionsData } from './SectionData'
-
-import Preloader from "../../layout/Preloader"
+import React from "react";
 
 import HeaderInfo from "./HeaderInfo"
-import WhatsappPromotional from "./WhatsappPromotional"
+import BannerPromotional from "./BannerPromotional"
 
-const HeaderOfSection = () => {
+const HeaderOfSection = ({ sectionInfo }) => {
 
-  const [sectionInfo, setSectionInfo] = useState({});
-  const [loading, setLoading] = useState(true);
+  const {
+    title,
+    description
+  } = sectionInfo;
 
-  useEffect(() => {
-    setSectionInfo(sectionsData);
-    setLoading(false)
-  }, [])
+  return (
+    <div className="header-of-section">
+      <HeaderInfo title={title} description={description} />
+      <BannerPromotional TextTitle={'Suchst du Profi?'} TextBody={'Ich helfe dir mit meiner groß Erfahrung in ' + title + ' Bereich'} />
+    </div>
+  );
 
-
-  if (loading) {
-    return <Preloader />;
-  } else {
-    return (
-      <div className="header-of-section">
-        <HeaderInfo title={sectionInfo.title} description={sectionInfo.description} />
-        <WhatsappPromotional />
-      </div>
-    );
-  }
 };
 
 export default HeaderOfSection;

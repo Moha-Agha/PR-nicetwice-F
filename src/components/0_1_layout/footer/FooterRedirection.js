@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from 'react-router-dom';
 
 const FooterRedirection = ({ to }) => {
@@ -16,7 +16,7 @@ const FooterRedirection = ({ to }) => {
         :
         <>
           <h1>
-            Na, möchtest du mir
+            Na, möchtest du mich
           </h1>
           <Link to='/contact' ><h1>kontaktieren?</h1></Link>
         </>

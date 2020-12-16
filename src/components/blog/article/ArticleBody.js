@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ArticleOther from './ArticleOther'
 import ArticleADDesktop from './ArticleADDesktop'
 
-const ArticleBody = ({ articleBody }) => {
+const ArticleBody = ({ articleBody, likes, id, articleTitle, articleSlug }) => {
 
-  const { intro, body, conclusion, likes } = articleBody
+  useEffect(() => {
+    imageStyleRemove()
+    // eslint-disable-next-line
+  }, [])
 
   return (
 
@@ -13,20 +16,16 @@ const ArticleBody = ({ articleBody }) => {
 
       <div className="article_body_contener">
 
-        <div className='article_intro_text'>{intro}</div>
+        <div id='article_content' className='article_content' dangerouslySetInnerHTML={{ __html: articleBody }} />
 
-        <div className="article_body_image">
-          <img src="https://source.unsplash.com/collection/60" />
+        {/* <div className="article_body_image">
+          <img src="https://source.unsplash.com/collection/60" alt='alt of the' />
           <span className="article_body_imageimage-info">
             Quelle - so und so Seite
         </span>
-        </div>
-        <div className='article_body_text'>{body}</div>
-        <div className='article_conclusion_text'>{conclusion}</div>
+        </div> */}
 
-
-        <ArticleOther
-          likes={likes} />
+        <ArticleOther likes={likes} id={id} articleTitle={articleTitle} articleSlug={articleSlug} />
 
       </div>
 
@@ -36,5 +35,14 @@ const ArticleBody = ({ articleBody }) => {
     </div>
   );
 };
+
+const imageStyleRemove = () => {
+  let images = document.getElementById('article_content').getElementsByTagName("img");
+  images = Array.from(images);
+  if (images.length !== 0) {
+    images.map((image) => image.removeAttribute("style"))
+  }
+
+}
 
 export default ArticleBody;

@@ -7,6 +7,7 @@ import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
   USER_LOADED,
+  UPDATE_USER,
   AUTH_ERROR,
   LOGIN_SUCCESS,
   LOGIN_FAIL,
@@ -30,7 +31,7 @@ const AuthState = props => {
     setAuthToken(localStorage.token);
 
     try {
-      const res = await axios.get('/api/auth');
+      const res = await axios.get('/auth');
 
       dispatch({
         type: USER_LOADED,
@@ -41,7 +42,33 @@ const AuthState = props => {
     }
   };
 
-  // Register User
+  // Update user Info
+  const updateUser = async userInfo => {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
+    try {
+      const res = await axios.put(
+        `/auth/${userInfo.id}`,
+        userInfo,
+        config
+      );
+
+      dispatch({
+        type: UPDATE_USER,
+        payload: res.data
+      });
+    } catch (err) {
+      dispatch({
+        type: AUTH_ERROR,
+        payload: err.response.msg
+      });
+    }
+  };
+
+  // Register User Most remove
   const register = async formData => {
     const config = {
       headers: {
@@ -50,7 +77,7 @@ const AuthState = props => {
     };
 
     try {
-      const res = await axios.post('/api/users', formData, config);
+      const res = await axios.post('/users', formData, config);
 
       dispatch({
         type: REGISTER_SUCCESS,
@@ -75,7 +102,7 @@ const AuthState = props => {
     };
 
     try {
-      const res = await axios.post('/api/auth', formData, config);
+      const res = await axios.post('/auth', formData, config);
 
       dispatch({
         type: LOGIN_SUCCESS,
@@ -107,6 +134,7 @@ const AuthState = props => {
         error: state.error,
         register,
         loadUser,
+        updateUser,
         login,
         logout,
         clearErrors

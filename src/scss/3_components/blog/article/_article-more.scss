@@ -12,15 +12,27 @@
 
     .article_more_blogs{
         .article-motivators-contener{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        column-gap: 0;
+            // display: flex;
+            // flex-flow: row nowrap;
+            // justify-content: space-between;
+            // column-gap: 0;
+
+            display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px,1fr));
+    column-gap: 5px;
 
         .article-motivator{
             margin:0 0 0 10px;
         &:first-child{
             margin:0 10px 0 0;
+        }
+        .article_tags{ 
+            .tag{
+                font-size: map-get($font-sizes, 'xs' );
+            }
+        }
+        .article_title {
+             margin: 0 0 10px 0; 
         }
       }
     }

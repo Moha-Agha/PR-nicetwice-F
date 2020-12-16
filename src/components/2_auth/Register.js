@@ -2,8 +2,8 @@ import React, { useState, useContext, useEffect } from 'react';
 import AlertContext from '../../context/alert/alertContext';
 import AuthContext from '../../context/auth/authContext';
 
-import Input from '../../components/uiElements/forms/Input';
-import Button from '../../components/uiElements/forms/Button';
+import Input from '../0_0_uiElements/forms/Input';
+import Button from '../0_0_uiElements/forms/Button';
 
 const Register = props => {
   const alertContext = useContext(AlertContext);

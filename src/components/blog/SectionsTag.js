@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-const SectionsTag = ({ name = '', title = '', articleNumber = '' }) => {
+const SectionsTag = ({ id, title = '', slug = '', articleNumber = '' }) => {
   return (
-    <a href={`/section/${name}`} className="sections-tag">
+    <Link to={`/section/${slug}`} className="sections-tag">
       <span className="sections-tag_number">{articleNumber}</span>
       <span className="sections-tag_title">{title}</span>
-    </a>
+    </Link>
   );
 };
 

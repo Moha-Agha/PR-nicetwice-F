@@ -66,6 +66,10 @@
             line-height: 26px;
             color: $dark-grey;
             font-size: map-get($font-sizes, 's' );
+            max-width: 130px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             &::before{
                 content: "#";
@@ -164,6 +168,12 @@
            }
            .article_title{
             margin: 10px auto 40px auto;
+        }
+
+        .article_tags{ 
+            .tag{
+                max-width: 100px;
+            }
         }
     } 
   }

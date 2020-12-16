@@ -1,68 +1,92 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useContext, useRef } from "react";
 
-import { cardsData } from '../BlogData'
+import SectionContext from '../../../context/section/sectionContext';
 
 import ArticleMotivator from "../ArticleMotivator"
 
 import HeaderOfSection from "./HeaderOfSection"
-import Pagination from "../../uiElements/Pagination"
-import BackTo from "../../uiElements/button/BackTo"
+import BackTo from "../../0_0_uiElements/button/BackTo"
 
-import Preloader from "../../layout/Preloader"
+import Preloader from "../../0_1_layout/Preloader"
 
-const Section = () => {
+const Section = (props) => {
 
-  const [sectionArticles, setsectionArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const sectionContext = useContext(SectionContext);
+  const { getSection, section } = sectionContext;
+
   const [width, setWidth] = useState()
+  const [uiLoding, setUiLoding] = useState(false)
 
-  useEffect(() => {
+  // runs only once before rendering the component.
+  const willMount = useRef(true);
+  if (willMount.current) {
+    let spl = props.location.pathname.split('/');
+    let res = spl[2]
+    getSection(res)
+
     setWidth(window.innerWidth);
-    setsectionArticles({ cardsData });
-    setLoading(false)
-  }, [])
 
+    //loading ui
+    setTimeout(() => {
+      setUiLoding(true)
+    }, 500);
 
-  if (loading) {
-    return <Preloader />;
-  } else {
-    return (
-      <>
-        <div className='container'>
-
-          <BackTo to='/blog' title='Zurück zum Blog' />
-          <HeaderOfSection />
-        </div>
-
-        <div className={width > 700 ? 'container' : null}>
-
-          <div className="article-motivators-without-slider">
-            <div className="article-motivators-contener-without-slider">
-              {
-                sectionArticles.cardsData.slice(0, 6).map(({ id, image, tags, title, share, likes, views, youtube, spotify }) => {
-                  return (
-                    <ArticleMotivator
-                      key={id}
-                      id={id}
-                      image={image + id}
-                      tags={tags}
-                      title={title}
-                      share={share}
-                      likes={likes}
-                      views={views}
-                      youtube={id}
-                      spotify={id} />
-                  )
-                })
-              }
-            </div>
-          </div>
-
-          {/* <Pagination /> */}
-        </div>
-      </>
-    )
+    willMount.current = false;
   }
+
+
+
+  if (!uiLoding) {
+    return <Preloader />
+  } else if (section !== null) {
+    return (<>
+      <div className='container'>
+        <BackTo to='/' title='Zurück zum Home' />
+        <HeaderOfSection sectionInfo={section[0]} />
+      </div>
+
+      <div className={width > 700 ? 'container' : null}>
+
+        <div className="article-motivators-without-slider">
+          <div className="article-motivators-contener-without-slider">
+            {section[1].slice(0, 6).map(({
+              _id,
+              slug,
+              title,
+              subtitle,
+              heroImage,
+              socialMedia,
+              articleBody,
+              likes,
+              views,
+              tags,
+              images }) => {
+              return (
+                <ArticleMotivator
+                  key={_id}
+                  id={_id}
+                  slug={slug}
+                  title={title}
+                  subtitle={subtitle}
+                  heroImage={heroImage}
+                  socialMedia={socialMedia}
+                  articleBody={articleBody}
+                  likes={likes}
+                  views={views}
+                  tags={tags}
+                  images={images}
+                />
+              )
+            })}
+          </div>
+        </div>
+
+        {/* <Pagination /> */}
+      </div>
+    </>)
+  } else { return <Preloader /> }
+
+
 };
 
 export default Section;

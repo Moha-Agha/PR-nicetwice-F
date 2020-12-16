@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 const FooterCopyright = () => {
   return (
     <div className="footer-copyright">
-      <p><a href='#!'>Datenschutz</a> - <a href='#!'>Sitemap</a> - <a href='#!'>AGB</a> - <a href='#!'>Impressum</a></p>
+      <div className='footer-link'>
+        <Link to='/privacy'>Datenschutz</Link> - <Link to='#!'>Sitemap</Link> - <Link to='/conditions'>AGB</Link> - <Link to='/Imprint'>Impressum</Link>
+      </div>
       <p><span role="img" aria-label="copyright">©️</span> 2020-2021 nicetwice.de</p>
     </div>
   );

@@ -164,7 +164,16 @@ $utilities: (
   cursor: pointer;
 }
 
+// Text Selection Color
+::-moz-selection { /* Code for Firefox */
+  color: $white;
+  background:$brand-red;
+}
 
+::selection {
+  color: $white;
+  background:$brand-red;
+}
 
 // scrollbar
 

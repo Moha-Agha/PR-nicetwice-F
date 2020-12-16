@@ -9,7 +9,7 @@ function SidenavHead() {
     const { showSidebar, setSidebarItem, setCurrentNav } = navContext;
 
     const authContext = useContext(AuthContext);
-    const { isAuthenticated, logout, user, loadUser } = authContext;
+    const { isAuthenticated, logout, loadUser } = authContext;
 
     useEffect(() => {
         loadUser();
@@ -23,11 +23,9 @@ function SidenavHead() {
 
     const authLinks = (
         <>
-            <span>Hello {user && user.name}</span> /
-            <a onClick={onLogout} href='#!'>
-                <i className='fas fa-sign-out-alt' />{' '}
-                <span className='hide-sm'>Logout</span>
-            </a>
+            <span onClick={() => { setSidebarItem('profile') }}>Hello Admin</span>
+            /
+            <span onClick={onLogout}>Logout</span>
         </>
     );
     const guestLinks = (

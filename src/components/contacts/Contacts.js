@@ -8,6 +8,8 @@ import Select from "../0_0_uiElements/forms/Select";
 import Textarea from "../0_0_uiElements/forms/Textarea";
 import Button from "../0_0_uiElements/forms/Button";
 
+import BackTo from "../0_0_uiElements/button/BackTo"
+
 import FooterRedirection from "../0_1_layout/footer/FooterRedirection"
 
 const Contacts = () => {
@@ -19,7 +21,8 @@ const Contacts = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  })
+    // eslint-disable-next-line
+  }, [])
 
   const [step, setStep] = useState(0);
 
@@ -71,7 +74,7 @@ const Contacts = () => {
           <>
             <form onSubmit={onSubmit} className='contact-us_message' >
 
-              <p>Hallo Nice,</p>
+              <p>Hallo Mohammad,</p>
               <div className="message-item">
                 <span className=' message-item_title_1 '>mein Name ist</span>
                 <Input
@@ -107,6 +110,7 @@ const Contacts = () => {
                   placeholder='Art des Projekts*'
                   required='required'
                   classs='  message-item_input_3 '
+                  options={[{ _id: '1', slug: 'Logo' }, { _id: '2', slug: 'Webseite' }, { _id: '3', slug: 'Logo+Webseite' }]}
                 />
               </div>
               <div className="message-item">
@@ -152,7 +156,6 @@ const Contacts = () => {
                 value='SENDEN'
               />
             </form >
-
           </>
         )
 
@@ -163,6 +166,7 @@ const Contacts = () => {
   return (
     <>
       <div className="container">
+        <BackTo to='/' title='Zurück zum Home' />
         <div id="contact" className="contact-us">
           <h1 className="contact-us_title"> sag mir, was du brauchst.<br /><span className="contact-us_subtitle"> was du wirklich brauchst.</span></h1>
 

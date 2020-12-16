@@ -1,5 +1,6 @@
 import React from 'react';
 import { Editor, EditorState, RichUtils, getDefaultKeyBinding, convertToRaw } from 'draft-js';
+import draftToHtml from 'draftjs-to-html';
 import 'draft-js/dist/Draft.css';
 
 
@@ -10,6 +11,7 @@ class TextEditor extends React.Component {
         this.state = { editorState: EditorState.createEmpty() };
 
         this.focus = () => this.refs.editor.focus();
+        this.onChange = (editorState) => this.setState({ editorState });
         this.onChange = (editorState) => this.setState({ editorState });
 
         this.handleKeyCommand = this._handleKeyCommand.bind(this);
@@ -74,10 +76,8 @@ class TextEditor extends React.Component {
             }
         }
 
-        const blooog = convertToRaw(contentState);
-        let blogJeson = JSON.stringify(blooog);
-        console.log(blooog);
-
+        let blogBody = draftToHtml(convertToRaw(contentState))
+        this.props.handleArticleBody(blogBody)
         return (
             <div className="RichEditor-root">
                 <BlockStyleControls

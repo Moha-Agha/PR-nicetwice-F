@@ -21,11 +21,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.aicon-align-to-left:before {
+  content: '\F02A'
+}
 .aicon-at:before {
   content: '\F01D'
 }
 .aicon-behance-logo:before {
   content: '\F021'
+}
+.aicon-bold:before {
+  content: '\F02B'
+}
+.aicon-center-align:before {
+  content: '\F02C'
 }
 .aicon-clock:before {
   content: '\F00D'
@@ -42,14 +51,23 @@
 .aicon-facebook:before {
   content: '\F001'
 }
+.aicon-header:before {
+  content: '\F02D'
+}
 .aicon-heart-like:before {
   content: '\F018'
 }
 .aicon-heart:before {
   content: '\F002'
 }
+.aicon-image:before {
+  content: '\F02E'
+}
 .aicon-info:before {
   content: '\F00E'
+}
+.aicon-italicize-text:before {
+  content: '\F02F'
 }
 .aicon-lamp:before {
   content: '\F023'
@@ -60,8 +78,20 @@
 .aicon-left-arrow:before {
   content: '\F01C'
 }
+.aicon-left-indentation-option:before {
+  content: '\F030'
+}
 .aicon-link:before {
   content: '\F010'
+}
+.aicon-linkedin:before {
+  content: '\F036'
+}
+.aicon-list:before {
+  content: '\F031'
+}
+.aicon-listing-option:before {
+  content: '\F032'
 }
 .aicon-menu:before {
   content: '\F016'
@@ -78,14 +108,23 @@
 .aicon-order-food:before {
   content: '\F026'
 }
+.aicon-pencil:before {
+  content: '\F039'
+}
 .aicon-phone-call:before {
   content: '\F01E'
+}
+.aicon-pinterest:before {
+  content: '\F037'
 }
 .aicon-print:before {
   content: '\F012'
 }
 .aicon-right-arrow:before {
   content: '\F01A'
+}
+.aicon-right-quotation-mark:before {
+  content: '\F033'
 }
 .aicon-search:before {
   content: '\F003'
@@ -105,11 +144,20 @@
 .aicon-star:before {
   content: '\F027'
 }
+.aicon-strikethrough:before {
+  content: '\F034'
+}
+.aicon-telegram:before {
+  content: '\F038'
+}
 .aicon-trash:before {
   content: '\F01F'
 }
 .aicon-twitter:before {
   content: '\F00C'
+}
+.aicon-underline-text-option:before {
+  content: '\F035'
 }
 .aicon-up-arrow:before {
   content: '\F019'

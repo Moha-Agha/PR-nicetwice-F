@@ -55,6 +55,20 @@
     background: $white;
     opacity: 0.3;
   }
+
+  .admin-nav{
+    margin: 20px auto 10px auto;
+    opacity: 0.3;
+
+    &:after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin-top: 10px;
+      background: $white;
+    }
+  }
 }
 
 .sidenavOpen {
@@ -79,6 +93,11 @@
   color: $darker-grey !important;
   cursor: default;
 }
+
+.active-label{
+  color: $brand-red !important;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}

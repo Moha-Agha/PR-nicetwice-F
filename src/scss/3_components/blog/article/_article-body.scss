@@ -8,22 +8,46 @@
     .article_body_contener{
        max-width: 560px;
   
-            text-align: justify;
             line-height: 32px;
             color: $white;
             font-size: map-get($font-sizes, 'm' );
         
-      
-       .article_intro_text{
+       .article_content{
           margin-bottom: 40px;
-       }   
-       .article_body_text{
-        margin-bottom: 20px;
-       }   
-       .article_conclusion_text{
-        margin-top: 40px;
-        margin-bottom: 20px;
-       }   
+
+          h1{ 
+              font-size: map-get($font-sizes, 'xxxl' );
+              margin-bottom: 20px;
+             }
+          h2{ 
+              font-size: map-get($font-sizes, 'xxl' );
+              margin-bottom: 15px;
+            }
+          h3{ font-size: map-get($font-sizes, 'xl' );}
+          h4{ font-size: map-get($font-sizes, 'l' );}
+          h5{ font-size: map-get($font-sizes, 'm' );}
+          h6{ font-size: map-get($font-sizes, 's' );}
+          p{ font-size: map-get($font-sizes, 'l' );}
+          .image{
+              margin: 10px 0px 0px 0px;
+          }
+          img{
+           
+                background: $grey;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+             
+            .article_body_imageimage-info{
+                color: $darker-grey;
+                font-size: map-get($font-sizes, 'xs' );
+            }
+          }
+          figcaption{
+            color: $darker-grey;
+            font-size: map-get($font-sizes, 'xs' ); 
+          }
+       }    
 
   
     .article_body_image{
@@ -62,6 +86,9 @@
 
 // Desktop
 @media all and (max-width: 1366px) and (min-width: 1201px) {
+    .article_body_contener{
+        width: 560px;
+    }
 
 }
 

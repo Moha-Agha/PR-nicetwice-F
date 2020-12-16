@@ -2,35 +2,35 @@ export const ServiceData = [
   {
     title: 'Logo',
     icon: 'aicon-star',
-    price: '2800',
+    price: '000',
     notic: 'Ohne weitere Kosten',
     time: '2 Wochen'
   },
   {
     title: 'E-Commerce website',
     icon: 'aicon-online-shop',
-    price: '5600',
+    price: '000',
     notic: 'zzgl. monatlicher Kosten',
     time: '4 Wochen'
   },
   {
     title: 'Firmenwebsite',
     icon: 'aicon-website',
-    price: '2800',
+    price: '000',
     notic: 'zzgl. monatlicher Kosten',
     time: '2 Wochen'
   },
   {
     title: 'Restaurant-website',
     icon: 'aicon-order-food',
-    price: '5600',
+    price: '000',
     notic: 'zzgl. monatlicher Kosten',
     time: '4 Wochen'
   },
   {
     title: 'Blog website',
     icon: 'aicon-laptop',
-    price: '4200',
+    price: '000',
     notic: 'zzgl. monatlicher Kosten',
     time: '3 Wochen'
   },

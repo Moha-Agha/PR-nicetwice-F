@@ -1,20 +1,27 @@
 import React from "react";
 
-const Select = ({ type, name, value, placeholder, classs, required, onChange, handleChange }) => {
+const Select = ({ classs, type, name, onChange, required = false, currentValue = '', value = '', placeholder = '', handleChange, options = '' }) => {
   let classesName = 'select ' + classs;
+
   return (
     <div className={classesName} >
-
+      <label htmlFor={name}>{placeholder}</label>
       <select
         type={type}
         name={name}
         onChange={onChange}
         required={required}
+        defaultValue={currentValue}
+        multiple={false}
       >
-        <option value="DEFAULT" disabled hidden>{placeholder}</option>
-        <option value="logo">Logo</option>
-        <option value="website">Webseite</option>
-        <option value="logo-website">Logo und Webseite</option>
+
+        {options.map((value) => {
+          return <option
+            key={value._id}
+            value={value._id}>
+            {value.slug}
+          </option>
+        })}
       </select>
 
     </div>
@@ -22,3 +29,5 @@ const Select = ({ type, name, value, placeholder, classs, required, onChange, ha
 };
 
 export default Select;
+
+

@@ -1,6 +1,8 @@
 .article_hero-image{
+    position: relative;
     margin-bottom: 20px;
     direction: ltr;
+
     img{
         background: $grey;
         border-radius: $border-radius-xl;

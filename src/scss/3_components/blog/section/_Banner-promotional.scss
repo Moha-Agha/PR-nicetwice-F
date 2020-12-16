@@ -1,14 +1,14 @@
-.whatsapp-promotional{
+.Banner-promotional{
 
-  min-width: 360px;
+  max-width: 364px;
   background-color: $brand-dark-grey;
-  padding: 35px 20px 20px 20px;
+  padding: 35px 35px 35px 20px;
   border-radius: $border-radius-xl;
   text-align: center;
 
   h2{
     font-size: map-get($font-sizes , 'xl' );
-    text-transform: none;
+    text-transform: uppercase;
     color: $white;
     margin:  20px auto 10px auto;
   }
@@ -17,7 +17,7 @@
     color: $grey;
     opacity: 0.8;
     line-height: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 
   .secondary-button{
@@ -26,7 +26,7 @@
 
   .sub-link{
     display: block;
-    margin: 10px auto 20px auto ;
+    margin: 10px auto 10px auto ;
     font-size: map-get($font-sizes , 'xs' );
     color: $brand-grey;
   }
@@ -37,7 +37,7 @@
 
 // Mobile
 @media all and (max-width: 700px) and (min-width: 340px) {
-  .whatsapp-promotional{
+  .Banner-promotional{
 
     min-width: 300px;
     background-color: $brand-black;
