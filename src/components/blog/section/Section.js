@@ -29,7 +29,7 @@ const Section = (props) => {
     //loading ui
     setTimeout(() => {
       setUiLoding(true)
-    }, 500);
+    }, 800);
 
     willMount.current = false;
   }
