@@ -15,7 +15,8 @@ import {
   DELETE_ARTICLE,
   SET_CURRENT_ARTICLE,
   CLEAR_CURRENT_ARTICLE,
-  ARTICLE_ERROR
+  ARTICLE_ERROR,
+  API
 } from '../types';
 
 const ArticleState = props => {
@@ -36,7 +37,7 @@ const ArticleState = props => {
   // Get article for start page of the blug
   const getArticles = async () => {
     try {
-      const res = await axios.get(`/articles`);
+      const res = await axios.get(`${API}/articles`);
 
       dispatch({
         type: GET_ARTICLES,
@@ -54,7 +55,7 @@ const ArticleState = props => {
   const getMostVisitedArticles = async (articleNumber) => {
     // /${articleNumber}
     try {
-      const res = await axios.get(`/articles/article/most-visited`);
+      const res = await axios.get(`${API}/articles/article/most-visited`);
 
       dispatch({
         type: GET_MOST_VISITED_ARTICLES,
@@ -71,7 +72,7 @@ const ArticleState = props => {
   // Get Latest Articles
   const getLatestArticles = async (articleNumber) => {
     try {
-      const res = await axios.get(`/articles/article/latest-articles`);
+      const res = await axios.get(`${API}/articles/article/latest-articles`);
 
       dispatch({
         type: GET_LATEST_ARTICLES,
@@ -88,7 +89,7 @@ const ArticleState = props => {
   // Get article by section
   const getArticleBySection = async (sectionId) => {
     try {
-      const res = await axios.get(`/articles/section/${sectionId}`);
+      const res = await axios.get(`${API}/articles/section/${sectionId}`);
 
       dispatch({
         type: GET_SECTION_ARTICLES,
@@ -105,7 +106,7 @@ const ArticleState = props => {
   // Get article by id
   const getArticleById = async (id) => {
     try {
-      const res = await axios.get(`/articles/article/${id}`);
+      const res = await axios.get(`${API}/articles/article/${id}`);
 
       dispatch({
         type: GET_ARTICLE,
@@ -122,7 +123,7 @@ const ArticleState = props => {
   // Get article by slug
   const getArticleBySlug = async (slug) => {
     try {
-      const res = await axios.get(`/articles/${slug}`);
+      const res = await axios.get(`${API}/articles/${slug}`);
 
       dispatch({
         type: GET_ARTICLE,
@@ -144,7 +145,7 @@ const ArticleState = props => {
       }
     };
     try {
-      const res = await axios.post('/articles', articleItems, config);
+      const res = await axios.post(`${API}/articles`, articleItems, config);
 
       dispatch({
         type: ADD_ARTICLE,
@@ -163,7 +164,7 @@ const ArticleState = props => {
   // Delete article
   const deleteArticle = async id => {
     try {
-      await axios.delete(`/articles/${id}`);
+      await axios.delete(`${API}/articles/${id}`);
 
       dispatch({
         type: DELETE_ARTICLE,
@@ -186,7 +187,7 @@ const ArticleState = props => {
     };
     try {
       const res = await axios.put(
-        `/articles/${articleFields.id}`,
+        `${API}/articles/${articleFields.id}`,
         articleFields,
         config
       );
@@ -212,7 +213,7 @@ const ArticleState = props => {
     };
     try {
       const res = await axios.put(
-        `/articles/newView/${slug}`,
+        `${API}/articles/newView/${slug}`,
         config
       );
 
@@ -237,7 +238,7 @@ const ArticleState = props => {
     };
     try {
       const res = await axios.put(
-        `/articles/newLike/${id}`,
+        `${API}/articles/newLike/${id}`,
         config
       );
 

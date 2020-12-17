@@ -12,7 +12,8 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  CLEAR_ERRORS
+  CLEAR_ERRORS,
+  API
 } from '../types';
 
 const AuthState = props => {
@@ -31,7 +32,7 @@ const AuthState = props => {
     setAuthToken(localStorage.token);
 
     try {
-      const res = await axios.get('/auth');
+      const res = await axios.get(`${API}/auth`);
 
       dispatch({
         type: USER_LOADED,
@@ -51,7 +52,7 @@ const AuthState = props => {
     };
     try {
       const res = await axios.put(
-        `/auth/${userInfo.id}`,
+        `${API}/auth/${userInfo.id}`,
         userInfo,
         config
       );
@@ -77,7 +78,7 @@ const AuthState = props => {
     };
 
     try {
-      const res = await axios.post('/users', formData, config);
+      const res = await axios.post(`${API}/users`, formData, config);
 
       dispatch({
         type: REGISTER_SUCCESS,
@@ -102,7 +103,7 @@ const AuthState = props => {
     };
 
     try {
-      const res = await axios.post('/auth', formData, config);
+      const res = await axios.post(`${API}/auth`, formData, config);
 
       dispatch({
         type: LOGIN_SUCCESS,

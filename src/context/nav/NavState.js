@@ -1,7 +1,12 @@
 import React, { useReducer } from 'react';
 import NavContext from './navContext';
 import navReducer from './navReducer';
-import { SHOW_NAV_SIDEBAR, SET_NAV_SIDEBAR_ITEM, SET_NAV_SIDEBAR_SECTION, SET_NAV_CURRENT } from '../types';
+import {
+  SHOW_NAV_SIDEBAR,
+  SET_NAV_SIDEBAR_ITEM,
+  SET_NAV_SIDEBAR_SECTION,
+  SET_NAV_CURRENT
+} from '../types';
 
 const NavState = props => {
   const initialState = {

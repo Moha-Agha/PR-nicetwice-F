@@ -6,7 +6,8 @@ import {
   GET_MESSAGES,
   ADD_MESSAGE,
   DELETE_MESSAGE,
-  MESSAGE_ERROR
+  MESSAGE_ERROR,
+  API
 } from '../types';
 
 const MessageState = props => {
@@ -21,7 +22,7 @@ const MessageState = props => {
   // Get Messages
   const getMessages = async () => {
     try {
-      const res = await axios.get('/messages');
+      const res = await axios.get(`${API}/messages`);
 
       dispatch({
         type: GET_MESSAGES,
@@ -43,7 +44,7 @@ const MessageState = props => {
       }
     };
     try {
-      const res = await axios.post('/messages', message, config);
+      const res = await axios.post(`${API}/messages`, message, config);
 
       dispatch({
         type: ADD_MESSAGE,
@@ -62,7 +63,7 @@ const MessageState = props => {
   // Delete Message
   const deleteMessage = async id => {
     try {
-      await axios.delete(`/messages/${id}`);
+      await axios.delete(`${API}/messages/${id}`);
 
       dispatch({
         type: DELETE_MESSAGE,

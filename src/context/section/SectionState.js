@@ -10,7 +10,8 @@ import {
   DELETE_SECTIONS,
   SET_CURRENT_SECTION,
   CLEAR_CURRENT_SECTION,
-  SECTIONS_ERROR
+  SECTIONS_ERROR,
+  API
 } from '../types';
 
 const SectionState = props => {
@@ -27,7 +28,7 @@ const SectionState = props => {
   // Get Sections
   const getSections = async () => {
     try {
-      const res = await axios.get('/sections');
+      const res = await axios.get(`${API}/sections`);
 
       dispatch({
         type: GET_SECTIONS,
@@ -43,7 +44,7 @@ const SectionState = props => {
   // Get Section
   const getSection = async (slug) => {
     try {
-      const res = await axios.get(`/sections/${slug}`);
+      const res = await axios.get(`${API}/sections/${slug}`);
 
       dispatch({
         type: GET_SECTION,
@@ -65,7 +66,7 @@ const SectionState = props => {
       }
     };
     try {
-      const res = await axios.post('/sections', sectionFields, config);
+      const res = await axios.post(`${API}/sections`, sectionFields, config);
 
       dispatch({
         type: ADD_SECTIONS,
@@ -84,7 +85,7 @@ const SectionState = props => {
   // Delete Section
   const deleteSection = async id => {
     try {
-      await axios.delete(`/sections/${id}`);
+      await axios.delete(`${API}/sections/${id}`);
 
       dispatch({
         type: DELETE_SECTIONS,
@@ -107,7 +108,7 @@ const SectionState = props => {
     };
     try {
       const res = await axios.put(
-        `/sections/${sectionFields.id}`,
+        `${API}/sections/${sectionFields.id}`,
         sectionFields,
         config
       );

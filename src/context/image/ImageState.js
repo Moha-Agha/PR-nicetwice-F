@@ -5,7 +5,8 @@ import imageReducer from './imageReducer';
 import {
   GET_IMAGES,
   DELETE_IMAGE,
-  IMAGES_ERROR
+  IMAGES_ERROR,
+  API
 } from '../types';
 
 const ArticleState = props => {
@@ -21,7 +22,7 @@ const ArticleState = props => {
   // Get Images 
   const getImages = async () => {
     try {
-      const res = await axios.get(`/image`);
+      const res = await axios.get(`${API}/image`);
 
       dispatch({
         type: GET_IMAGES,
@@ -38,7 +39,7 @@ const ArticleState = props => {
   // Delete Image
   const deleteImage = async id => {
     try {
-      await axios.delete(`/image/${id}`);
+      await axios.delete(`${API}/image/${id}`);
 
       dispatch({
         type: DELETE_IMAGE,
