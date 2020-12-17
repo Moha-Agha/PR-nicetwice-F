@@ -16,6 +16,7 @@ const ArticleMotivator = ({
   views,
   tags = ['nicetwice', 'logo'] }) => {
 
+  const imageUrl = 'https://nicetwicede.herokuapp.com/'
   return (
     <div className="article-motivator" >
 
@@ -43,7 +44,7 @@ const ArticleMotivator = ({
 
       <div className="article_image">
         <div className="article_gradient-dark"></div>
-        <img src={`http://localhost:5000/image/${heroImage.image}`} alt="nicetwice" />
+        <img src={`${imageUrl}image/${heroImage.image}`} alt="nicetwice" />
       </div>
     </div>
   );
