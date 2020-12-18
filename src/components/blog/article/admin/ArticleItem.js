@@ -52,7 +52,7 @@ const ArticleItem = ({ article }) => {
       <p>{date.slice(8, 10) + '.' + date.slice(5, 7) + '.' + date.slice(0, 4)}</p>
     </div>
     <div className='article-image'>
-      <img src={`${imageUrl}/image/${heroImage.image}`} alt={heroImage.alt} />
+      <img src={`${imageUrl}image/${heroImage.image}`} alt={heroImage.alt} />
     </div>
     <p className="article-title"><Link to={`/article/${slug}`}>{title}</Link></p>
     <p className="article-subtitle">{subtitle}</p>
