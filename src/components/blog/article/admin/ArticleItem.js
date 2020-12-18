@@ -6,6 +6,8 @@ import ImageContext from '../../../../context/image/imageContext';
 
 
 const ArticleItem = ({ article }) => {
+  const imageUrl = 'https://nicetwicede.herokuapp.com/';
+
   let history = useHistory();
   const articleContext = useContext(ArticleContext)
   const { setCurrentArticle, deleteArticle } = articleContext;
@@ -50,7 +52,7 @@ const ArticleItem = ({ article }) => {
       <p>{date.slice(8, 10) + '.' + date.slice(5, 7) + '.' + date.slice(0, 4)}</p>
     </div>
     <div className='article-image'>
-      <img src={`http://localhost:5000/image/${heroImage.image}`} alt={heroImage.alt} />
+      <img src={`${imageUrl}/image/${heroImage.image}`} alt={heroImage.alt} />
     </div>
     <p className="article-title"><Link to={`/article/${slug}`}>{title}</Link></p>
     <p className="article-subtitle">{subtitle}</p>

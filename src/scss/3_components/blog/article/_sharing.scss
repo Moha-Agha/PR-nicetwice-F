@@ -82,7 +82,18 @@
 
 // Mobile
 @media all and (max-width: 700px) and (min-width: 340px) {
-    .sharing{display: none;}
+    .sharing{
+        display: none;
+        right: 0;
+    }
+
+    .sharing-tooltip {
+        margin-top: 44px;
+        right: -11px;
+        &:before {
+            display: none;
+          }
+      }
 }
 
 // Tablet

@@ -68,7 +68,11 @@
 
 // Mobile
 @media all and (max-width: 700px) and (min-width: 340px) {
-    .article_body_ad-desktop{display: none;}
+    .article_body_ad-desktop{
+        display: none;
+        width: 0;
+        height: 0;
+    }
 }
 
 // Tablet

@@ -28,3 +28,11 @@
 .hide{
     display: none;
 }
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+    .scroll-to-top-button{
+        left: 300px;
+
+    }
+}
