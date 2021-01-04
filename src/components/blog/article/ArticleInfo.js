@@ -6,11 +6,13 @@ const ArticleInfo = ({ ReadingTime, socialMedia, author, avatar, date }) => {
 
   const { youtube, spotify } = socialMedia
 
+  const imageUrl = 'https://nicetwicede.herokuapp.com/'
+
   return (
     <div className="article_info">
 
       <div className="article_author">
-        <img src={`http://localhost:5000/image/${avatar}`} alt="article author" width="55" height="55" />
+        <img src={`${imageUrl}/image/${avatar}`} alt="article author" width="55" height="55" />
         <div>
           <div className="article_author_name"> {author} </div>
           <div className="article_author_publish-date">{publishDate}</div>
