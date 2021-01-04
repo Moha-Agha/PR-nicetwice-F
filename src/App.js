@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import "./scss/App.scss";
 
@@ -18,14 +18,8 @@ import NavState from './context/nav/NavState';
 
 const App = () => {
 
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
-
-  useEffect(() => {
-    window.addEventListener('load', () => {
-      setLoading(true);
-    });
-  })
 
   return (
 
