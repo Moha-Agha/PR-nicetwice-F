@@ -9,7 +9,7 @@ export const PortfolioData = [
     id: 2,
     image: 'portfolio-2',
     type: '.jpg',
-    href: 'https://inislam.net/'
+    href: ''
   },
   {
     id: 3,
