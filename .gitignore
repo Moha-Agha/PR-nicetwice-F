@@ -1,6 +1,8 @@
 node_modules/
 /config/default.json
 
+./utils/variables.js
+
 .DS_Store
 /client/.env.local
 /client/.env.development.local
