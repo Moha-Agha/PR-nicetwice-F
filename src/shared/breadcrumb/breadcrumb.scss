@@ -1,0 +1,14 @@
+.breadcrumb{
+    display:block;
+    color: $breadcrumb;
+    font-size: map-get($font-sizes , 'm' );
+    direction: $direction;
+    .breadcrumb_first{
+        color: $breadcrumb-first;
+    }
+    .breadcrumb_second{
+      color: $breadcrumb-second;
+      margin: auto 5px;
+    }
+  }
+  

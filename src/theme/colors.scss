@@ -1,0 +1,79 @@
+
+// brand color
+$brand-prime:#FA163F;
+$brand-secondary:#262626;
+$brand-third:#FBFDFD;
+
+//Interactive colors
+$brand-prime-1:#FB264D;
+$brand-prime-2:#FF395C;
+$brand-prime--1:#F2123A;
+$brand-prime--2:#E50830;
+
+$brand-secondary-1:#474646;    
+$brand-secondary-2:#363535;
+$brand-secondary--1:#202020;
+$brand-secondary--2:#161616;
+
+$brand-third-2:#E9E9E9;
+$brand-third-1:#F5F5F5;
+$brand-third--1:#FEFFFF;
+$brand-third--2:#FFFFFF;
+
+// Colors grey
+$grey-darkest:#151515;
+$grey-darker:#202020;
+$grey-dark:#333333;
+$grey:#717171; 
+$grey-light:#82878C;
+$grey-lighter:#A0A5AA;
+$grey-lightest:#B4B9BE;
+
+
+//Denotative Colors
+$succes: #004A0A;
+$error: #8B0000;
+$warning: #C26100;
+$info: #00396C;
+
+//Denotative Text
+$text-light: $brand-third;
+$text-dark: $brand-secondary;
+
+//Denotative Colors - Button
+$button-premium: $brand-secondary;
+$button-secondary: $brand-third;
+$button-default: $brand-prime;
+$button-dangerous: #8B0000;
+$button-not-allow: #B4B9BE;
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$red: $brand-prime;
+$red-dark: $brand-prime--2;
+$red-darker: #b80022;
+
+// UI color
+$page-background: $brand-secondary;
+    //card
+    $card:$grey-dark;
+    $card-title:$brand-third;
+    $card-subtitle:rgba($brand-third, 0.5);
+    $card-text:$text-light;
+    $card-subtext:rgba($text-light, 0.5);
+    //breadcrumb
+    $breadcrumb:rgba($text-light, 0.8);
+    $breadcrumb-first:rgba($text-light, 0.5);
+    $breadcrumb-second:rgba($text-light, 0.8);
+    //Like and shear
+    $heart-like:$brand-prime;  
+    //preloader
+    $preloader:$page-background;
+    $preloader-border:$page-background;
+    $preloader-car:$brand-third--2;
+    $preloader-car-strike:$brand-prime;
+    $preloader-text:$brand-third--2;
+
+// $gradient-dark : linear-gradient(180deg, rgba($brand-color-darker,0) 0%, rgba($brand-color-darker,0.15) 30%, rgba($brand-color-darker,0.8) 70%, rgba($brand-color-darker,0.95) 100%);
+

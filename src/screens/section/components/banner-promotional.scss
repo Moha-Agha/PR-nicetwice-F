@@ -1,0 +1,86 @@
+.Banner-promotional{
+  background-color: $card;
+  padding: 40px;
+  border-radius: $border-radius;
+  text-align: center;
+
+  h2{
+    font-size: map-get($font-sizes , 'l' );
+    text-transform: uppercase;
+    color: $card-title;
+    margin:  15px auto 15px auto;
+  }
+  p{
+    font-size: map-get($font-sizes , 's' );
+    color: $card-text;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+
+  .secondary-button{
+    padding: 15px 20px;
+  }
+
+  .sub-link{
+    display: block;
+    margin: 10px auto 10px auto ;
+    font-size: map-get($font-sizes , 'xs' );
+    color: $card-subtext;
+  }
+
+} 
+
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+  .Banner-promotional{
+
+    min-width: 300px;
+    background-color: $black;
+    padding: 0;
+    margin: 20px 0 0 -5px;
+  
+    h2{
+     display: none;
+    }
+    p{
+      display: none;
+    }
+  
+    .secondary-button{
+      width: 100%;
+      margin: 0;
+    }
+  
+    .sub-link{
+      display: block;
+      margin: 10px auto 0 auto ;
+    }
+  
+  } 
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+}
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
+}
+
+ 
+  
+  
+  
+ 
+  
+ 
+          

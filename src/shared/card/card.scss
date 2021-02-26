@@ -1,0 +1,32 @@
+
+    .card{
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: space-between;
+         align-items: center;
+         background-color: $card;
+         border-radius: $card-border-radius;
+         padding: 0 5%;
+         @include shadow-card();
+
+         .card_imag{
+             width: 45%;
+             display: flex;
+             justify-content: center;
+             margin-top: -20px;
+         }
+
+        .card_text{
+            width: 52%;
+            .card_text-title{
+                font-size: map-get($font-sizes , 'xl' );
+                color: $card-title;
+            }
+            .card_text-subtitle{
+                font-size: map-get($font-sizes , 'm' );
+                color: $card-subtitle;
+                margin-top: 15px;
+            }
+         }
+    }
+

@@ -1,0 +1,43 @@
+
+ @mixin shadow-card() {
+       box-shadow: 0 6px 15px 0 rgba($black, 0.10);
+     }
+
+ @mixin shadow-section-card() {
+       box-shadow: 0 6px 25px 0 rgba($brand-prime, 0.09);
+     }
+    
+ @mixin shadow-book-card() {
+       box-shadow: -2px 5px 20px 0 rgba($brand-prime, 0.10);
+     }
+    
+ @mixin add-shadow-0() {
+   box-shadow: none;
+ }
+    
+ @mixin add-shadow-xs() {
+   box-shadow: 0 3px 10px 0 rgba($brand-secondary, 0.07);
+ }
+ @mixin add-shadow-s() {
+   box-shadow: 0 3px 14px 0 rgba($brand-secondary, 0.09);
+ }
+
+ @mixin add-shadow-m() {
+   box-shadow: 0px 0.6rem 0.9rem 0px rgba($brand-secondary, 0.12);
+ }
+
+ @mixin add-shadow-l() {
+   box-shadow: 0 0.5rem 2rem 0 rgba($brand-secondary, 0.15);
+ }
+
+ @mixin add-shadow-xl() {
+   box-shadow: 0 0.5rem 3rem 0 rgba($brand-secondary, 0.15);
+ }
+
+ @mixin shadow-seidnav() {
+   box-shadow: -10px 3px 26px 0 rgba($brand-secondary--2, 0.56);
+ }
+
+ @mixin add-shadow-service() {
+   box-shadow: 0 4px 33px 0 rgba($brand-secondary, 1.0);
+ }

@@ -1,0 +1,55 @@
+.article_title{
+    margin: 20px  0;
+    
+    h1{
+        font-size: map-get($font-sizes , 'xxxl');
+        line-height: map-get($font-line-heights, 'xxxl' );
+        text-transform: uppercase;
+        &::after{
+            content: '.';
+            color: $brand-prime;
+        }
+    }
+    h2{
+        font-size: map-get($font-sizes , 'xl');
+        line-height: map-get($font-line-heights, 'xl' );
+        color: rgba($brand-third, 0.5);
+        margin: 3px 0 40px 0;
+    }
+
+}
+
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+    .article_title{
+        
+        h1{
+            line-height: 45px;
+            font-size: map-get($font-sizes, 'xxl' );
+        }
+        h2{
+            line-height: 40px;
+            color: $white;
+            font-size: map-get($font-sizes, 'xl' );
+            text-transform: none;
+            font-weight: 300;
+            opacity: 0.4;
+        }
+    }
+}
+
+// Tablet
+@media all and (max-width: 1200px) and (min-width: 701px) {
+
+}
+
+// Desktop
+@media all and (max-width: 1366px) and (min-width: 1201px) {
+
+}
+
+// X Desktop
+@media all and  (min-width: 1367px) {
+
+}

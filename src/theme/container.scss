@@ -1,0 +1,25 @@
+$direction: rtl;
+
+$grid-row-columns: 0;
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1700px,
+// );
+
+// $container-max-widths: (
+//   sm: 99rem,
+//   md: 99rem,
+//   lg: 1137px,
+//   xl: 1516px,
+// );
+
+
+.container{
+    max-width: 1120px;
+    margin: auto;
+}

@@ -1,0 +1,4 @@
+export const TRUE_UILOADING = 'TRUE_UILOADING';
+export const FALSE_UILOADING = ' FALSE_UILOADING';
+
+

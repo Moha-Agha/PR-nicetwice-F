@@ -1,0 +1,50 @@
+.home-hero{
+    margin: 100px 0;
+    text-transform: uppercase;
+
+    .home-hero_hallo-hand{
+        margin-right: 27px;
+        transform: 
+        translateX(10px) 
+        translateY(0px)
+        scale(1.02, 1.02)
+        rotate(10deg) ;
+        animation-name: hallo-hand-animation;
+        // infinite
+        animation-iteration-count:6;
+        animation-duration: 0.8s;
+        // animation-delay: 0.8s;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+    }
+    .home-hero_title{
+        font-size: map-get($font-sizes , 'xxxl' );
+        font-weight: bold;
+    }
+    .home-hero_subtitle{
+        font-size: map-get($font-sizes , 'xxxl' );
+        font-weight: bold;
+        color:$page-background;
+        -webkit-text-stroke-color: $brand-third;
+        -webkit-text-stroke-width: 3px; 
+    }
+}
+
+@keyframes hallo-hand-animation {
+        0%   {
+            transform: 
+            translateX(10px) 
+            translateY(0px)
+            scale(1.02, 1.02)
+            rotate(10deg) ;
+            opacity: 1.0;
+        }
+        100% {
+            transform: 
+            translateX(20px)
+            translateY(3px)  
+            scale(1, 1) 
+            rotate(30deg) ;
+            opacity: 0.98;
+        }
+  }

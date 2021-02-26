@@ -1,55 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
+import "./theme/App.scss";
 
-import "./scss/App.scss";
+//context
+import AlertState from './shared/alert/AlertState';
+import AuthState from './admin/auth/context/AuthState';
+import NavState from './shared/nav/context/NavState';
+import SectionState from './screens/section/context/SectionState';
+import ArticleState from './screens/article/context/ArticleState';
+import ContactState from './screens/contact/context/ContactState';
 
-import Routing from './components/1_routing/Routing';
-import Preloader from './components/0_1_layout/Preloader';
-
-import ContactState from './context/contact/ContactState';
-import MessagetState from './context/message/MessagetState';
-import SectionState from './context/section/SectionState';
-import ArticleState from './context/article/ArticleState';
-import AuthState from './context/auth/AuthState';
-import AlertState from './context/alert/AlertState';
-import ImageState from './context/image/ImageState';
-import NavState from './context/nav/NavState';
-
-
+import Routing from './routing/Routing';
 
 const App = () => {
 
-  const [loading, setLoading] = useState(true)
+  return (<>
+  <AlertState>
+    <AuthState>
+      <NavState>
+          <SectionState>
+            <ArticleState>
+              <ContactState>
+                    
+                    <Routing/>
 
-
-  return (
-
-    <> { loading ?
-      (<>
-        <AuthState>
-          <ContactState>
-            <SectionState>
-              <ArticleState>
-                <AlertState>
-                  <ImageState>
-                    <NavState>
-
-                      <MessagetState>
-                        <Routing />
-                      </MessagetState>
-
-                    </NavState>
-                  </ImageState>
-                </AlertState>
-              </ArticleState>
-            </SectionState>
-          </ContactState>
-        </AuthState>
-      </>)
-      : <Preloader />}
-    </>
-
-
-  );
+              </ContactState>
+            </ArticleState>
+          </SectionState>
+      </NavState>
+    </AuthState>
+  </AlertState>
+  </>);   
 };
 
 export default App;

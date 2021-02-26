@@ -1,0 +1,48 @@
+.footer{
+    margin: 160px 0 0 0;
+
+    .footer_contact-us-card{
+          display: flex;
+         flex-flow: row nowrap;
+         justify-content: space-between;
+         align-items: center;
+         background-color: $card;
+         border-radius: $border-radius;
+         margin-bottom: 40px;
+         padding: 0 5%;
+         @include shadow-card();
+
+         .footer_contact-us-card_imag{
+             width: 34%;
+             display: flex;
+             justify-content: center;
+             margin-top: -20px;
+         }
+
+        .footer_contact-us-card_text{
+            width: 57%;
+            .footer_contact-us-card_text-title{
+                font-size: map-get($font-sizes , 'xxl' );
+                color: $brand-third;
+            }
+            .footer_contact-us-card_text-subtitle{
+                font-size: map-get($font-sizes , 'xl' );
+                color: rgba($brand-third, 0.5);
+                margin-top: 15px;
+                span{
+                    font-size: map-get($font-sizes , 'xl' );
+                    color: $brand-prime;
+                    font-weight: bold; 
+                }
+            }
+         }
+    }
+
+    .footer_info{
+        font-size: map-get($font-sizes , 'm' );
+        text-align: center;
+        color: rgba($brand-third, 0.5);
+        line-height: 25px;
+        padding-bottom: 50px;
+    }
+}

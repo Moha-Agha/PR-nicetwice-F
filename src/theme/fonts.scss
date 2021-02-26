@@ -1,0 +1,82 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$font-family-arabic: 'Almarai';
+$font-family-englische: 'Ubuntu';
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,'Liberation Mono', 'Courier New', monospace;
+
+$font-family-base:  $font-family-englische, $font-family-arabic, 'Helvetica Neue Light','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+$font-default-color: $text-light;
+$body-color: $font-default-color;
+$text-muted: $grey;
+
+$emphasized-link-hover-darken-percentage: 15% !default;
+
+
+//website font
+*{
+    font-family: $font-family-base;
+}
+
+// calculate rem fontsizes based of 16px
+
+ $font-sizes-mobile: (
+   'input': 1.5rem,
+   'xxxl': 4.5rem,
+   'xxl': 2.4rem,
+   'xl': 1.8rem,
+   'l': 1.6rem,
+   'm': 1.5rem,
+   's': 1.3rem,
+   'xs': 1.2rem,
+   'xxs': 1rem,
+   'xxxs': 0.8rem,
+ );
+
+ $font-line-heights-mobile: (
+   'input': 2.4 / 1.5,
+   'xxxl': 3.2 / 3,
+   'xxl': 2.6 / 2.4,
+   'xl': 2.4 / 1.8,
+   'l': 2.4 / 1.6,
+   'm': 2.2 / 1.5,
+   's': 2 / 1.2,
+   'xs': 1.8 / 1.2,
+   'xxs': 1.4 / 1,
+   'xxxs': 1.2 / 0.8,
+ );
+
+ $font-sizes: (
+   'input': 1.5rem,
+   'xxxl': 72px,
+   'xxl': 42px,
+   'xl': 32px,
+   'l': 24px,
+   'm': 1.8rem,
+   's': 1.6rem,
+   'xs': 1.4rem,
+   'xxs': 1rem,
+   'xxxs': 0.8rem,
+ );
+
+ $font-line-heights: (
+   'input': 2.4 / 1.6,
+   'xxxl': 80px,
+   'xxl': 54px,
+   'xl': 44px,
+   'l': 36px,
+   'm': 2.2 / 1.5,
+   's': 2.2 / 1.5,
+   'xs': 1.8 / 1.2,
+   'xxs': 1.4 / 1,
+   'xxxs': 1.2 / 0.8,
+ );
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;

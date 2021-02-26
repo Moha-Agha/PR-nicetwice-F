@@ -1,0 +1,50 @@
+.section-card{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $card;
+    border-radius: $border-radius;
+    padding: 0 5%;
+    @include shadow-card();
+    height: 159px;
+
+    .section-card_imag{
+        margin: -7px 10px 0 10px ;
+        width: 45%;
+    }
+
+   .section-card_text{
+       .section-card_text-title{
+           font-size: map-get($font-sizes , 'xl' );
+           color: $brand-third;
+       }
+       .section-card_text-subtitle{
+           font-size: map-get($font-sizes , 'm' );
+           color: rgba($brand-third, 0.5);
+           margin-top: 15px;
+       }
+    }
+
+    .section-card_text-padding{
+        padding: 0 13%;
+    }
+    }
+
+
+    
+ .section-card-front{ 
+     grid-column: 1/4;
+  }
+ .section-card-ui{ 
+    grid-column: 4/7;
+  }
+ .section-card-backend{ 
+    grid-column: 1/3;
+  }
+ .section-card-ux{
+    grid-column: 3/5;
+  }
+ .section-card-branding{ 
+    grid-column: 5/7;
+  }

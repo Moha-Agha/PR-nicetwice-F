@@ -1,0 +1,39 @@
+.scroll-buttons{
+    position: fixed;
+    cursor: pointer;
+    z-index: 99999999;
+    right: 10px;
+    bottom: 20px;
+    width: 50px;
+}
+.scroll-button{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-color: $brand-prime;
+    color: $white;
+    line-height: 47px;
+    margin: 10px 10px 0 0;
+    text-align: center;
+    border-radius: $border-radius-circal;
+    border: 2px solid $brand-prime;
+
+    &:hover{
+        background-color: $white;
+        border: 2px solid $brand-prime;
+        color: $brand-prime;
+    }
+
+}
+
+.hide{
+    display: none;
+}
+
+// Mobile
+@media all and (max-width: 700px) and (min-width: 340px) {
+    .scroll-to-top-button{
+        left: 300px;
+
+    }
+}

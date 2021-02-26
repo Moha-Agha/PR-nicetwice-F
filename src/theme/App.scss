@@ -1,0 +1,79 @@
+@import './reset.scss';
+
+//theme
+@import './borders.scss';
+@import './buttons.scss';
+@import './colors.scss';
+@import './container.scss';
+@import './fonts.scss';
+@import './forms.scss';
+@import './icons.scss';
+@import './resets.scss';
+@import './shadows.scss';
+@import './base.scss';
+
+//icons
+@import '../media/fonts/icons/icons.css';
+
+//admin components
+@import '../admin/auth/login/login.scss';
+
+//shared components
+@import '../shared/blogCard/blogCard.scss';
+@import '../shared/breadcrumb/breadcrumb.scss';
+@import '../shared/card/card.scss';
+@import '../shared/floatNav/floatNav.scss';
+@import '../shared/footer/footer.scss';
+@import '../shared/logo/logo.scss';
+   //nav conponents
+   @import '../shared/nav/nav.scss';
+   @import '../shared/nav/components/sidenav/sidenav.scss';
+   @import '../shared/nav/components/sidenavSearch/sidenavSearch.scss';
+   //button conponents
+   @import '../shared/button/back-to.scss';
+   @import '../shared/button/premium-button.scss';
+   @import '../shared/button/secondary-button.scss';
+   //forms conponents
+   @import'../shared/forms/button/button.scss';
+   @import'../shared/forms/checkbox/checkbox.scss';
+   @import'../shared/forms/input/input.scss';
+   @import'../shared/forms/select/select.scss';
+   @import'../shared/forms/textarea/textarea.scss';
+@import '../shared/pagination/pagination.scss';
+@import '../shared/preloader/preloader.scss';
+@import '../shared/sectionCard/sectionCard.scss';
+
+
+// screens components
+// home components
+@import '../screens/home/home.scss';
+@import '../screens/home/components/hero/hero.scss';
+@import '../screens/home/components/workProcess/workProcess.scss';
+@import '../screens/home/components/moreBlogs/moreBlogs.scss';
+// contacts components
+@import '../screens/contact/contact.scss';
+// portfolio components
+@import '../screens/portfolio/portfolio.scss';
+@import '../screens/portfolio/components/portfolio-item.scss';
+// service components
+@import '../screens/service/service.scss';
+@import '../screens/service/components/service-item.scss';
+// section components
+@import '../screens/section/section.scss';
+@import '../screens/section/components/banner-promotional.scss';
+@import '../screens/section/components/header-info.scss';
+// article components
+@import '../screens/article/article.scss';
+@import '../screens/article/components/articleTitle/article-title.scss';
+@import '../screens/article/components/articleInfo/article-info.scss';
+@import '../screens/article/components/articleImage/article-image.scss';
+@import '../screens/article/components/articleBody/article-body.scss';
+@import '../screens/article/components/articleAd/article-ad.scss';
+@import '../screens/article/components/articleOther/article-other.scss';
+@import '../screens/article/components/articleMore/article-more.scss';
+@import '../screens/article/components/sharing/sharing.scss';
+// others components
+@import '../screens/others/error/error.scss';
+@import '../screens/others/PageNotFound/pageNotFound.scss';
+@import '../screens/others/weWillBack/weWillBack.scss';
+@import '../screens/others/weWillStartSoon/weWillStartSoon.scss';

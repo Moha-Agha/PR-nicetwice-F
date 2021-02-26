@@ -1,0 +1,159 @@
+
+* {
+    box-sizing: border-box;
+    font-size: map-get($font-sizes , 'xs' );
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+     background-color: $page-background;
+     color: $font-default-color;
+    // @include set-font('s');
+    margin: 0 ;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  code {
+    // background: $grey;
+    // color: $red;
+  }
+  
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+  
+  h1,
+  .h1 {
+    margin: 0 0 0.8rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: map-get($font-sizes , 'xxl' );
+  }
+  
+  h2,
+  .h2 {
+    margin: 0 0 0.8rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: map-get($font-sizes , 'xl' );
+  }
+  
+  h3,
+  .h3 {
+    margin: 0 0 0.8rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: map-get($font-sizes , 'm' );
+  }
+  
+  h4,
+  .h4 {
+    margin: 0 0 0.8rem 0;
+    font-weight: bold;
+    font-size: map-get($font-sizes , 's' );
+  }
+  
+  h5,
+  .h5 {
+    margin: 0 0 0.8rem 0;
+    font-weight: bold;
+    font-size: map-get($font-sizes , 'xs' );
+  }
+  
+  h6,
+  .h6 {
+    margin: 0 0 0.8rem 0;
+    font-weight: bold;
+    font-size: map-get($font-sizes , 'xxs' );
+  }
+  
+  p {
+    margin: 0 0 0.70rem 0;
+    font-size: map-get($font-sizes , 'xs' );
+  }
+  
+  a {
+    // color: $link-color;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+    //   color: $link-color-hover;
+    }
+    &:focus {
+      background: none;
+      outline: none;
+    }
+  }
+
+  $direction: ltr;
+  
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .a--with-arrow {
+    // @include add-icon-after('\F011');
+  }
+  
+  .a--with-arrow-left {
+    // @include add-icon-before('\F011');
+  }
+  
+  small {
+    // @include set-fontsize('xs');
+  }
+  
+
+  .icon-circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: $brand-third 2px solid;
+    line-height: 46px;
+    text-align: center;
+    color: $brand-third;
+    cursor: pointer;
+  }
+
+  
+  // Text Selection Color
+  ::-moz-selection { /* Code for Firefox */
+    color: $white;
+    background:$brand-prime;
+  }
+
+  ::selection {
+    color: $white;
+    background:$brand-prime;
+  }
+  
+  // scrollbar
+  
+  body::-webkit-scrollbar-track
+  {
+    background-color: $brand-secondary-1;
+  
+  }
+  
+  body::-webkit-scrollbar
+  {
+      width: 10px;
+      background-color: $brand-third;
+  }
+  
+  body::-webkit-scrollbar-thumb
+  {
+    background-color: $brand-secondary--2;
+    border-radius: 10px;
+  }
+
+
