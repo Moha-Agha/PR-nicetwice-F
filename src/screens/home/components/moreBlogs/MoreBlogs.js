@@ -38,8 +38,14 @@ const MoreBlogs = ({title, subtitle,isMobile}) => {
             <p >{subtitle}</p>
 
             <div className="sections-cards">
-            <SectionCardSkeleton />
-            
+            { sections && sections !== null ? sections.map((section) => {
+                  return <SectionCard 
+                  key={section._id}
+                  classStyle={giveClassName(section.slug)}
+                  icon={isMobile? "no": section.slug.includes('frontend') ? 'frontend': section.slug.includes('ui') ? 'ui':'no' }
+                  title={section.title}
+                  slug={section.slug} />
+                }) : <SectionCardSkeleton />}
             </div>
         </div>
      </div>
