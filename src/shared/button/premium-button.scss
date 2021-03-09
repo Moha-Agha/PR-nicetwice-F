@@ -4,7 +4,7 @@
     width: auto;
     background-color:$brand-prime; 
     color: $white;
-    font-size: map-get( $font-sizes, 's' );
+    font-size: map-get( $font-sizes, 'xxs' );
     font-weight: normal;
     text-transform: uppercase;
     padding: 10px 25px;
@@ -32,5 +32,5 @@
     background-color: $brand-prime;
     color: $white;
     text-align: center;
-    font-size: map-get( $font-sizes, 's' );
+    font-size: map-get( $font-sizes, 'xs' );
     }

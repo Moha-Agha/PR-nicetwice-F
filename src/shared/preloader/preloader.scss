@@ -108,7 +108,7 @@
     color: $preloader-text;
   }
   .preloader .text {
-    font-size: map-get($font-sizes , 'xl');
+    font-size: map-get($font-sizes , 'xxs');
     margin: auto;
   }
   .preloader .dots {

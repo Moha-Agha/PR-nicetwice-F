@@ -31,6 +31,7 @@ export const SECTION_LOCA = {
     "branding":"Branding Design",
     "brandingSubtitle":"Eckpfeiler des Project",
     "ThereAre":"Es gibt",
+    "Browse":"durchsuchen",
     "articles":"Artikel",
     }
 

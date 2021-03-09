@@ -5,8 +5,8 @@ import {SECTION_LOCA} from '../../localization/de/Language';
 import frontend from './image/Frontend_icon.png';
 import ui from './image/ui_design_icon.png';
 
-const SectionCard = ({classStyle,icon,title, subtitle,slug}) => {
-console.log(classStyle);
+const SectionCard = ({classStyle,icon,title, subtitle,numberOfArticles,slug}) => {
+console.log(numberOfArticles);
 let cardIcon
 
     switch (icon) {
@@ -27,7 +27,7 @@ let cardIcon
                 {icon === 'no'? "":<div className='section-card_imag'>{cardIcon}</div> }
                 <div className= {icon === 'no' ? 'section-card_text section-card_text-padding' :'section-card_text'}>
                     <div className='section-card_text-title'>{title} </div>
-                    <div className='section-card_text-subtitle'>{subtitle? subtitle: SECTION_LOCA.ThereAre+' '+ ' '+SECTION_LOCA.articles} </div>
+                    <div className='section-card_text-subtitle'>{subtitle? subtitle: SECTION_LOCA.articles+' '+SECTION_LOCA.Browse} </div>
                 </div>
             </Link>
           

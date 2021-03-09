@@ -19,7 +19,7 @@
             text-align: center;
             border-radius: 50%;
             margin: 5px 6px;
-            border: solid 0.319rem $grey-lighter;
+            border: solid 0.187rem $grey-lighter;
             color: $grey-lighter;
         }
     
@@ -53,7 +53,7 @@
         align-items: center;
 
         color: $grey-lighter;
-        font-size: map-get($font-sizes, 's' );
+        font-size: map-get($font-sizes, 'xxs' );
         span{
             font-weight: bold;
             margin-left: 5px;
@@ -64,7 +64,7 @@
             transform: translateY(0px) ;
             transition: ease-in-out 0.5s all;
            span{
-             font-size: map-get($font-sizes, 'xs' );
+             font-size: map-get($font-sizes, 'xxs' );
               font-weight: bold;
               color: $text-light;
                position: absolute;

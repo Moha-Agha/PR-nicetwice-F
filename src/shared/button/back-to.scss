@@ -2,7 +2,7 @@
     direction: $direction;
 
     display:inline-block;
-    font-size: map-get( $font-sizes, 's' );
+    font-size: map-get( $font-sizes, 'xxxs' );
     white-space: nowrap;
     margin-top: 40px;
     transition: ease-in-out 0.2s all;

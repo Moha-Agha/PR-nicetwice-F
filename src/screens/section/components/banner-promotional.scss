@@ -5,14 +5,14 @@
   text-align: center;
 
   h2{
-    font-size: map-get($font-sizes , 'l' );
+    font-size: map-get($font-sizes , 's' );
     text-transform: uppercase;
     color: $card-title;
     margin:  15px auto 15px auto;
   }
   p{
-    font-size: map-get($font-sizes , 's' );
-    color: $card-text;
+    font-size: map-get($font-sizes , 'xxs' );
+    color: $card-subtext;
     line-height: 25px;
     margin-bottom: 40px;
   }
@@ -24,7 +24,7 @@
   .sub-link{
     display: block;
     margin: 10px auto 10px auto ;
-    font-size: map-get($font-sizes , 'xs' );
+    font-size: map-get($font-sizes , 'xxxs' );
     color: $card-subtext;
   }
 

@@ -20,7 +20,7 @@
     .contact-us_message{
         line-height: 30px;
         p{
-            font-size: map-get($font-sizes , 'l' );
+            font-size: map-get($font-sizes , 's' );
             font-weight: bold;
             margin:  5px auto 5px auto;
 
@@ -41,7 +41,7 @@
             margin-bottom: 4px;
             font-weight: bold;
            
-            span{font-size: map-get($font-sizes , 'l' );}
+            span{font-size: map-get($font-sizes , 's' );}
       .message-item_title_1 { flex: 1 1 ; padding-bottom: 8px;}
       .message-item_input_1 { flex: 3 2 ; }
       .message-item_title_2 { flex: 1 1 ; padding-bottom: 8px;}

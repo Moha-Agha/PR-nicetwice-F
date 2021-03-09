@@ -8,7 +8,7 @@
     }
  }
  .service_subtitle{
-    font-size: map-get($font-sizes , 'm');
+    font-size: map-get($font-sizes , 'xxs');
     color: rgba($brand-third, 0.5);
     margin: -3px 0 40px 0;
  }
@@ -16,7 +16,7 @@
 
 
 .service-notic{
-  font-size: map-get($font-sizes , 'm' );
+  font-size: map-get($font-sizes , 'xs' );
   color:$grey-darker;
   text-align: center;
   margin: 40px auto 20px auto;

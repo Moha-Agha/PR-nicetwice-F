@@ -37,23 +37,23 @@
    }
    .service-item-title{
       color: rgba($brand-third-2, 1.0);
-      font-size: map-get($font-sizes , 'l' );
+      font-size: map-get($font-sizes , 's' );
       font-weight: bold;
       margin-top: 0px;
    }
    .service-item-price{
-      font-size: map-get($font-sizes , 'l' );
+      font-size: map-get($font-sizes , 'xxs' );
       color: $brand-prime;
       font-weight: bold;
       margin-top: 20px;
    }
    .service-item-time{
-      font-size: map-get($font-sizes , 's' );
+      font-size: map-get($font-sizes , 'xxs' );
       line-height: 26px;
       color: rgba($brand-third-2, 0.5);
    }
    .service-item-notic{
-      font-size: map-get($font-sizes , 's' );
+      font-size: map-get($font-sizes , 'xxs' );
       line-height: 26px;
       color: rgba($brand-third-2, 0.5);
    }

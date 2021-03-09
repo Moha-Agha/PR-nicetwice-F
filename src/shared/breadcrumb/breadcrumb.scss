@@ -1,7 +1,7 @@
 .breadcrumb{
     display:block;
     color: $breadcrumb;
-    font-size: map-get($font-sizes , 'm' );
+    font-size: map-get($font-sizes , 'xxxs' );
     direction: $direction;
     .breadcrumb_first{
         color: $breadcrumb-first;
