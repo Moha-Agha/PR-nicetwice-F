@@ -7,7 +7,7 @@ import SectionContext from '../../../section/context/sectionContext';
 const MoreBlogs = ({title, subtitle,isMobile}) => {
 
   const sectionContext = useContext(SectionContext);
-  const { getSections, sections } = sectionContext;
+  const { getSections, sections,loadingSection } = sectionContext;
 
   useEffect(() => {
     getSections();
@@ -38,7 +38,7 @@ const MoreBlogs = ({title, subtitle,isMobile}) => {
             <p >{subtitle}</p>
 
             <div className="sections-cards">
-            { sections ? sections.map((section) => {
+            { !loadingSection && sections ? sections.map((section) => {
                   return <SectionCard 
                   key={section._id}
                   classStyle={giveClassName(section.slug)}
