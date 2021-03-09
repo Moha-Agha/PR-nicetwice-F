@@ -1,11 +1,14 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import NavContext from "../shared/nav/context/navContext";
 
 //layout
 import FloatNav from '../shared/floatNav/FloatNav';
 import Nav from '../shared/nav/Nav';
 import Footer from '../shared/footer/Footer';
 //pages
+import ScreenSupport from '../screens/others/screenSupport/ScreenSupport';
 import Home from '../screens/home/Home';
 import Section from '../screens/section/Section';
 import Article from '../screens/article/Article';
@@ -17,12 +20,19 @@ import PageNotFound from '../screens/others/PageNotFound/PageNotFound';
 
 const Routing = () => {
 
+  const navContext =useContext(NavContext);
+  const{isMobile}=navContext;
+
   return (
     <Router>
       <FloatNav/>
       <Nav/>
         <Switch>
-          <Route exact path='/' component={Home}/>
+          {isMobile?
+            <Route exact path='/' component={ScreenSupport}/>
+          : <Route exact path='/' component={Home}/>
+          }
+          
     
           <Route exact path='/section/:name' component={Section} />
           <Route exact path='/article/:slug' component={Article} />

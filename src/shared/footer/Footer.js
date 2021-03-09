@@ -1,13 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
+
+import NavContext from '../nav/context/navContext';
+
 import {FOOTER_LOCA} from '../../localization/de/Language';
 
 import contactUsCard from '../../media/image/contact_us_card.png';
 
 const Footer = () => {
 
+    const navContext = useContext(NavContext)
+    const{isMobile}=navContext;
+
     return (
-        <footer className='container '>
+        <footer className={isMobile ? ' ':'container '}>
             <div className='footer'>
                 <Link to={'/contact'} className='footer_contact-us-card'>
                 <div className='footer_contact-us-card_imag'>

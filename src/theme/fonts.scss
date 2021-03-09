@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
@@ -15,65 +13,111 @@ $text-muted: $grey;
 
 $emphasized-link-hover-darken-percentage: 15% !default;
 
-
 //website font
-*{
-    font-family: $font-family-base;
+*{ font-family: $font-family-base; }
+
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
 }
 
-// calculate rem fontsizes based of 16px
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
 
- $font-sizes-mobile: (
-   'input': 1.5rem,
-   'xxxl': 4.5rem,
-   'xxl': 2.4rem,
-   'xl': 1.8rem,
-   'l': 1.6rem,
-   'm': 1.5rem,
-   's': 1.3rem,
-   'xs': 1.2rem,
-   'xxs': 1rem,
-   'xxxs': 0.8rem,
- );
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
 
- $font-line-heights-mobile: (
-   'input': 2.4 / 1.5,
-   'xxxl': 3.2 / 3,
-   'xxl': 2.6 / 2.4,
-   'xl': 2.4 / 1.8,
-   'l': 2.4 / 1.6,
-   'm': 2.2 / 1.5,
-   's': 2 / 1.2,
-   'xs': 1.8 / 1.2,
-   'xxs': 1.4 / 1,
-   'xxxs': 1.2 / 0.8,
- );
+$min_width: 320px;
+$max_width: 1120px;
+$min_font: 8px;
+$max_font: 16px;
 
- $font-sizes: (
-   'input': 1.5rem,
-   'xxxl': 72px,
-   'xxl': 42px,
-   'xl': 32px,
-   'l': 24px,
-   'm': 1.8rem,
-   's': 1.6rem,
-   'xs': 1.4rem,
-   'xxs': 1rem,
-   'xxxs': 0.8rem,
- );
+// basw on 16px
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
 
- $font-line-heights: (
-   'input': 2.4 / 1.6,
-   'xxxl': 80px,
-   'xxl': 54px,
-   'xl': 44px,
-   'l': 36px,
-   'm': 2.2 / 1.5,
-   's': 2.2 / 1.5,
-   'xs': 1.8 / 1.2,
-   'xxs': 1.4 / 1,
-   'xxxs': 1.2 / 0.8,
- );
+
+// Mobile
+@media all and (max-width: 570px) and (min-width: 320px) {
+ 
+}
+
+// Tablet
+@media all and (max-width: 770px) and (min-width: 571px) {
+
+}
+
+// Desktop
+@media all  and (min-width: 770px) {
+  
+}
+
+
+$font-sizes-mobile: (
+  'input': 1.5rem,
+  'xxxl': 6.4rem,
+  'xxl': 2.4rem,
+  'xl': 3.2rem,
+  'l': 2.4rem,
+  'm': 1.5rem,
+  's': 1.3rem,
+  'xs': 1.2rem,
+  'xxs': 1rem,
+  'xxxs': 0.8rem,
+);
+
+$font-line-heights-mobile: (
+  'input': 2.4 / 1.5,
+  'xxxl': 3.2 / 3,
+  'xxl': 2.6 / 2.4,
+  'xl': 2.4 / 1.8,
+  'l': 2.4 / 1.6,
+  'm': 2.2 / 1.5,
+  's': 2 / 1.2,
+  'xs': 1.8 / 1.2,
+  'xxs': 1.4 / 1,
+  'xxxs': 1.2 / 0.8,
+);
+
+$font-sizes: (
+  'xxxl': 4.5rem, 
+  'xxl': 4rem,
+  'xl': 3rem,
+  'l': 2.25rem,
+  'm': 2rem,
+  's': 1.63rem,
+  'xs': 1.32rem,
+  'xxs': 1.13rem,
+  'xxxs': 0.88rem,
+);
+
+$font-line-heights: (
+  'input': 2.4 / 1.6,
+  'xxxl': 6.8 / 6,
+  'xxl': 4.2 / 3.6,
+  'xl': 3.2 / 2.4,
+  'l': 2.4 / 1.8,
+  'm': 2.2 / 1.5,
+  's': 2.2 / 1.5,
+  'xs': 1.8 / 1.2,
+  'xxs': 1.4 / 1,
+  'xxxs': 1.2 / 0.8,
+);
+
 
 $font-weight-lighter: lighter !default;
 $font-weight-light: 300 !default;

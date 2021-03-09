@@ -1,53 +1,56 @@
-import React from 'react';
+import React, { useEffect,useContext } from 'react';
 import SectionCard from '../../../../shared/sectionCard/SectionCard';
+import SectionCardSkeleton from '../../../../shared/sectionCard/components/Skeleton/SectionCardSkeleton';
+import SectionContext from '../../../section/context/sectionContext';
 
-import {SECTION_LOCA} from '../../../../localization/de/Language'
 
-const MoreBlogs = ({title, subtitle}) => {
+const MoreBlogs = ({title, subtitle,isMobile}) => {
+
+  const sectionContext = useContext(SectionContext);
+  const { getSections, sections } = sectionContext;
+
+  useEffect(() => {
+    getSections();
+    // eslint-disable-next-line
+  }, [])
+
+  const giveClassName =(slug)=>{
+      switch (slug) {
+          case 'frontend-development':
+          return 'section-card-front';
+          case 'ui-design':
+            return 'section-card-ui';
+          case 'backend-development':
+            return 'section-card-backend';
+          case 'ux-design':
+            return 'section-card-ux';
+          case 'branding':
+            return 'section-card-branding';
+          default:
+            return  ' ';
+      }
+  }
+
     return (
-     <div className="more-blogs">
-        <h2 >{title}</h2>
-        <p >{subtitle}</p>
+     <div className={isMobile? "container-mobile":"container"}>
+        <div className="more-blogs">
+            <h2 >{title}</h2>
+            <p >{subtitle}</p>
 
-        <div className="sections-cards">
-            <SectionCard 
-            classStyle={'section-card-front'}
-            icon={'frontend'}
-            title={SECTION_LOCA.frontend}
-            subtitle={SECTION_LOCA.frontendSubtitle}
-            slug={'frontend-development'} />
-
-            <SectionCard 
-            classStyle={'section-card-ui'} 
-            icon={'ui'} 
-            title={SECTION_LOCA.uiDesign} 
-            subtitle={SECTION_LOCA.uiDesignSubtitle}
-            slug={'ui-design'} />
-
-            <SectionCard 
-            classStyle={'section-card-backend'} 
-            icon={'no'} 
-            title={SECTION_LOCA.backend} 
-            subtitle={SECTION_LOCA.backendSubtitle}
-            slug={'backend-development'} />
-
-            <SectionCard 
-            classStyle={'section-card-ux'} 
-            icon={'no'} 
-            title={SECTION_LOCA.uxDesign} 
-            subtitle={SECTION_LOCA.uxDesignSubtitle}
-            slug={'ux-design'} />
-            
-            <SectionCard 
-            classStyle={'section-card-branding'} 
-            icon={'no'} 
-            title={SECTION_LOCA.branding} 
-            subtitle={SECTION_LOCA.brandingSubtitle}
-            slug={'branding'} />
-
+            <div className="sections-cards">
+            { sections ? sections.map((section) => {
+                  return <SectionCard 
+                  key={section._id}
+                  classStyle={giveClassName(section.slug)}
+                  icon={isMobile? "no": section.slug.includes('frontend') ? 'frontend': section.slug.includes('ui') ? 'ui':'no' }
+                  title={section.title}
+                  slug={section.slug} />
+                }) : <SectionCardSkeleton />}
+            </div>
         </div>
      </div>
     )
 }
+
 
 export default MoreBlogs

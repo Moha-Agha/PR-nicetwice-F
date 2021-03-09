@@ -1,7 +1,7 @@
 
 .logo{
    display: block;
-   width: 293px;
+   max-width: 293px;
    img{
        width: 100%;
        object-fit: cover;
@@ -10,8 +10,8 @@
    h5{
     margin-top: 3px;
     color: rgba($brand-third, 0.5);
-    font-size: map-get($font-sizes , 'xs' );
+    font-size: map-get($font-sizes , 'xxxs' );
     font-weight: normal;
-    letter-spacing: 0.380rem;
+    letter-spacing: 0.235rem;
    }
 }

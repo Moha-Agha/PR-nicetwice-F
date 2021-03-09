@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {SECTION_LOCA} from '../../localization/de/Language';
 
 import frontend from './image/Frontend_icon.png';
 import ui from './image/ui_design_icon.png';
 
 const SectionCard = ({classStyle,icon,title, subtitle,slug}) => {
-
+console.log(classStyle);
 let cardIcon
 
     switch (icon) {
@@ -21,13 +22,15 @@ let cardIcon
     }
  
     return (
+  
             <Link to={`/section/${slug}`} className={"section-card " + classStyle}>
                 {icon === 'no'? "":<div className='section-card_imag'>{cardIcon}</div> }
                 <div className= {icon === 'no' ? 'section-card_text section-card_text-padding' :'section-card_text'}>
                     <div className='section-card_text-title'>{title} </div>
-                    <div className='section-card_text-subtitle'>{subtitle} </div>
+                    <div className='section-card_text-subtitle'>{subtitle? subtitle: SECTION_LOCA.ThereAre+' '+ ' '+SECTION_LOCA.articles} </div>
                 </div>
             </Link>
+          
     )
 }
 

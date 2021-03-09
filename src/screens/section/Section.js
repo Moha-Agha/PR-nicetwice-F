@@ -16,8 +16,8 @@ const Section = (props) => {
   const sectionContext = useContext(SectionContext);
   const { getSection, section } = sectionContext;
 
-  const [width, setWidth] = useState()
-  const [uiLoding, setUiLoding] = useState(false)
+  const [width, setWidth] = useState();
+  const [uiLoding, setUiLoding] = useState(false);
 
   var sectionTitle;
   // runs only once before rendering the component.

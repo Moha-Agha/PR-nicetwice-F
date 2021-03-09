@@ -19,6 +19,7 @@
 @import '../admin/auth/login/login.scss';
 
 //shared components
+@import '../screens/others/screenSupport/screen-support.scss';
 @import '../shared/blogCard/blogCard.scss';
 @import '../shared/breadcrumb/breadcrumb.scss';
 @import '../shared/card/card.scss';
@@ -42,6 +43,7 @@
 @import '../shared/pagination/pagination.scss';
 @import '../shared/preloader/preloader.scss';
 @import '../shared/sectionCard/sectionCard.scss';
+@import '../shared/sectionCard/components/Skeleton/sectionCardSkeleton.scss';
 
 
 // screens components

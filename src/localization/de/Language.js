@@ -5,6 +5,7 @@ export const NAV_LOCA = {
     "Offers":"Angebote",
     "sections":"sections",
     }
+
 export const HOME_LOCA = {
     "heroTitle":"Ich bin Mohammad",
     "herosutitle":"Ich baue Mobile Apps und Websiten für dich",
@@ -29,6 +30,8 @@ export const SECTION_LOCA = {
     "uxDesignSubtitle":"zufriedene Kunden",
     "branding":"Branding Design",
     "brandingSubtitle":"Eckpfeiler des Project",
+    "ThereAre":"Es gibt",
+    "articles":"Artikel",
     }
 
 export const FOOTER_LOCA = {
@@ -40,4 +43,8 @@ export const FOOTER_LOCA = {
     "sitemap":"Sitemap",
     "termsAndConditions":"AGB",
     "Imprint":"Impressum",
+    }
+
+export const SCREEN_SUPPORT_LOCA = {
+    "MobileNotAvailable":"Oops, Mobile Screen ist noch nicht verfügbar. Ich arbeite daran :)",
     }

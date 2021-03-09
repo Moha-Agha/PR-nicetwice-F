@@ -1,5 +1,4 @@
-
-    .card{
+ .card{
          display: flex;
          flex-flow: row nowrap;
          justify-content: space-between;
@@ -19,14 +18,49 @@
         .card_text{
             width: 52%;
             .card_text-title{
-                font-size: map-get($font-sizes , 'xl' );
+                font-size: map-get($font-sizes , 'm' );
                 color: $card-title;
             }
             .card_text-subtitle{
-                font-size: map-get($font-sizes , 'm' );
+                font-size: map-get($font-sizes , 'xxs' );
                 color: $card-subtitle;
                 margin-top: 15px;
             }
          }
     }
 
+
+ // Mobile
+ @media all and (max-width: 460px) {
+    .card{
+        height: 118px;
+        .card_imag{
+            width: 47%;
+            height: 138px;
+        }
+
+       .card_text{
+           width: 47%;
+           .card_text-title{
+            // font-size: map-get($font-sizes-mobile , 'xl' );
+          }
+           .card_text-subtitle{
+            // font-size: map-get($font-sizes-mobile  , 'l' );
+            margin-top: 5px;
+           }
+        }
+   }
+  }
+ @media all and (max-width: 560px) and (min-width: 340px) {
+ 
+  }
+  
+  // Tablet
+  @media all and (max-width: 770px) and (min-width: 561px) {
+   
+  }
+  
+  // Desktop
+  @media all and  (min-width: 771px) {
+
+  }

@@ -22,15 +22,15 @@
         .footer_contact-us-card_text{
             width: 57%;
             .footer_contact-us-card_text-title{
-                font-size: map-get($font-sizes , 'xxl' );
+                font-size: map-get($font-sizes , 'l' );
                 color: $brand-third;
             }
             .footer_contact-us-card_text-subtitle{
-                font-size: map-get($font-sizes , 'xl' );
+                font-size: map-get($font-sizes , 's' );
                 color: rgba($brand-third, 0.5);
                 margin-top: 15px;
                 span{
-                    font-size: map-get($font-sizes , 'xl' );
+                    font-size: map-get($font-sizes , 's' );
                     color: $brand-prime;
                     font-weight: bold; 
                 }
@@ -39,10 +39,70 @@
     }
 
     .footer_info{
-        font-size: map-get($font-sizes , 'm' );
         text-align: center;
         color: rgba($brand-third, 0.5);
         line-height: 25px;
         padding-bottom: 50px;
+
+        div{
+            font-size: map-get($font-sizes , 'xxxs' );
+        }
     }
 }
+
+
+
+
+ // Mobile
+ @media all and (max-width: 560px) and (min-width: 320px) {
+    .footer{
+        margin: 160px 0 0 0;
+        
+        .footer_contact-us-card{
+             border-radius: 0;
+    
+             .footer_contact-us-card_imag{
+                 width: 34%;
+                 display: flex;
+                 justify-content: center;
+                 margin-top: -20px;
+             }
+    
+            .footer_contact-us-card_text{
+                width: 57%;
+                .footer_contact-us-card_text-title{
+                    // font-size: map-get($font-sizes , 'xxl' );
+                    color: $brand-third;
+                }
+                .footer_contact-us-card_text-subtitle{
+                    // font-size: map-get($font-sizes , 'xl' );
+                    color: rgba($brand-third, 0.5);
+                    margin-top: 15px;
+                    span{
+                        // font-size: map-get($font-sizes , 'xl' );
+                        color: $brand-prime;
+                        font-weight: bold; 
+                    }
+                }
+             }
+        }
+    
+        .footer_info{
+            font-size: map-get($font-sizes , 'm' );
+            text-align: center;
+            color: rgba($brand-third, 0.5);
+            line-height: 25px;
+            padding-bottom: 50px;
+        }
+    }
+  }
+  
+  // Tablet
+  @media all and (max-width: 770px) and (min-width: 561px) {
+    
+  }
+  
+  // Desktop
+  @media all and  (min-width: 771px) {
+  
+  }
