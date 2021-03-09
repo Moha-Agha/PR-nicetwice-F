@@ -1,6 +1,11 @@
+.login{
+  h3{
+       font-size: map-get($font-sizes, 'xs' );
+  } 
+}
 .back-arrow{
     margin: 30px 0 ;
-    font-size: map-get($font-sizes, 's' );
+    font-size: map-get($font-sizes, 'xxs' );
     display: flex;
     flex-flow: nowrap row;
     align-items: center;
@@ -8,6 +13,6 @@
     cursor: pointer;
     i{
         margin-right: 15px;
-        font-size: map-get($font-sizes, 'm' );
+        font-size: map-get($font-sizes, 'xxs' );
     }
 }

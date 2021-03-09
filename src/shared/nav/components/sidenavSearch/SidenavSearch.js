@@ -12,7 +12,7 @@ const SidenavSearch = () => {
     return (
         <>
             <div className="sidenav_head">
-                <span>Auf nicetwice.de suchen</span>
+                Auf nicetwice.de suchen
                 <div
                     className="icon-circle"
                     onClick={() => {

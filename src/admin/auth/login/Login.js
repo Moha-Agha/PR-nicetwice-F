@@ -52,7 +52,7 @@ const Login = props => {
   };
 
   return (
-    < >
+    <div className="login">
       <div className="back-arrow" onClick={() => { setSidebarItem('menu') }}><i className="aicon-left-arrow"> </i> zurück zum Menü </div>
       <h3>Account Login</h3>
       <form onSubmit={onSubmit}>
@@ -83,7 +83,7 @@ const Login = props => {
           className=''
         />
       </form>
-    </>
+    </div>
   );
 };
 
