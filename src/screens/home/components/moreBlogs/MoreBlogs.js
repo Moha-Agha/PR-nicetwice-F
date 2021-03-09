@@ -7,7 +7,7 @@ import SectionContext from '../../../section/context/sectionContext';
 const MoreBlogs = ({title, subtitle,isMobile}) => {
 
   const sectionContext = useContext(SectionContext);
-  const { getSections, sections,loadingSection } = sectionContext;
+  const { getSections, sections } = sectionContext;
 
   useEffect(() => {
     getSections();

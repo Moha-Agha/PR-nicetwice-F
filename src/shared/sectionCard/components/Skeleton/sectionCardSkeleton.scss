@@ -24,9 +24,9 @@
   top: -50%;
   transform: rotateZ(45deg);
 
-     -webkit-animation: 1.2s ease-in 0s infinite  section-card-skeleton_shine-move;
-           animation: 1.2s ease-in 0s infinite  section-card-skeleton_shine-move;
+     -webkit-animation: 1.2s ease-in-out  infinite  section-card-skeleton_shine-move;
+           animation: 1.2s ease-in-out infinite  section-card-skeleton_shine-move;
 }
 
-@-webkit-keyframes section-card-skeleton_shine-move { from { margin-left: -40%; } to { margin-left: 100%; }  }
-        @keyframes section-card-skeleton_shine-move { from { margin-left: -40%; } to { margin-left: 100%; }  }
+@-webkit-keyframes section-card-skeleton_shine-move { from { margin-left: -70%; } to { margin-left: 140%; }  }
+        @keyframes section-card-skeleton_shine-move { from { margin-left: -70%; } to { margin-left: 140%; }  }

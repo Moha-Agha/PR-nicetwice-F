@@ -5,8 +5,8 @@ import {SECTION_LOCA} from '../../localization/de/Language';
 import frontend from './image/Frontend_icon.png';
 import ui from './image/ui_design_icon.png';
 
-const SectionCard = ({classStyle,icon,title, subtitle,numberOfArticles,slug}) => {
-console.log(numberOfArticles);
+const SectionCard = ({classStyle,icon,title, subtitle,slug}) => {
+
 let cardIcon
 
     switch (icon) {
