@@ -38,7 +38,7 @@ const SectionState = props => {
     } catch (err) {
       dispatch({
         type: SECTIONS_ERROR,
-        payload: err.response.msg
+        payload: err.response
       });
     }
   };
