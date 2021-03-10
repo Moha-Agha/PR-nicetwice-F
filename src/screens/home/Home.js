@@ -42,10 +42,7 @@ const Home = () => {
             </div>
         </div>
         
-            <WorkProcess
-            title={HOME_LOCA.workProcessTitle}
-            subtitle={HOME_LOCA.workProcessSubtitle}
-            isMobile={isMobile}/>
+            <WorkProcess isMobile={isMobile}/>
             <MoreBlogs
             title={HOME_LOCA.moreBlogsTitle}
             subtitle={HOME_LOCA.moreBlogsSubtitle}

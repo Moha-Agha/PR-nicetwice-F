@@ -48,9 +48,7 @@
   h3,
   .h3 {
     margin: 0 0 0.8rem 0;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: map-get($font-sizes , 'm' );
+    font-size: map-get($font-sizes , 'xl' );
   }
   
   h4,
@@ -76,7 +74,7 @@
   
   p {
     margin: 0 0 0.70rem 0;
-    font-size: map-get($font-sizes , 'xs' );
+    font-size: map-get($font-sizes , 'xxs' );
   }
   
   a {

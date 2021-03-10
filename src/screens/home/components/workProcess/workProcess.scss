@@ -1,48 +1,80 @@
-.work-process{
-   margin: 130px 0;
-    h2{
-        font-size: map-get($font-sizes , 'xxxl');
-        text-transform:capitalize;
-        &::after{
-            content: '.';
-            color: $brand-prime;
-        }
-    }
-    p{
-        font-size: map-get($font-sizes , 'xxs');
-        color: rgba($brand-third, 0.5);
-        margin: -3px 0 40px 0;
-    }
+#work-process{
+   margin: $section-margin;
+   padding: $section-padding;
+   height: $section-height;
+   background-color: $card;
 }
 
-.blog-cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 352px));
-    column-gap: 32px;
+.work-process_container{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.work-process_text{
+    width: 47%;
+}
+.work-process_text_title{
+    color: rgba($text-light, 0.5);
+    margin-bottom: 6vh;
+}
+.work-process_text_content_item{
+    h3{cursor: pointer;}
+    div{
+        line-height: 28px;
+        color: rgba($text-light, 0.5);
+        width: 90%;
+        height: auto;
+        overflow: hidden;
+    }
+    padding-bottom: 5vh;
+    transition: all 1s ease-in-out;
+}
+.work-process_text_content_item_disable{
+    h3{color: rgba($text-light, 0.2); cursor: pointer;}
+    div{
+        height: 0;
+        overflow: hidden;
+    }
+    transition: all 1s ease-in-out;
+}
+
+.work-process_image{
+    width: 47%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    img{
+        width: 21rem;
+    }
+}
+.work-process_nav{
+    width: 6%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.work-process_nav_item{
+    width: 1.5vw;
+    height: 1.42vw;
+    border-radius: $border-radius-circal;
+    border: solid 0.2vw rgba($text-light, 0.5);
+    background-color: $card;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.work-process_nav_item_active{
+    background-color: rgba($text-light, 0.5);
+    border:none;
+    transition: all 0.5s ease-in-out;
 }
 
 // Mobile
 @media all and (max-width: 560px) and (min-width: 340px) {
-    .work-process{
-    // h2{
-    //     font-size: map-get($font-sizes-mobile , 'xxxl');
-    // }
-    // p{
-    //     font-size: map-get($font-sizes-mobile , 'l');
-    //     line-height: map-get($font-line-heights-mobile , 'l');
-    // }
-   }
-   .blog-cards{ 
-        display: flex;
-        flex-flow: row nowrap;
-        padding: 10px 0 10px 0;
-        overflow-y: hidden;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
-        column-gap: 25px;
-    }
+  
  }
  
  // Tablet

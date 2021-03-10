@@ -13,8 +13,13 @@ export const HOME_LOCA = {
     "portfolioCardSutitle":"Mein Portfolio",
     "servicesCardTitle":"Was ich dir anbieten kann",
     "servicesCardSutitle":"Meine Services",
-    "workProcessTitle":"Arbeitsprozess",
-    "workProcessSubtitle":"Einige Blogs, die den Arbeitsprozess deines Projekts bei mir erklären können.",
+    "workProcessTitle":"Mein Arbeitsprozess",
+    "stepOneTitle":"1. Deine Gesanken",
+    "stepOneContent":"Die Beschreibung des Projekts und eine Erläuterung der Grundideen des Projekts ist deine Aufgabe. Deshalb erwarte ich von dir eine tolle Projektbeschreibung",
+    "stepTwoTitle":"2. Design stage",
+    "stepTwoContent":"Beginnend mit der Projektanalyse, dann der Suchphase, dann das User flow, dann diskutieren wir darüber, dann das Wireframe und wenn wir gut sind, werde ich anfangen, am Projektprototyp zu arbeiten und die nächste Phase vorzubereiten",
+    "stepThreeTitle":"3. Code stage",
+    "stepThreeContent":"Wie der Gletscher erscheint. so sieht der Kunde von die codeing phase. Database, Frontend, Bakend und testing sind im wasser",
     "moreBlogsTitle":"Mehr Blogs",
     "moreBlogsSubtitle":"Hier  kannst du mehr Blogs zu diesen Themen lesen.",
     }
@@ -47,5 +52,6 @@ export const FOOTER_LOCA = {
     }
 
 export const SCREEN_SUPPORT_LOCA = {
+    "MobileGetRepaired":"Oops, Mobile Screen muss repariert werden. Ich arbeite daran :)",
     "MobileNotAvailable":"Oops, Mobile Screen ist noch nicht verfügbar. Ich arbeite daran :)",
     }
