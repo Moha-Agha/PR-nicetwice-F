@@ -7,8 +7,8 @@ import programing from '../../../../media/svg/programing.svg';
 
 const WorkProcess = ({isMobile}) => {
 
-    const [open, setOpen] = useState(1)
-    
+    const [open, setOpen] = useState(1);
+
     return (       
         <div id="work-process">
           <div className={isMobile? "container-mobile":"container"}>

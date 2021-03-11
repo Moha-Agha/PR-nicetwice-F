@@ -2,35 +2,44 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {SECTION_LOCA} from '../../localization/de/Language';
 
-import frontend from './image/Frontend_icon.png';
-import ui from './image/ui_design_icon.png';
+import frontenddevelopment from './image/Frontend_development.svg';
+import backenddevelopment from './image/Backend_development.svg';
+import branding from './image/Branding.svg';
+import uxdesign from './image/User_experience.svg';
+import uidesign from './image/User_Interface.svg';
 
-const SectionCard = ({classStyle,icon,title, subtitle,slug}) => {
 
-let cardIcon
+const SectionCard = ({classStyle,title,subtitle,slug}) => {
 
-    switch (icon) {
-        case 'frontend':
-            cardIcon =  <img  src={frontend} alt={"nicetwice.de " + title + "section"} />
+    let icons;
+
+    switch (slug.replace('-','')) {
+        case 'frontenddevelopment':
+            icons = frontenddevelopment
             break;
-        case 'ui':
-            cardIcon =  <img  src={ui} alt={"nicetwice.de " + title + "section"} />
+        case 'backenddevelopment':
+            icons = backenddevelopment
             break;
+        case 'branding':
+            icons = branding
+            break;
+        case 'uxdesign':
+            icons = uxdesign
+            break;
+    
         default:
-            cardIcon =  ''
+            icons = uidesign
             break;
     }
- 
+
     return (
-  
             <Link to={`/section/${slug}`} className={"section-card " + classStyle}>
-                {icon === 'no'? "":<div className='section-card_imag'>{cardIcon}</div> }
-                <div className= {icon === 'no' ? 'section-card_text section-card_text-padding' :'section-card_text'}>
+                <div className= 'section-card_text section-card_text-padding' >
+                    <img className='section-card_imag' src={icons} /> 
                     <div className='section-card_text-title'>{title} </div>
                     <div className='section-card_text-subtitle'>{subtitle? subtitle: SECTION_LOCA.articles+' '+SECTION_LOCA.Browse} </div>
                 </div>
             </Link>
-          
     )
 }
 

@@ -42,7 +42,6 @@ const MoreBlogs = ({title, subtitle,isMobile}) => {
                   return <SectionCard 
                   key={section._id}
                   classStyle={giveClassName(section.slug)}
-                  icon={isMobile? "no": section.slug.includes('frontend') ? 'frontend': section.slug.includes('ui') ? 'ui':'no' }
                   title={section.title}
                   slug={section.slug} />
                 }) : <SectionCardSkeleton />}
