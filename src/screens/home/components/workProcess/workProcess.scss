@@ -2,6 +2,7 @@
    margin: $section-margin;
    padding: $section-padding;
    height: $section-height;
+   max-height: 950px;
    background-color: $card;
 }
 
@@ -23,17 +24,18 @@
         line-height: 28px;
         color: rgba($text-light, 0.5);
         width: 90%;
-        height: auto;
+        height: 106px;
         overflow: hidden;
     }
     padding-bottom: 5vh;
-    transition: all 1s ease-in-out;
+   
 }
 .work-process_text_content_item_disable{
-    h3{color: rgba($text-light, 0.2); cursor: pointer;}
+    h3{
+        color: rgba($text-light, 0.2);
+    }
     div{
-        height: 0;
-        overflow: hidden;
+        height: 0px;
     }
     transition: all 1s ease-in-out;
 }
@@ -57,7 +59,9 @@
 
 .work-process_nav_item{
     width: 1.5vw;
+    max-width: 25px;
     height: 1.42vw;
+    max-height: 25px;
     border-radius: $border-radius-circal;
     border: solid 0.2vw rgba($text-light, 0.5);
     background-color: $card;

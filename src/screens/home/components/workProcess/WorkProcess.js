@@ -20,19 +20,19 @@ const WorkProcess = ({isMobile}) => {
                     <div className="work-process_text_content">
                         <div className={open === 1 ?
                         "work-process_text_content_item":
-                        "work-process_text_content_item_disable"}> 
+                        "work-process_text_content_item work-process_text_content_item_disable"}> 
                             <h3 onClick={()=>setOpen(1)}>{HOME_LOCA.stepOneTitle}</h3>
                             <div>{HOME_LOCA.stepOneContent}</div>
                         </div>
                         <div className={open === 2 ?
                         "work-process_text_content_item":
-                        "work-process_text_content_item_disable"}>
+                        "work-process_text_content_item work-process_text_content_item_disable"}>
                             <h3 onClick={()=>setOpen(2)}>{HOME_LOCA.stepTwoTitle}</h3>
                             <div>{HOME_LOCA.stepTwoContent}</div>
                         </div>
                         <div className={open === 3 ?
                         "work-process_text_content_item":
-                        "work-process_text_content_item_disable"}>
+                        "work-process_text_content_item work-process_text_content_item_disable"}>
                             <h3 onClick={()=>setOpen(3)}>{HOME_LOCA.stepThreeTitle}</h3>
                             <div>{HOME_LOCA.stepThreeContent}</div>
                         </div>

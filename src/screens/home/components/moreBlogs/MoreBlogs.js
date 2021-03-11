@@ -14,23 +14,6 @@ const MoreBlogs = ({title, subtitle,isMobile}) => {
     // eslint-disable-next-line
   }, [])
 
-  const giveClassName =(slug)=>{
-      switch (slug) {
-          case 'frontend-development':
-          return 'section-card-front';
-          case 'ui-design':
-            return 'section-card-ui';
-          case 'backend-development':
-            return 'section-card-backend';
-          case 'ux-design':
-            return 'section-card-ux';
-          case 'branding':
-            return 'section-card-branding';
-          default:
-            return  ' ';
-      }
-  }
-
     return (
      <div className={isMobile? "container-mobile":"container"}>
         <div className="more-blogs">
@@ -41,7 +24,6 @@ const MoreBlogs = ({title, subtitle,isMobile}) => {
             { sections && sections !== null ? sections.map((section) => {
                   return <SectionCard 
                   key={section._id}
-                  classStyle={giveClassName(section.slug)}
                   title={section.title}
                   slug={section.slug} />
                 }) : <SectionCardSkeleton />}

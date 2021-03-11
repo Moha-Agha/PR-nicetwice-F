@@ -9,7 +9,7 @@ import uxdesign from './image/User_experience.svg';
 import uidesign from './image/User_Interface.svg';
 
 
-const SectionCard = ({classStyle,title,subtitle,slug}) => {
+const SectionCard = ({title,subtitle,slug}) => {
 
     let icons;
 
@@ -33,11 +33,12 @@ const SectionCard = ({classStyle,title,subtitle,slug}) => {
     }
 
     return (
-            <Link to={`/section/${slug}`} className={"section-card " + classStyle}>
-                <div className= 'section-card_text section-card_text-padding' >
-                    <img className='section-card_imag' src={icons} /> 
-                    <div className='section-card_text-title'>{title} </div>
-                    <div className='section-card_text-subtitle'>{subtitle? subtitle: SECTION_LOCA.articles+' '+SECTION_LOCA.Browse} </div>
+            <Link to={`/section/${slug}`} className="section-card ">
+                <img className='section-card_icon' src={icons} /> 
+                <div className='section-card_title'>{title}
+                    <div className='section-card_subtitle'>
+                      {subtitle? subtitle: SECTION_LOCA.articles+' '+SECTION_LOCA.Browse}
+                    </div>
                 </div>
             </Link>
     )
