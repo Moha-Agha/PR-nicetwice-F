@@ -13,11 +13,12 @@
     .section-card_icon{
         margin-bottom: 10%;
         width: 45%;
+        max-width: 120px;
     }
     .section-card_title{
            font-size: map-get($font-sizes , 'm' );
            color: $brand-third;
-           max-width: 95%;
+           max-width: 86%;
        }
     .section-card_subtitle{
            font-size: map-get($font-sizes , 'xxs' );
@@ -33,48 +34,15 @@
   // Mobile
 @media all and (max-width: 560px) and (min-width: 340px) {
     .section-card{
-
-  
-       .section-card_text{
-           .section-card_text-title{
-            //    font-size: map-get($font-sizes-mobile , 'xl' );
-           }
-           .section-card_text-subtitle{
-            //    font-size: map-get($font-sizes-mobile , 'l' );
-               margin-top: 5px;
-           }
-        }
-    
-        .section-card_text-padding{
-            padding: 0 10%;
-        }
-        }
-
-    .section-card-front{ 
-        flex-shrink: 0;
-        grid-column: 0;
-     }
-    .section-card-ui{ 
-        flex-shrink: 0;
-        grid-column: 0;
-     }
-    .section-card-backend{ 
-        flex-shrink: 0;
-        grid-column: 0;
-     }
-    .section-card-ux{
-        flex-shrink: 0;
-        grid-column: 0;
-     }
-    .section-card-branding{ 
-        flex-shrink: 0;
-        grid-column: 0;
+        padding: 20px;
      } 
 }
 
 // Tablet
 @media all and (max-width: 770px) and (min-width: 561px) {
- 
+    .section-card{
+        padding: 20px;
+     } 
 }
 
 // Desktop

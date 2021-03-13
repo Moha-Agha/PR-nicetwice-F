@@ -17,6 +17,9 @@ import Service from '../screens/service/Service';
 import ContactUs from '../screens/contact/Contact';
 //other pages
 import PageNotFound from '../screens/others/PageNotFound/PageNotFound';
+import Privacy from '../screens/others/privacy/Privacy';
+import Imprint from '../screens/others/imprint/Imprint';
+import Conditions from '../screens/others/conditions/Conditions';
 
 const Routing = () => {
 
@@ -41,9 +44,9 @@ const Routing = () => {
           <Route exact path='/service' component={Service}/>
           <Route exact path='/contact' component={ContactUs} /> 
           {/* other pages */}
-          {/* <Route exact path='/privacy' component={Privacy} />
+          <Route exact path='/privacy' component={Privacy} />
           <Route exact path='/imprint' component={Imprint} />
-          <Route exact path='/conditions' component={Conditions} /> */}
+          <Route exact path='/conditions' component={Conditions} /> 
           {/* Admin */}
           {/* <PrivateRoute exact path='/messages' component={Messages} />
           <PrivateRoute exact path='/section' component={AdminSection} />

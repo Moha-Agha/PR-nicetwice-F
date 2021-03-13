@@ -1,6 +1,6 @@
 import React from "react";
 
-const PortfolioItem = ({ number = '', image = '', type = '.jpg', href = '#' }) => {
+const PortfolioItem = ({ number = '',title='', image = '', type = '.jpg', href = '#' }) => {
 
   let img
   let path
@@ -22,10 +22,13 @@ const PortfolioItem = ({ number = '', image = '', type = '.jpg', href = '#' }) =
 
 
   return (
-    <div className='portfolio-item'>
-      <span className='portfolio-item_number'>{number}</span>
-      {img}
-    </div>
+    <a href={href} className='portfolio-item'>
+      <div className="portfolio-item_titel">
+        {title}
+      <div className="portfolio-item_subtitle">UI + Ux + Development</div>
+      </div>
+      <img className="portfolio-item_image" src={path} alt="niceTwice.de portfolio" />
+    </a>
   );
 };
 

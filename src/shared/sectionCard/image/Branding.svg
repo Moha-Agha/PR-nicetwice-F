@@ -10,5 +10,14 @@
     <path id="Path_521" data-name="Path 521" d="M.31,7.808A1.532,1.532,0,0,0,1.9,9.081a1.485,1.485,0,0,0,1.479-1.3L3.1,0,0,.037Z" transform="translate(42.87 71.525) rotate(-133)"/>
     <path id="Path_522" data-name="Path 522" d="M.006.355A1.533,1.533,0,0,1,1.594-.917,1.485,1.485,0,0,1,3.072.388L2.8,8.164-.3,8.127Z" transform="translate(48.634 46.591) rotate(133)"/>
     <path id="Path_523" data-name="Path 523" d="M.31,7.808A1.532,1.532,0,0,0,1.9,9.081a1.485,1.485,0,0,0,1.479-1.3L3.1,0,0,.037Z" transform="translate(71.294 69.222) rotate(137)"/>
+    <path id="Path_545" data-name="Path 545" d="M62.037,48.5A13.537,13.537,0,1,0,75.574,62.037,13.537,13.537,0,0,0,62.037,48.5Zm0,24.017a10.48,10.48,0,1,1,10.48-10.48A10.48,10.48,0,0,1,62.037,72.517Z" transform="translate(-6.035 -6.037)"/>
+    <circle id="Ellipse_124" data-name="Ellipse 124" cx="3.75" cy="3.75" r="3.75" transform="translate(84 20)"/>
+    <circle id="Ellipse_125" data-name="Ellipse 125" cx="3.75" cy="3.75" r="3.75" transform="translate(84 84)"/>
+    <circle id="Ellipse_126" data-name="Ellipse 126" cx="3.75" cy="3.75" r="3.75" transform="translate(95 52.25)"/>
+    <circle id="Ellipse_127" data-name="Ellipse 127" cx="3.75" cy="3.75" r="3.75" transform="translate(8 52.25)"/>
+    <circle id="Ellipse_128" data-name="Ellipse 128" cx="3.75" cy="3.75" r="3.75" transform="translate(52.25 7)"/>
+    <circle id="Ellipse_129" data-name="Ellipse 129" cx="3.75" cy="3.75" r="3.75" transform="translate(52.25 97)"/>
+    <circle id="Ellipse_130" data-name="Ellipse 130" cx="3.75" cy="3.75" r="3.75" transform="translate(20.25 20)"/>
+    <circle id="Ellipse_131" data-name="Ellipse 131" cx="3.75" cy="3.75" r="3.75" transform="translate(20.25 84)"/>
   </g>
 </svg>

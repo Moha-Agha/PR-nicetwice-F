@@ -47,6 +47,10 @@
         div{
             font-size: map-get($font-sizes , 'xxxs' );
         }
+        a, a:active, a:focus, a:visited{
+            color: rgba($text-light, 0.5);
+        }
+
     }
 }
 

@@ -18,7 +18,7 @@
  .sections-cards{
      display: grid;
     //  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
      column-gap: 32px;
      row-gap: 32px;
  }
@@ -56,5 +56,7 @@
 
 // Desktop
 @media all and  (min-width: 771px) {
-
+    .sections-cards{
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
 }

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
-import BackTo from "../0_0_uiElements/button/BackTo"
-import FooterRedirection from "../0_1_layout/footer/FooterRedirection"
+import BackTo from "../../../shared/button/BackTo";
 
 const Imprint = () => {
 
@@ -14,23 +13,24 @@ const Imprint = () => {
     <div id="service" >
       <div className="container">
         <BackTo to='/' title='Zurück zum Home' />
-        <h3 className="service_title"> Impressum </h3>
+        <h1 className="service_title"> Impressum</h1>
       </div>
 
       <div className='container'>
 
-        <h3>nicetwice.de Einzelunternehmen </h3><br />
-        <h4>
+        <p>nicetwice.de Einzelunternehmen </p><br />
+        <p>
           Zimmermannstraße 3,<br />
           21079 Hamburg<br />
           Germany
                 <br />
               Kontakt
-              Telefon: +49 1575 9026756
+              Telefon: +49 [1]575 9026756
                 <br />
-                E-Mail: muha.agha@gmail.com
+                E-Mail: muha.agha[at]gmail.com
+                <br />
                 Internet: http://www.nicetwice.de
-            </h4>
+            </p>
         {/* <br /><h3>Rechtliche Angaben</h3><br />
         <p>
 
@@ -52,7 +52,6 @@ const Imprint = () => {
 
       </div>
 
-      <FooterRedirection />
     </div >
   )
 

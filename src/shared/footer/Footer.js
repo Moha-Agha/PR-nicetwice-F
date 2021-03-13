@@ -31,7 +31,11 @@ const Footer = () => {
                 </Link>
 
                 <div className='footer_info'>
-                <div>{FOOTER_LOCA.privacyPolicy} - {FOOTER_LOCA.sitemap} - {FOOTER_LOCA.termsAndConditions} - {FOOTER_LOCA.Imprint}</div>
+                <div>
+                    <a href='/privacy'>{FOOTER_LOCA.privacyPolicy}</a>
+                    - <a href='/'>{FOOTER_LOCA.sitemap}</a>
+                    - <a href='/conditions'>{FOOTER_LOCA.termsAndConditions}</a>
+                    - <a href='/imprint'>{FOOTER_LOCA.Imprint}</a></div>
                 <div><span role="img" aria-label="Copywriting">©️</span> 2020-2021 nicetwice.de</div>
                 </div>
             </div>

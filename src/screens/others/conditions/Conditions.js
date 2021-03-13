@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import BackTo from "../0_0_uiElements/button/BackTo"
-import FooterRedirection from "../0_1_layout/footer/FooterRedirection"
+import BackTo from "../../../shared/button/BackTo";
 
 const Conditions = () => {
 
@@ -24,7 +23,6 @@ const Conditions = () => {
 
       </div>
 
-      <FooterRedirection />
     </div >
   )
 
