@@ -17,7 +17,7 @@ export const HOME_LOCA = {
     "stepOneTitle":"1. Deine Gedanken",
     "stepOneContent":"Die Beschreibung des Projekts und eine Erläuterung der Grundideen des Projekts ist deine Aufgabe. Deshalb erwarte ich von dir eine tolle Projektbeschreibung. Natürlich helfe ich dir dabei.",
     "stepTwoTitle":"2. Design stage",
-    "stepTwoContent":"Beginnend mit der Projektanalyse, dann der Suchphase, dann das User flow, dann diskutieren wir darüber, dann das Wireframe und wenn wir gut sind, werde ich anfangen, am Projektprototyp zu arbeiten und die nächste Phase vorzubereiten",
+    "stepTwoContent":"Wir beginnen mit der Projektanalyse und der Suchphase. Danach diskutieren wir über den User flow. Dann folgt das Wireframe und wenn dieses perfekt ist, fange ich an am Projektprototyp zu arbeiten und die nächste Phase vorzubereiten.",
     "stepThreeTitle":"3. Code stage",
     "stepThreeContent":"Wie der Gletscher erscheint. so sieht der Kunde von die codeing phase. Database, Frontend, Bakend und testing sind im wasser",
     "moreBlogsTitle":"Mehr Blogs",

@@ -22,8 +22,16 @@ const Portfolio = () => {
         <p className="portfolio_subtitle">UI-UX design website and App programming</p>
 
         <div className='portfolio'>
-          {PortfolioData.map(({ id, title, image, type, href }) => {
-            return < PortfolioItem key={id} number={id} title={title} image={image} type={type} href={href} />
+          {PortfolioData.map(({ id, title, image, type, href,behance }) => {
+            return < PortfolioItem
+                      key={id}
+                      number={id}
+                      title={title}
+                      image={image}
+                      type={type}
+                      href={href}
+                      behance={behance}
+                      />
           })}
         </div>
 

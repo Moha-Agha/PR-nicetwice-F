@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
-const PortfolioItem = ({ number = '',title='', image = '', type = '.jpg', href = '#' }) => {
+const PortfolioItem = ({ behance = '',title='', image = '', type = '.jpg', href = '#' }) => {
 
+  const [step, setStep] = useState(0);
   let img
   let path
 
@@ -18,17 +19,38 @@ const PortfolioItem = ({ number = '',title='', image = '', type = '.jpg', href =
     img = <div className='free-place'><div><h2>EIN FREIER PLATZ<br />FÜR DEIN BUSINESS!</h2></div></div>
   }
 
+  const stepHandler=()=>{
+    setStep(1)
+  }
 
+  const switchStep = () => { switch (step) {
+      case 1:
+        return (
+          <>  
+          <div className="portfolio-item_titel-link"><a href={behance}>Behance</a> / <a href={href}>Onlein</a></div>
+           <div className="portfolio-item_subtitle">
+           Leider, dieses Projekt ist noch nicht abgeschlossen.
+           </div>
+          </>
+        )
+    default:
+      return (
+        <>
+          {title}
+          <div className="portfolio-item_subtitle">UI + Ux + Development</div>
+        </>
+      )
+    } }
 
 
   return (
-    <a href={href} className='portfolio-item'>
+    <div onClick={stepHandler} className='portfolio-item'>
       <div className="portfolio-item_titel">
-        {title}
-      <div className="portfolio-item_subtitle">UI + Ux + Development</div>
+        {behance ==='#'? <a href={href} >{title}  <div className="portfolio-item_subtitle">UI + Ux + Development</div></a>
+        :switchStep()}
       </div>
       <img className="portfolio-item_image" src={path} alt="niceTwice.de portfolio" />
-    </a>
+    </div>
   );
 };
 
