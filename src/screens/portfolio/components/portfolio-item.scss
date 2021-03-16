@@ -19,8 +19,10 @@
    a, a:visited, a:focus{color: $text-light;}
   }
   .portfolio-item_titel-link{
-     a, a:visited, a:focus{color: $text-light;}
-     a:hover{color: rgba($text-light, 0.5);}
+     span:hover{
+        color: rgba($text-light, 0.5);
+        cursor: pointer;
+      }
   }
   .portfolio-item_subtitle{
    font-size: map-get($font-sizes , 'xxs');

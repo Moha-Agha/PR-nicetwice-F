@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import OpenInNewTab from '../../../shared/link/OpenInNewTab';
 
 const PortfolioItem = ({ behance = '',title='', image = '', type = '.jpg', href = '#' }) => {
 
@@ -27,9 +28,11 @@ const PortfolioItem = ({ behance = '',title='', image = '', type = '.jpg', href 
       case 1:
         return (
           <>  
-          <div className="portfolio-item_titel-link"><a href={behance}>Behance</a> / <a href={href}>Onlein</a></div>
+          <div className="portfolio-item_titel-link">
+            <span onClick={() => OpenInNewTab(behance)} >Behance</span>
+             / <span onClick={() => OpenInNewTab(href)} >Onlein</span></div>
            <div className="portfolio-item_subtitle">
-           Leider, dieses Projekt ist noch nicht abgeschlossen.
+           Dieses Projekt ist noch nicht abgeschlossen.
            </div>
           </>
         )
