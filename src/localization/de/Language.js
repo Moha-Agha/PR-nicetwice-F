@@ -19,7 +19,7 @@ export const HOME_LOCA = {
     "stepTwoTitle":"2. Design stage",
     "stepTwoContent":"Wir beginnen mit der Projektanalyse und der Suchphase. Danach diskutieren wir über den User flow. Dann folgt das Wireframe und wenn dieses perfekt ist, fange ich an am Projektprototyp zu arbeiten und die nächste Phase vorzubereiten.",
     "stepThreeTitle":"3. Code stage",
-    "stepThreeContent":"Wie der Gletscher erscheint. so sieht der Kunde von die codeing phase. Database, Frontend, Bakend und testing sind im wasser",
+    "stepThreeContent":"Hier kannst du dich entspannt zurücklehnen. Die Programmierarbeit baut auf dem auf, was wir in den beiden vorherigen Phasen ausgearbeitet haben. Die Programmierung ist der verborgene Teil des Eisbergs.",
     "moreBlogsTitle":"Mehr Blogs",
     "moreBlogsSubtitle":"Hier  kannst du mehr Blogs zu diesen Themen lesen.",
     }
