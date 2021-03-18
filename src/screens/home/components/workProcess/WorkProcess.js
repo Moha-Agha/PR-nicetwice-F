@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
 import {HOME_LOCA} from '../../../../localization/de/Language';
 
-import briefing from '../../../../media/svg/briefing.svg';
-import design from '../../../../media/svg/design.svg';
-import programing from '../../../../media/svg/programing.svg';
 
 const WorkProcess = ({isMobile}) => {
 
     const [open, setOpen] = useState(1);
 
+    let briefing='https://media.giphy.com/media/3oriOfkNwbu0nDVPCU/giphy.gif';
+    let design='https://media.giphy.com/media/2XskdWuNUyqElkKe4bm/giphy.gif';
+    let programing='https://media.giphy.com/media/9WHE2bo5Na9Gg/giphy.gif';
+    
     return (       
         <div id="work-process">
           <div className={isMobile? "container-mobile":"container"}>
