@@ -7,14 +7,17 @@ import NavContext from "../shared/nav/context/navContext";
 import FloatNav from '../shared/floatNav/FloatNav';
 import Nav from '../shared/nav/Nav';
 import Footer from '../shared/footer/Footer';
+
 //pages
 import ScreenSupport from '../screens/others/screenSupport/ScreenSupport';
 import Home from '../screens/home/Home';
+import Blog from '../screens/blog/Blog';
 import Section from '../screens/section/Section';
 import Article from '../screens/article/Article';
 import Portfolio from '../screens/portfolio/Portfolio';
 import Service from '../screens/service/Service';
 import ContactUs from '../screens/contact/Contact';
+
 //other pages
 import PageNotFound from '../screens/others/PageNotFound/PageNotFound';
 import Privacy from '../screens/others/privacy/Privacy';
@@ -37,6 +40,7 @@ const Routing = () => {
           }
           
     
+          <Route exact path='/blog' component={Blog} />
           <Route exact path='/section/:name' component={Section} />
           <Route exact path='/article/:slug' component={Article} />
 
