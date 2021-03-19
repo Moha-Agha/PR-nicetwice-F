@@ -7,7 +7,7 @@ const WorkProcess = ({isMobile}) => {
     const [open, setOpen] = useState(1);
 
     let briefing='https://media.giphy.com/media/3oriOfkNwbu0nDVPCU/giphy.gif';
-    let design='https://media.giphy.com/media/2XskdWuNUyqElkKe4bm/giphy.gif';
+    let design='https://media.giphy.com/media/3o6gEfc9gye4x6gg00/giphy.gif';
     let programing='https://media.giphy.com/media/9WHE2bo5Na9Gg/giphy.gif';
     
     return (       
