@@ -21,8 +21,8 @@ $brand-third--1:#FEFFFF;
 $brand-third--2:#FFFFFF;
 
 // Colors grey
-$grey-darkest:#151515;
-$grey-darker:#202020;
+$grey-darkest:#121212;
+$grey-darker:#1F1F1F;
 $grey-dark:#333333;
 $grey:#717171; 
 $grey-light:#82878C;
@@ -55,9 +55,9 @@ $red-dark: $brand-prime--2;
 $red-darker: #b80022;
 
 // UI color
-$page-background: $brand-secondary;
+$page-background: $grey-darkest ;
     //card
-    $card:$grey-darkest;
+    $card: $grey-darker;
     $card-skeleton: $grey ;
     $card-title:$brand-third;
     $card-subtitle:rgba($brand-third, 0.5);
