@@ -1,10 +1,7 @@
 .blog-card{
-        max-width: 270px;
-        @include screen(tablet){max-width: none;}
         flex-shrink: 0;
 
         .blog-card_img{
-            max-width: 270px;
             @include screen(tablet){max-width: 352px;}
             max-height: 219px;
             overflow: hidden;
