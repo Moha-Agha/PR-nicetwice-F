@@ -1,5 +1,6 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 
+import NavContext from '../../shared/nav/context/navContext';
 import ArticleContext from './context/articleContext';
 
 import Preloader from "../../shared/preloader/Preloader";
@@ -14,7 +15,8 @@ import ArticleMore from "./components/articleMore/ArticleMore"
 
 const Article = (props) => {
 
-  const [width, setWidth] = useState();
+  const navContext = useContext(NavContext);
+  const{ isMobile }= navContext;
 
   const articleContext = useContext(ArticleContext);
   const { getArticleBySlug, NewViewArticle, article, loadingArticle } = articleContext;
@@ -23,10 +25,6 @@ const Article = (props) => {
     let spl = props.location.pathname.split('/');
     let res = spl[2]
     getArticleBySlug(res)
-
-    window.scrollTo(0, 0);
-    
-    setWidth(window.innerWidth);
 
     NewViewArticle(res);
     // eslint-disable-next-line
@@ -88,7 +86,7 @@ const Article = (props) => {
 
             </div>
           </div>
-          <div className={width > 700 ? 'container' : null}>
+          <div className={!isMobile ? 'container' : null}>
             <ArticleMore sectionSlug={article[1].slug} articleSlug={slug} />
           </div>
         </>

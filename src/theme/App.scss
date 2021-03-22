@@ -19,6 +19,10 @@
 //admin components
 @import '../admin/auth/login/login.scss';
 
+//blog components
+@import '../screens/blog/blog.scss';
+@import '../screens/blog/components/sectionsTag/sectionsTag.scss';
+
 //shared components
 @import '../screens/others/screenSupport/screen-support.scss';
 @import '../shared/blogCard/blogCard.scss';
