@@ -17,9 +17,10 @@ const MoreBlogs = ({title, subtitle,isMobile}) => {
     return (
      <div className={isMobile? "container-mobile":"container"}>
         <div className="more-blogs">
+          <div className={!isMobile? "container-mobile":"container"}>
             <h2 >{title}</h2>
             <p >{subtitle}</p>
-
+          </div>
             <div className="sections-cards">
             { sections && sections !== null ? sections.map((section) => {
                   return <SectionCard 

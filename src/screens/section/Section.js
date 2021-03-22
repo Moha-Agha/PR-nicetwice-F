@@ -51,7 +51,7 @@ const Section = (props) => {
         <HeaderOfSection sectionInfo={section[0]} />
       </div>
 
-      <div className={width > 700 ? 'container' : null}>
+      <div className= 'container' >
 
       <div className="articles">
             {section[1].slice(0, 6).map(({

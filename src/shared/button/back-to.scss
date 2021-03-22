@@ -2,9 +2,10 @@
     direction: $direction;
 
     display:inline-block;
-    font-size: map-get( $font-sizes, 'xxxs' );
+    @include font-size(xxxs);
     white-space: nowrap;
-    margin-top: 40px;
+    margin-top: 15vw;
+    @include screen(tablet){margin-top: 4vw;}
     transition: ease-in-out 0.2s all;
     a{
       display: flex;
@@ -13,7 +14,7 @@
       color:rgba($text-light, 0.7);
     }
     i{
-      margin:0 10px 0 10px;
+      margin:0 10px 0 0px;
       transition: ease-in-out 0.2s all;
     }
     &:hover{

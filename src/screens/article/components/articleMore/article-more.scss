@@ -4,7 +4,7 @@
     
     h2{
         color: $text-light;
-        font-size: map-get($font-sizes, 's' );
+        @include font-size(s);
         margin-bottom: 30px;
         text-align: center;
     }
@@ -27,7 +27,7 @@
         }
         .article_tags{ 
             .tag{
-                font-size: map-get($font-sizes, 'xs' );
+                @include font-size(xs);
             }
         }
         .article_title {

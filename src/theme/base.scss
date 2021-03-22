@@ -10,7 +10,7 @@
   body {
      background-color: $page-background;
      color: $font-default-color;
-    // @include set-font('s');
+     @include select-not-allow();
     margin: 0 ;
     text-rendering: optimizeSpeed;
     -webkit-font-smoothing: antialiased;
@@ -34,7 +34,7 @@
     margin: 0 0 0.8rem 0;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: map-get($font-sizes , 'xxxl' );
+    @include font-size(xxxl);
   }
   
   h2,
@@ -42,39 +42,39 @@
     margin: 0 0 0.8rem 0;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: map-get($font-sizes , 'xxl' );
+    @include font-size(xxl);
   }
   
   h3,
   .h3 {
     margin: 0 0 0.8rem 0;
-    font-size: map-get($font-sizes , 'xl' );
+    @include font-size(xl);
   }
   
   h4,
   .h4 {
     margin: 0 0 0.8rem 0;
     font-weight: bold;
-    font-size: map-get($font-sizes , 's' );
+    @include font-size(s);
   }
   
   h5,
   .h5 {
     margin: 0 0 0.8rem 0;
     font-weight: bold;
-    font-size: map-get($font-sizes , 'xs' );
+    @include font-size(xs);
   }
   
   h6,
   .h6 {
     margin: 0 0 0.8rem 0;
     font-weight: bold;
-    font-size: map-get($font-sizes , 'xxs' );
+    @include font-size(xxs);
   }
   
   p {
     margin: 0 0 0.70rem 0;
-    font-size: map-get($font-sizes , 'xxs' );
+    @include font-size(xxs);
   }
   
   a {

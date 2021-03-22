@@ -14,33 +14,33 @@
           margin-bottom: 40px;
 
           h1{ 
-              font-size: map-get($font-sizes, 'xl' );
+              @include font-size(xl);
               text-transform: capitalize;
-              line-height: map-get($font-line-heights, 'xl' );
+              
               margin-bottom: 20px;
              }
           h2{ 
-              font-size: map-get($font-sizes, 'l' );
-              line-height: map-get($font-line-heights, 'l' );
+              @include font-size(l);
+              
               text-transform: capitalize;
               margin-bottom: 15px;
             }
-          h3{ font-size: map-get($font-sizes, 'm' );}
-          h4{ font-size: map-get($font-sizes, 's' );}
-          h5{ font-size: map-get($font-sizes, 'xs' );}
-          h6{ font-size: map-get($font-sizes, 'xxs' );}
+          h3{ @include font-size(m);}
+          h4{ @include font-size(s);}
+          h5{ @include font-size(xs);}
+          h6{ @include font-size(xxs);}
           p{ 
-              font-size: map-get($font-sizes, 'xxs' );
-              line-height: map-get($font-line-heights, 's' );
+              @include font-size(xxs);
+              
 
               strong, i, a{
-                font-size: map-get($font-sizes, 'xxs' );
-                line-height: map-get($font-line-heights, 's' );
+                @include font-size(xxs);
+                
               }
             }
             li{
-                font-size: map-get($font-sizes, 'xxs' );
-                line-height: map-get($font-line-heights, 's' );
+                @include font-size(xxs);
+                
               }
 
           .image{
@@ -55,12 +55,12 @@
              
             .article_body_imageimage-info{
                 color:$grey-darker;
-                font-size: map-get($font-sizes, 'xxs' );
+                @include font-size(xxs);
             }
           }
           figcaption{
             color:$grey-darker;
-            font-size: map-get($font-sizes, 'xs' ); 
+            @include font-size(xs); 
           }
        }    
 
@@ -77,7 +77,7 @@
          }
         .article_body_imageimage-info{
             color:$grey-darker;
-            font-size: map-get($font-sizes, 'xs' );
+            @include font-size(xs);
         }
     }
     }

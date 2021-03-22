@@ -1,9 +1,10 @@
 .contact-us{
+    margin-top:0px;
     position: relative;
-    
+    @include screen(desktop){max-width: 900px;}
     .contact-us_title{
-        margin-top: 30px;
-        font-size: map-get($font-sizes , 'xxxl');
+        margin: 40px auto 0px auto ;
+        @include font-size(xxxl);
         text-transform:capitalize;
         &::after{
             content: '.';
@@ -11,16 +12,18 @@
         }
     }
     .contact-us_subtitle{
-        font-size: map-get($font-sizes , 'xxxl' );
+        @include font-size(xxxl);
         font-weight: bold;
         color: $page-background;
         -webkit-text-stroke-color: $brand-third;
-        -webkit-text-stroke-width: 3px; 
+        -webkit-text-stroke-width: 1px; 
+        @include screen(tablet){-webkit-text-stroke-width: 3px; }
     }
     .contact-us_message{
         line-height: 30px;
+        margin:  100px auto 100px auto;
         p{
-            font-size: map-get($font-sizes , 's' );
+            @include font-size(s);
             font-weight: bold;
             margin:  5px auto 5px auto;
 
@@ -30,7 +33,20 @@
         }
 
         .message-item{
-            display: -webkit-box;
+            display: block ;
+            span{@include font-size(s);}
+            .message-item_title_1 { display: block;}
+            .message-item_input_1 { display: block;}
+            .message-item_title_2 { display: block;}
+            .message-item_input_2 { display: block;}
+            .message-item_title_3 { display: block;}
+            .message-item_input_3 { display: block;}
+            .message-item_title_4 { display: block;}
+            .message-item_input_4 { display: block;}
+            .message-item_title_5 { display: block;}
+            .message-item_input_5 { display: block;}
+            @include screen(tablet){
+             display: -webkit-box;
             display: -moz-box;
             display: -ms-flexbox;
             display: -moz-flex;
@@ -39,29 +55,33 @@
             flex-flow: row nowrap;
             align-items: center;
             margin-bottom: 4px;
-            font-weight: bold;
-           
-            span{font-size: map-get($font-sizes , 's' );}
-      .message-item_title_1 { flex: 1 1 ; padding-bottom: 8px;}
-      .message-item_input_1 { flex: 3 2 ; }
-      .message-item_title_2 { flex: 1 1 ; padding-bottom: 8px;}
-      .message-item_input_2 { flex: 3 2 ; }
-      .message-item_title_3 { flex: 2 1 ; padding-bottom: 8px;}
-      .message-item_input_3 { flex: 3 2 ; }
-      .message-item_title_4 { flex: 2 1 ; padding-bottom: 8px;}
-      .message-item_input_4 { flex: 3 2 ; }
-      .message-item_title_5 { flex: 3 1 ; padding-bottom: 8px;}
-      .message-item_input_5 { flex: 3 2 ; }
-        }
+            font-weight: bold; 
 
-   
+            .message-item_title_1 { flex: 1 1 ; padding-bottom: 8px;}
+            .message-item_input_1 { flex: 3 2 ; }
+            .message-item_title_2 { flex: 1 1 ; padding-bottom: 8px;}
+            .message-item_input_2 { flex: 3 2 ; }
+            .message-item_title_3 { flex: 2 1 ; padding-bottom: 8px;}
+            .message-item_input_3 { flex: 3 2 ; }
+            .message-item_title_4 { flex: 2 1 ; padding-bottom: 8px;}
+            .message-item_input_4 { flex: 3 2 ; }
+            .message-item_title_5 { flex: 3 1 ; padding-bottom: 8px;}
+            .message-item_input_5 { flex: 3 2 ; }
+            }
+            @include screen(desktop){
+                .message-item_title_5 { display: inline-block; margin-right: 10px; }
+                .message-item_input_5 { display: inline-block; max-width: 500px; }
+            }
+        }
 
     }
 }
 
 
 .city-name{
-    position: absolute;
+    display: none;
+    @include screen(tablet){
+      position: absolute;
     right: -433px;
     top: 445px;
     font-size: 121px;
@@ -70,7 +90,8 @@
     opacity: 0.02;
     transform: rotate(-90deg);
     padding: 0;
-    margin: 0;
+    margin: 0;  
+    }
 }
 
 
@@ -82,16 +103,19 @@
   color: $text-light;
   border: solid 10px $card;
   text-align: center;
-  margin: 0 30px 30px 0;
-
+  margin-top: 80px;
+  @include screen(tablet){
+   margin: 0 30px 30px 0;   
+  }
+  @include screen(desktop){margin-top: 250px;}
   .aicon-direct{
-    font-size: map-get($font-sizes , 'xxxl' );
+    @include font-size(xxxl);
     line-height: 90px;
   }
 }
 .contact-us_success {
-    font-size: map-get($font-sizes , 'xxxl' );
-    line-height: map-get($font-line-heights , 'xxxl' );
+    @include font-size(xxxl);
+    
   color: $text-light;
   &::after{
     content: '.';
@@ -100,96 +124,5 @@
 }
 
 
-
-// Mobile
-@media all and (max-width: 700px) and (min-width: 340px) {
  
-
-    .contact-us{
-        margin-top:0px;
-    }
-    .contact-us_title{
-        margin: 40px auto 40px auto ;
-    }
-
-    .contact-us_message{
-     
-        .message-item{
-            display: block !important;
-           
-       span{font-size: map-get($font-sizes , 'm' );}
-      .message-item_title_1 { display: block;}
-      .message-item_input_1 { display: block;}
-      .message-item_title_2 { display: block;}
-      .message-item_input_2 { display: block;}
-      .message-item_title_3 { display: block;}
-      .message-item_input_3 { display: block;}
-      .message-item_title_4 { display: block;}
-      .message-item_input_4 { display: block;}
-      .message-item_title_5 { display: block;}
-      .message-item_input_5 { display: block;}
-        }
-
-    }
-    .city-name{
-        display: none;
-    }
-
-  .contact-us_icon-success{
-    margin-top: 80px;
-    }
-        
-  }
- 
- // Tablet
- @media (max-width: 1200px) and (min-width: 701px) {
- 
-    .city-name{
-        display: none;
-    }
-  }
- 
- // Desktop and X Desktop
- @media (min-width: 1201px) {
- 
-    .contact-us{
-        max-width: 900px;
-    
-        .contact-us_message{
-            margin:  100px auto 100px auto;
-    
-            .message-item{
-                display: block;
-
-                .message-item_title_1 { display: inline-block; margin-right: 10px;}
-                .message-item_input_1 { display: inline-block; max-width: 500px;  }
-                .message-item_title_2 { display: inline-block; margin-right: 10px; }
-                .message-item_input_2 { display: inline-block; max-width: 500px; }
-                .message-item_title_3 { display: inline-block; margin-right: 10px; }
-                .message-item_input_3 { display: inline-block; max-width: 500px; }
-                .message-item_title_4 { display: inline-block; margin-right: 10px; }
-                .message-item_input_4 { display: inline-block; max-width: 500px; }
-                .message-item_title_5 { display: inline-block; margin-right: 10px; }
-                .message-item_input_5 { display: inline-block; max-width: 500px; }
-            }
-    
-     .button{
-         margin-top: 30px;
-           max-width: 200px;
-       }
-    
-        }
-        .contact-us_icon-success{
-        margin-top: 250px;
-        }
-    }
-
-  }
- 
- // X Desktop
- @media (max-width: 1920px) and (min-width: 1367px) {
-   
- 
-  }
-
 

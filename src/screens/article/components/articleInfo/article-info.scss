@@ -21,7 +21,7 @@
         margin: auto 10px;
         .article_author_name{
             color: $white;
-            font-size: map-get($font-sizes, 'xxxs' );
+            @include font-size(xxxs);
             font-weight: bold;
             display: flex;
             flex-flow: column nowrap;
@@ -39,7 +39,7 @@
         }
         .article_author_publish-date{
             color: $text-light;
-            font-size: map-get($font-sizes, 'xxxs' );
+            @include font-size(xxxs);
         }
        }
     
@@ -65,10 +65,10 @@
     .aicon-clock{
         display: inline-block;
         color: $white;
-        font-size: map-get($font-sizes, 'xxs' );
+        @include font-size(xxs);
     }
     span{
-        font-size: map-get($font-sizes, 'xxxs' );
+        @include font-size(xxxs);
         margin-left: 6px;  
     }
 }
@@ -83,12 +83,12 @@
     flex-flow: row nowrap;
     align-items: center;
     text-align: center;
-    font-size: map-get($font-sizes, 'xxxs' );
+    @include font-size(xxxs);
  
       i{
         display: inline-block;
         color: $white;
-        font-size: map-get($font-sizes, 'xxs' );
+        @include font-size(xxs);
       }
       span{   
         color: $white;

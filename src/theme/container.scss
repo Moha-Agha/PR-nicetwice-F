@@ -1,64 +1,28 @@
-$sizes: (
-  25: 25%,
-  50: 50%,
-  75: 75%,
-  100: 100%,
-  auto: auto,
-);
-
- $container-max-widths: (
-   xs: 340px,
-   sm: 440px,
-   md: 760px,
-   lg: 1200px
- );
-
- $grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1700px,
-);
+$mobile:250px;
+$tablet:571px;
+$desktop:770px;
+$big-desktop:1200px;
 
 
+@mixin screen($size) {
+    @if $size == mobile {
+     @media all  and (min-width: $mobile){@content;}
+    } @else if $size == tablet {
+     @media all and (min-width: $tablet){@content;}
+    } @else if $size == desktop {
+     @media all  and (min-width: $desktop){@content;}
+    } @else if $size == big-desktop {
+      @media all  and (min-width: $big-desktop){@content;}
+    } 
+  }
 
-.container{
-    max-width: 1200px;
+  .container{
+    max-width: 84vw;
     margin: auto;
-}
-.container-mobile{
-  margin: 0;
-  }
+    @include screen(mobile){ max-width: 315px;};
+    @include screen(tablet){ max-width: 750px;};
+    @include screen(desktop){max-width: 1100px;};
+    @include screen(big-desktop){max-width: 1155px;};
+ }
 
-
- // Mobile
- @media all and (max-width: 460px) {
-    .container{
-        max-width: 300px;
-        padding: 0 20px;
-    }
-  }
- @media all and (max-width: 560px) and (min-width: 340px) {
-    .container{
-        max-width: 440px;
-        padding: 0 20px;
-    }
-  }
-  
-  // Tablet
-  @media all and (max-width: 770px) and (min-width: 561px) {
-    .container{
-        max-width: 760px;
-        padding: 0 40px;
-    }
-  }
-  
-  // Desktop
-  @media all and  (min-width: 771px) {
-    .container{
-        max-width: 1200px;
-        padding: 0 40px;
-    }
-  }
+  .container-mobile{margin: 0;}

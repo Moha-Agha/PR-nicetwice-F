@@ -5,13 +5,13 @@
   
 
   h2{
-    font-size: map-get($font-sizes , 'xxs' );
+    @include font-size(xxs);
     text-transform: none;
     color: $card-subtitle;
     margin-bottom: 20px;
   }
   h1{
-    font-size: map-get($font-sizes , 'm' );
+    @include font-size(m);
     color: $card-title;
     margin-bottom: 25px;
     text-transform: none;
@@ -30,7 +30,7 @@
     }
   }
   p{
-    font-size: map-get($font-sizes , 'xxs' );
+    @include font-size(xxs);
     color: $card-subtitle;
     line-height: 32px;
   }

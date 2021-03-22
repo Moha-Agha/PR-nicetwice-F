@@ -3,8 +3,6 @@
 
 $font-family-arabic: 'Almarai';
 $font-family-englische: 'Ubuntu';
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,'Liberation Mono', 'Courier New', monospace;
-
 $font-family-base:  $font-family-englische, $font-family-arabic, 'Helvetica Neue Light','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 $font-default-color: $text-light;
@@ -15,7 +13,6 @@ $emphasized-link-hover-darken-percentage: 15% !default;
 
 //website font
 *{ font-family: $font-family-base; }
-
 
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
@@ -40,7 +37,7 @@ $emphasized-link-hover-darken-percentage: 15% !default;
   }
 }
 
-$min_width: 320px;
+$min_width: 250px;
 $max_width: 1120px;
 $min_font: 8px;
 $max_font: 16px;
@@ -50,73 +47,64 @@ html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
-
-// Mobile
-@media all and (max-width: 570px) and (min-width: 320px) {
- 
+h1,h2,h3,h4,h5,h6,p {
+  line-height: 1.40;
 }
 
-// Tablet
-@media all and (max-width: 770px) and (min-width: 571px) {
+@mixin font-size($size) {
+
+  // Mobile
+    @media all  and (min-width: 250px) {
+      @if $size == xxxl {
+        font-size: 4.5rem; // 72 px
+      } @else if $size == xxl {
+        font-size: 4rem; // 64 px
+      } @else if $size == xl {
+        font-size: 2.88rem; // 46.08 px
+      } @else if $size == l {
+        font-size: 2.25rem; // 36 px
+      } @else if $size == m {
+        font-size: 2rem; // 32 px
+      }@else if $size == s {
+        font-size: 18px; // 26.08 px
+      } @else if $size == xs {
+        font-size: 18px; // 21.12 px
+      }@else if $size == xxs {
+        font-size: 16px; // 18.08 px
+      } @else if $size == xxxs {
+        font-size: 14px; // 14.08 px
+      }
+     }
+
+  // Tablet
+    @media all and (min-width: 571px) {
+      
+    }
+      
+   // Desktop
+    @media all  and (min-width: 770px) {
+      @if $size == xxxl {
+        font-size: 4.5rem; // 72 px
+      } @else if $size == xxl {
+        font-size: 4rem; // 64 px
+      } @else if $size == xl {
+        font-size: 2.88rem; // 46.08 px
+      } @else if $size == l {
+        font-size: 2.25rem; // 36 px
+      } @else if $size == m {
+        font-size: 2rem; // 32 px
+      }@else if $size == s {
+        font-size: 1.63rem; // 26.08 px
+      } @else if $size == xs {
+        font-size: 1.32rem; // 21.12 px
+      }@else if $size == xxs {
+        font-size: 1.13rem; // 18.08 px
+      } @else if $size == xxxs {
+        font-size: 0.88rem; // 14.08 px
+      }
+     }
 
 }
-
-// Desktop
-@media all  and (min-width: 770px) {
-  
-}
-
-
-$font-sizes-mobile: (
-  'input': 1.5rem,
-  'xxxl': 6.4rem,
-  'xxl': 2.4rem,
-  'xl': 3.2rem,
-  'l': 2.4rem,
-  'm': 1.5rem,
-  's': 1.3rem,
-  'xs': 1.2rem,
-  'xxs': 1rem,
-  'xxxs': 0.8rem,
-);
-
-$font-line-heights-mobile: (
-  'input': 2.4 / 1.5,
-  'xxxl': 3.2 / 3,
-  'xxl': 2.6 / 2.4,
-  'xl': 2.4 / 1.8,
-  'l': 2.4 / 1.6,
-  'm': 2.2 / 1.5,
-  's': 2 / 1.2,
-  'xs': 1.8 / 1.2,
-  'xxs': 1.4 / 1,
-  'xxxs': 1.2 / 0.8,
-);
-
-$font-sizes: (
-  'xxxl': 4.5rem, 
-  'xxl': 4rem,
-  'xl': 2.88rem,
-  'l': 2.25rem,
-  'm': 2rem,
-  's': 1.63rem,
-  'xs': 1.32rem,
-  'xxs': 1.13rem,
-  'xxxs': 0.88rem,
-);
-
-$font-line-heights: (
-  'input': 2.4 / 1.6,
-  'xxxl': 6.8 / 6,
-  'xxl': 4.2 / 3.6,
-  'xl': 3.2 / 2.4,
-  'l': 2.4 / 1.8,
-  'm': 2.2 / 1.5,
-  's': 2.2 / 1.5,
-  'xs': 1.8 / 1.2,
-  'xxs': 1.4 / 1,
-  'xxxs': 1.2 / 0.8,
-);
 
 
 $font-weight-lighter: lighter !default;

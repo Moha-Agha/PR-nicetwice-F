@@ -34,7 +34,7 @@ const SectionCard = ({title,subtitle,slug}) => {
 
     return (
             <Link to={`/section/${slug}`} className="section-card ">
-                <img className='section-card_icon' src={icons} /> 
+                <img className='section-card_icon' src={icons} alt={slug} /> 
                 <div className='section-card_title'>{title}
                     <div className='section-card_subtitle'>
                       {subtitle? subtitle: SECTION_LOCA.articles+' '+SECTION_LOCA.Browse}

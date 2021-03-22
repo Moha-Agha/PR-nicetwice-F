@@ -1,7 +1,7 @@
 .work-process{
    margin: 130px 0;
     h2{
-        font-size: map-get($font-sizes , 'xxxl');
+        @include font-size(xxxl);
         text-transform:capitalize;
         &::after{
             content: '.';
@@ -9,7 +9,7 @@
         }
     }
     p{
-        font-size: map-get($font-sizes , 'xxs');
+        @include font-size(xxs);
         color: rgba($brand-third, 0.5);
         margin: -3px 0 40px 0;
     }

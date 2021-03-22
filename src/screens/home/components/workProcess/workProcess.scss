@@ -1,34 +1,43 @@
 #work-process{
-   margin: $section-margin;
-   padding: $section-padding;
-   height: $section-height;
-   max-height: 950px;
-   background-color: $card;
+    @include section-margin();
+    padding: 5vh 0;
+    background-color: $card;
+    @include screen(desktop){
+        padding: $section-padding;
+        height: $section-height;
+        max-height: 950px;
+    }
 }
-
 .work-process_container{
-    display: flex;
-    flex-flow: row nowrap;
+    @include screen(desktop){
+        display: flex;
+        flex-flow: row nowrap;
+    }
 }
-
 .work-process_text{
-    width: 47%;
+    @include screen(desktop){width: 47%;}
 }
 .work-process_text_title{
+    @include font-size(xs);
     color: rgba($text-light, 0.5);
     margin-bottom: 6vh;
 }
 .work-process_text_content_item{
-    h3{cursor: pointer;}
+    h3{
+        @include font-size(l);
+        cursor: pointer;
+    }
     div{
+        @include font-size(xxs);
         line-height: 28px;
         color: rgba($text-light, 0.5);
-        width: 90%;
-        height: 106px;
         overflow: hidden;
-    }
-    padding-bottom: 5vh;
-   
+        @include screen(desktop){
+            width: 90%;
+            height: 106px;
+            margin-bottom: 2vh;
+        }
+      } 
 }
 .work-process_text_content_item_disable{
     h3{
@@ -36,29 +45,37 @@
     }
     div{
         height: 0px;
+        margin-bottom: 0;
     }
     transition: all 1s ease-in-out;
 }
 
 .work-process_image{
-    width: 47%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    
-    img{
-        border-radius:$border-radius ;
+    display: none;
+    @include screen(desktop){
+        display: block;
+        width: 47%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        img{border-radius:$border-radius;}
     }
 }
+
 .work-process_nav{
-    width: 6%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-end;
+    display: none;
+    @include screen(desktop){
+        display: block;
+        width: 6%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-end;
+    }
 }
 
 .work-process_nav_item{
+    @include screen(desktop){
     width: 1.5vw;
     max-width: 25px;
     height: 1.42vw;
@@ -69,25 +86,13 @@
     margin-bottom: 15px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
+   }       
 }
 
 .work-process_nav_item_active{
-    background-color: rgba($text-light, 0.5);
-    border:none;
-    transition: all 0.5s ease-in-out;
+     @include screen(desktop){
+         background-color: rgba($text-light, 0.5);
+         border:none;
+         transition: all 0.5s ease-in-out;
+     }  
 }
-
-// Mobile
-@media all and (max-width: 560px) and (min-width: 340px) {
-  
- }
- 
- // Tablet
- @media all and (max-width: 770px) and (min-width: 561px) {
-  
- }
- 
- // Desktop
- @media all and  (min-width: 771px) {
-
- }

@@ -5,13 +5,14 @@
   background: $card;
   border-radius: $border-radius;
   overflow: hidden;
+  max-width: 559px;
 
   &:focus, :active{
    background: $card;
   }
 
   .portfolio-item_titel{
-   font-size: map-get($font-sizes , 'xl');
+   @include font-size(xl);
    font-weight: bold;
    color: $text-light;
    padding: 5vh 5vh 5vh 5vh;
@@ -25,7 +26,7 @@
       }
   }
   .portfolio-item_subtitle{
-   font-size: map-get($font-sizes , 'xxs');
+   @include font-size(xxs);
    font-weight: normal;
    color: rgba($text-light, 0.5);
    padding-top: 1vh;

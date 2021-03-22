@@ -1,7 +1,6 @@
 $navbar-height: 5rem;
 $navbar-mobile-height: 5rem;
 
-
 #nav{
     display: flex;
     flex-flow: row nowrap;
@@ -14,16 +13,21 @@ $navbar-mobile-height: 5rem;
         flex-flow: row-reverse nowrap;
         justify-content: space-between;
         align-items: center;
-
+        cursor: pointer;
         list-style: none;
         li{
             width: 42px;
             height: 42px;
-            line-height: 49px;
+            line-height: 55px;
+            @include screen(tablet){line-height: 52px;}
             text-align: center;
             margin-right: 10px;
             border: solid 2px $brand-third;
             border-radius: $border-radius-circal;
+
+            &:hover{
+                border: solid 2px rgba($brand-third, 0.5);  
+            }
         }
         .nav_items-lang{
             line-height: 33px;
@@ -36,49 +40,5 @@ $navbar-mobile-height: 5rem;
 }
 
 
-//old scss
-
-.navbar{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 50px;
-}
-
-.navbar_items{
-    display: flex;
-    flex-flow: row nowrap;
-
-    div{
-      &:first-child{
-          margin-right: 15px;
-      }
-    }
-}
 
 
- // X Desktop
- @media all and (max-width: 1920px) and (min-width: 1367px) {
-    .navbar{
-        padding-top: 109px;
-    }
- 
- }
-
-
-
- // Mobile
- @media all and (max-width: 560px) and (min-width: 340px) {
- 
-  }
-  
-  // Tablet
-  @media all and (max-width: 770px) and (min-width: 561px) {
-
-  }
-  
-  // Desktop
-  @media all and  (min-width: 771px) {
-
-  }

@@ -35,7 +35,7 @@ const Routing = () => {
       <Nav/>
         <Switch>
           {isMobile?
-            <Route exact path='/' component={ScreenSupport}/>
+            <Route exact path='/' component={Home}/>
           : <Route exact path='/' component={Home}/>
           }
           

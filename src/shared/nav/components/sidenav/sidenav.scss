@@ -14,7 +14,7 @@
  
   a {
     text-decoration: none;
-    font-size: map-get($font-sizes, 'm' );
+    @include font-size(m);
     font-weight:  bold;
     color: $white;
     display: block;
@@ -27,7 +27,7 @@
     justify-content: baseline;
     align-items: center;
     span {
-      font-size: map-get($font-sizes, 'xs' );
+      @include font-size(xs);
       font-weight: $font-weight-normal;
       color: $white;
       display: inline-block;

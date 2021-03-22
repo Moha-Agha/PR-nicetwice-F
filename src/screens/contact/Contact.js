@@ -143,7 +143,7 @@ const Contact = () => {
                   value={information}
                   onChange={onChange}
                   placeholder='Weitere Informationen'
-                  classs='  message-item_input_5 '
+                  classs='  message-item_input_6 '
                 />
               </div>
 

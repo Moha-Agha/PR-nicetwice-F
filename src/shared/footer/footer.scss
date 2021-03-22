@@ -1,36 +1,51 @@
 .footer{
-    margin: 160px 0 0 0;
+    
+    @include section-margin();
 
     .footer_contact-us-card{
-          display: flex;
+         display: flex;
          flex-flow: row nowrap;
-         justify-content: space-between;
+         justify-content: space-around;
          align-items: center;
          background-color: $card;
-         border-radius: $border-radius;
+         border-radius: 0;
          margin-bottom: 40px;
-         padding: 0 5%;
+         padding: 4.3% 1%;
          @include shadow-card();
+         
+         @include screen(tablet){
+             border-radius: $border-radius;
+             padding: 0 5%;
+        };
 
          .footer_contact-us-card_imag{
-             width: 34%;
              display: flex;
              justify-content: center;
-             margin-top: -20px;
+             margin: 0 0 -15px 0;
+             @include screen(tablet){
+                 width: 40%;
+                 margin: -20px 0 0 0;
+                };
+             
+             img{
+                @include screen(tablet){ width: auto;};
+                 width: 90%;
+             }
          }
 
         .footer_contact-us-card_text{
-            width: 57%;
+            width: 63%;
             .footer_contact-us-card_text-title{
-                font-size: map-get($font-sizes , 'l' );
+                @include font-size(l);
                 color: $brand-third;
+                @include screen(tablet){width: 75%;};
             }
             .footer_contact-us-card_text-subtitle{
-                font-size: map-get($font-sizes , 's' );
+                @include font-size(s);
                 color: rgba($brand-third, 0.5);
                 margin-top: 15px;
                 span{
-                    font-size: map-get($font-sizes , 's' );
+                    @include font-size(s);
                     color: $brand-prime;
                     font-weight: bold; 
                 }
@@ -43,9 +58,10 @@
         color: rgba($brand-third, 0.5);
         line-height: 25px;
         padding-bottom: 50px;
+        @include font-size(m);
 
         div{
-            font-size: map-get($font-sizes , 'xxxs' );
+            @include font-size(xxxs);
         }
         a, a:active, a:focus, a:visited{
             color: rgba($text-light, 0.5);
@@ -53,60 +69,3 @@
 
     }
 }
-
-
-
-
- // Mobile
- @media all and (max-width: 560px) and (min-width: 320px) {
-    .footer{
-        margin: 160px 0 0 0;
-        
-        .footer_contact-us-card{
-             border-radius: 0;
-    
-             .footer_contact-us-card_imag{
-                 width: 34%;
-                 display: flex;
-                 justify-content: center;
-                 margin-top: -20px;
-             }
-    
-            .footer_contact-us-card_text{
-                width: 57%;
-                .footer_contact-us-card_text-title{
-                    // font-size: map-get($font-sizes , 'xxl' );
-                    color: $brand-third;
-                }
-                .footer_contact-us-card_text-subtitle{
-                    // font-size: map-get($font-sizes , 'xl' );
-                    color: rgba($brand-third, 0.5);
-                    margin-top: 15px;
-                    span{
-                        // font-size: map-get($font-sizes , 'xl' );
-                        color: $brand-prime;
-                        font-weight: bold; 
-                    }
-                }
-             }
-        }
-    
-        .footer_info{
-            font-size: map-get($font-sizes , 'm' );
-            text-align: center;
-            color: rgba($brand-third, 0.5);
-            line-height: 25px;
-            padding-bottom: 50px;
-        }
-    }
-  }
-  
-  // Tablet
-  @media all and (max-width: 770px) and (min-width: 561px) {
-    
-  }
-  
-  // Desktop
-  @media all and  (min-width: 771px) {
-  
-  }

@@ -13,7 +13,7 @@ const UiLoading = (props) => {
        //loading ui
        setTimeout(() => {
         setUiLoading(true)
-       }, 700);
+       }, 300);
 
      }
   

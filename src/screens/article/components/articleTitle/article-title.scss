@@ -2,8 +2,8 @@
     margin: 20px  0;
     
     h1{
-        font-size: map-get($font-sizes , 'xxxl');
-        line-height: map-get($font-line-heights, 'xxxl' );
+        @include font-size(xxxl);
+        
         text-transform: uppercase;
         &::after{
             content: '.';
@@ -11,8 +11,8 @@
         }
     }
     h2{
-        font-size: map-get($font-sizes , 'xl');
-        line-height: map-get($font-line-heights, 'xl' );
+        @include font-size(xl);
+        
         color: rgba($brand-third, 0.5);
         margin: 3px 0 40px 0;
     }

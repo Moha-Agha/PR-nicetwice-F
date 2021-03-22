@@ -3,7 +3,7 @@
 
     h1{ 
         margin:20px auto 10px auto;
-        font-size: map-get($font-sizes , 'xxxl');
+        @include font-size(xxxl);
         text-transform:capitalize;
         &::after{
             content: '.';

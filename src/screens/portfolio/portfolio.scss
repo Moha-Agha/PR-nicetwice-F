@@ -1,6 +1,6 @@
 .portfolio_title{ 
    margin:20px auto 10px auto;
-   font-size: map-get($font-sizes , 'xxxl');
+   @include font-size(xxxl);
    text-transform:capitalize;
    &::after{
        content: '.';
@@ -8,49 +8,17 @@
    }
 }
 .portfolio_subtitle{
-   font-size: map-get($font-sizes , 'xxs');
+   @include font-size(xxs);
    color: rgba($brand-third, 0.5);
    margin: -3px 0 40px 0;
+   @include screen(tablet){ margin: -3px 0 3vw 0;};
 }
 
-// Mobile
-@media all and (max-width: 700px) and (min-width: 340px) {
-   .portfolio_title{
-      margin-top: 0px;
-   }
-}
-
-// Tablet
-@media all and (max-width: 1200px) and (min-width: 734px) {
-
-}
-
-// Desktop
-@media all and (max-width: 1366px) and (min-width: 1201px) {
-   .portfolio_subtitle{
-      margin-bottom: 3vw;
-   }
-   .portfolio{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 32px;
-      row-gap: 32px;
-      margin: auto;   
-}
-}
-
-// X Desktop
-@media all  and (min-width: 1367px) {
-      .portfolio_title{
-         margin:20px auto 10px auto;
-         font-size: 54px;
-      }
-      .portfolio{
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-         column-gap: 32px;
-         row-gap: 32px;
-         margin: auto;   
-   }     
-
+.portfolio{
+   display: grid;
+   grid-template-columns: 1fr;
+   @include screen(tablet){grid-template-columns: 1fr 1fr};
+   column-gap: 32px;
+   row-gap: 32px;
+   margin: auto;   
 }

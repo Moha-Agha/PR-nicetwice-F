@@ -12,7 +12,7 @@ const WorkProcess = ({isMobile}) => {
     
     return (       
         <div id="work-process">
-          <div className={isMobile? "container-mobile":"container"}>
+          <div className="container">
             <div className="work-process_container">
 
                 <div className="work-process_text">
