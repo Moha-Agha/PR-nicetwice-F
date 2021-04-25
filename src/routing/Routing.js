@@ -52,9 +52,8 @@ const Routing = () => {
           <Route exact path='/privacy' component={Privacy} />
           <Route exact path='/imprint' component={Imprint} />
           <Route exact path='/conditions' component={Conditions} /> 
-          <Route exact path='/zohoverify/verifyforzoho.html' component={Verifyforzoho} /> 
           {/* Admin */}
-          {/* <PrivateRoute exact path='/messages' component={Messages} />
+          {/*<PrivateRoute exact path='/messages' component={Messages} />
           <PrivateRoute exact path='/section' component={AdminSection} />
           <PrivateRoute exact path='/new-section' component={AddSection} />
           <PrivateRoute exact path='/edit-section' component={EditSection} />
