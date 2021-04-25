@@ -23,6 +23,7 @@ import PageNotFound from '../screens/others/PageNotFound/PageNotFound';
 import Privacy from '../screens/others/privacy/Privacy';
 import Imprint from '../screens/others/imprint/Imprint';
 import Conditions from '../screens/others/conditions/Conditions';
+import Verifyforzoho from '../screens/others/Verifyforzoho';
 
 const Routing = () => {
 
@@ -51,6 +52,7 @@ const Routing = () => {
           <Route exact path='/privacy' component={Privacy} />
           <Route exact path='/imprint' component={Imprint} />
           <Route exact path='/conditions' component={Conditions} /> 
+          <Route exact path='/zohoverify/verifyforzoho.html' component={Verifyforzoho} /> 
           {/* Admin */}
           {/* <PrivateRoute exact path='/messages' component={Messages} />
           <PrivateRoute exact path='/section' component={AdminSection} />
