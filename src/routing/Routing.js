@@ -23,7 +23,6 @@ import PageNotFound from '../screens/others/PageNotFound/PageNotFound';
 import Privacy from '../screens/others/privacy/Privacy';
 import Imprint from '../screens/others/imprint/Imprint';
 import Conditions from '../screens/others/conditions/Conditions';
-import Verifyforzoho from '../screens/others/Verifyforzoho';
 
 const Routing = () => {
 
